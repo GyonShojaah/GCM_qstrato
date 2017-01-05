@@ -1,0 +1,912 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.5)  5 JAN 2017 12:04
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**GCM_qstrato.tex
+(./GCM_qstrato.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/emulateapj/emulateapj.cls
+Document Class: emulateapj 
+\bibbaselineskip=\skip41
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip42
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip43
+\belowcaptionskip=\skip44
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+
+Class revtex4-1 Warning: No Society specified, using default society aps.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/aps4-1.rtx
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
+mentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+Class revtex4-1 Info: APS journal PRA selected on input line 7545.
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./natbib.sty
+Package: natbib 2003/06/06 7.1 (PWD)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 518.
+\c@NAT@ctr=\count94
+)
+
+LaTeX Warning: You have requested, on input line 7549, version
+               `2009/11/07 8.31a (PWD, AO)' of package natbib,
+               but only version
+               `2003/06/06 7.1 (PWD)'
+               is available.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Info: Redefining \Bbb on input line 113.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count96
+\LTcapwidth=\dimen104
+\LT@head=\box41
+\LT@firsthead=\box42
+\LT@foot=\box43
+\LT@lastfoot=\box44
+\LT@cols=\count97
+\LT@rows=\count98
+\c@LT@tables=\count99
+\c@LT@chunks=\count100
+\LT@p@ftn=\toks18
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen105
+\epsfframethickness=\dimen106
+\epsfrsize=\dimen107
+\epsftmp=\dimen108
+\epsftsize=\dimen109
+\epsfxsize=\dimen110
+\epsfysize=\dimen111
+\pspoints=\dimen112
+)
+\c@front@matter@foot@note=\count101
+\alt@affil@toks=\toks19
+\alt@affil@toks@count=\toks20
+\keys@width=\skip51
+\c@lastfootnote=\count102
+\c@remember@figure@num=\count103
+\c@remember@table@num=\count104
+\bibindent=\dimen113
+\plot@width=\skip52
+\c@table@save=\count105
+\table@note@skip=\skip53
+\deluxe@table@width=\skip54
+\@d@t@a=\skip55
+\c@deluxe@table@num=\count106
+\abovedeluxetableskip=\skip56
+\belowdeluxetableskip=\skip57
+\lastrowheight=\dimen114
+\DT@p@ftn=\toks21
+\pt@column=\count107
+\pt@ncol=\count108
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen115
+)
+LaTeX Info: Redefining \text on input line 28.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen116
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen117
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks23
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks24
+\eqnshift@=\dimen118
+\alignsep@=\dimen119
+\tagshift@=\dimen120
+\tagwidth@=\dimen121
+\totwidth@=\dimen122
+\lineht@=\dimen123
+\@envbody=\toks25
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(./aas_macros.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count121
+\c@@ppsavesec=\count122
+\c@@ppsaveapp=\count123
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen124
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count124
+\Hy@pagecounter=\count125
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count126
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4691.
+LaTeX Info: Redefining \href on input line 4955.
+\c@Hy@tempcnt=\count127
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen126
+\Fld@menulength=\count128
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6318.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count129
+\c@Item=\count130
+\c@Hfootnote=\count131
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count132
+\c@bookmark@seq@number=\count133
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip61
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 13.
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 37.
+Class revtex4-1 Info: Patching unrecognized longtable package. (Proceeding with
+ fingers crossed) on input line 37.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 37.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 37.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 37.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 37.
+
+
+LaTeX Warning: Unused global option(s):
+    [11pt].
+
+(./GCM_qstrato.aux
+
+LaTeX Warning: Label `ss:result_H2Omixingratio' multiply defined.
+
+)
+\openout1 = `GCM_qstrato.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count134
+\scratchdimen=\dimen129
+\scratchbox=\box47
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen130
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box48
+Package hyperref Info: Link coloring ON on input line 37.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count140
+)
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
+
+(./GCM_qstrato.out) (./GCM_qstrato.out)
+\@outlinefile=\write4
+\openout4 = `GCM_qstrato.out'.
+
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 37.
+\openout3 = `GCM_qstratoNotes.bib'.
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <fig/star_spectra_GCM_all.eps>
+(epstopdf)                    date: 2016-12-11 15:49:33
+(epstopdf)                    size: 95924 bytes
+(epstopdf)             Output file: <fig/star_spectra_GCM_all-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2016-12-11 15:49:43
+(epstopdf)                    size: 43130 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/star_spectra_GCM_all-e
+ps-converted-to.pdf fig/star_spectra_GCM_all.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/star_spectra_GCM_all-eps-converted-to.pdf, id=127, 361.35pt x 252.945pt>
+File: fig/star_spectra_GCM_all-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/star_spectra_GCM_all-eps-converted-to.pdf>
+Package pdftex.def Info: fig/star_spectra_GCM_all-eps-converted-to.pdf used on 
+input line 147.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+
+
+Package natbib Warning: Citation `ROCKE3D' on page 2 undefined on input line 15
+4.
+
+[2 <./fig/star_spectra_GCM_all-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
+[]\OT1/cmr/m/n/10 In com-put-ing the ab-sorp-tion by at-mo-spheric
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 191--196
+\OT1/cmr/m/n/10 molecules, we use high-resolution line-by-line opac-
+ []
+
+
+<fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_temp.png, id=186, 339.669pt x 171
+.2799pt>
+File: fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_temp.png Graphic file (type 
+png)
+ <use fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_temp.png>
+Package pdftex.def Info: fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_temp.png 
+used on input line 222.
+(pdftex.def)             Requested size: 117.72688pt x 59.36343pt.
+
+<fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_xH2O.png, id=188, 345.4506pt x 17
+2.0026pt>
+File: fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_xH2O.png Graphic file (type 
+png)
+ <use fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_xH2O.png>
+Package pdftex.def Info: fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_xH2O.png 
+used on input line 227.
+(pdftex.def)             Requested size: 117.72688pt x 58.61658pt.
+
+<fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_temp.png, id=189, 339.669pt x 171
+.2799pt>
+File: fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_temp.png Graphic file (type 
+png)
+ <use fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_temp.png>
+Package pdftex.def Info: fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_temp.png 
+used on input line 232.
+(pdftex.def)             Requested size: 117.72688pt x 59.36343pt.
+
+<fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_xH2O.png, id=190, 345.4506pt x 17
+2.0026pt>
+File: fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_xH2O.png Graphic file (type 
+png)
+ <use fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_xH2O.png>
+Package pdftex.def Info: fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_xH2O.png 
+used on input line 237.
+(pdftex.def)             Requested size: 117.72688pt x 58.61658pt.
+
+<fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_temp.png, id=191, 339.669pt x 171.
+2799pt>
+File: fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_temp.png Graphic file (type p
+ng)
+ <use fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_temp.png>
+Package pdftex.def Info: fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_temp.png u
+sed on input line 250.
+(pdftex.def)             Requested size: 117.72688pt x 59.36343pt.
+
+<fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_xH2O.png, id=192, 345.4506pt x 172
+.0026pt>
+File: fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_xH2O.png Graphic file (type p
+ng)
+ <use fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_xH2O.png>
+Package pdftex.def Info: fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_xH2O.png u
+sed on input line 255.
+(pdftex.def)             Requested size: 117.72688pt x 58.61658pt.
+
+<fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_temp.png, id=193, 339.669pt x 171.
+2799pt>
+File: fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_temp.png Graphic file (type p
+ng)
+ <use fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_temp.png>
+Package pdftex.def Info: fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_temp.png u
+sed on input line 260.
+(pdftex.def)             Requested size: 117.72688pt x 59.36343pt.
+
+<fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_xH2O.png, id=194, 345.4506pt x 172
+.0026pt>
+File: fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_xH2O.png Graphic file (type p
+ng)
+ <use fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_xH2O.png>
+Package pdftex.def Info: fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_xH2O.png u
+sed on input line 265.
+(pdftex.def)             Requested size: 117.72688pt x 58.61658pt.
+
+
+Package natbib Warning: Citation `Way2016' on page 3 undefined on input line 27
+3.
+
+[3 <./fig/ANN0109-0134aijlAqOH0TLS_GJ876S04P48L40Q_temp.png> <./fig/ANN0109-013
+4aijlAqOH0TLS_GJ876S04P48L40Q_xH2O.png> <./fig/ANN0231-0287aijlAqOH0TLS_GJ876S1
+2P21L40Q_temp.png> <./fig/ANN0231-0287aijlAqOH0TLS_GJ876S12P21L40Q_xH2O.png> <.
+/fig/ANN0007-0010aijlAqOH0TLS_SunS10P365L40Q_temp.png> <./fig/ANN0007-0010aijlA
+qOH0TLS_SunS10P365L40Q_xH2O.png> <./fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q
+_temp.png> <./fig/ANN0006-0012aijlAqOH0TLS_SunS22P202L40Q_xH2O.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 279.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 279.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 279.
+
+Package epstopdf Info: Source file: <fig/AqOH0TLS_xH2O_3mbar_all.eps>
+(epstopdf)                    date: 2016-12-11 16:03:43
+(epstopdf)                    size: 26816 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2016-12-11 16:03:51
+(epstopdf)                    size: 9609 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_xH2O_3mbar_al
+l-eps-converted-to.pdf fig/AqOH0TLS_xH2O_3mbar_all.eps>
+(epstopdf)             \includegraphics on input line 287.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-to.pdf, id=224, 361.35pt x 252.945pt
+>
+File: fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-to.pdf used 
+on input line 287.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+Package epstopdf Info: Source file: <fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP.eps
+>
+(epstopdf)                    date: 2016-12-29 22:17:57
+(epstopdf)                    size: 26121 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2016-12-29 22:18:35
+(epstopdf)                    size: 9051 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_tsurf_xH2O_GC
+M_Kasting_WP-eps-converted-to.pdf fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP-eps-converted-to.pdf, id=225, 361.35pt 
+x 252.945pt>
+File: fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP-eps-converted-to.pdf Graphic file 
+(type pdf)
+ <use fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP-eps-converted-t
+o.pdf used on input line 297.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+
+Underfull \hbox (badness 1661) in paragraph at lines 313--318
+[]\OT1/cmr/m/n/10 Because these are syn-chronously ro-tat-ing plan-ets
+ []
+
+Package epstopdf Info: Source file: <fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.eps>
+(epstopdf)                    date: 2016-12-29 22:42:00
+(epstopdf)                    size: 451341 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2016-12-29 22:42:25
+(epstopdf)                    size: 114478 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_GJ876_temp_xH
+2O_vz_heat-eps-converted-to.pdf fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.eps>
+(epstopdf)             \includegraphics on input line 338.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-converted-to.pdf, id=236, 607.26875pt
+ x 284.06125pt>
+File: fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-converted-to.
+pdf used on input line 338.
+(pdftex.def)             Requested size: 410.4955pt x 192.01912pt.
+ [4 <./fig/AqOH0TLS_xH2O_3mbar_all-eps-converted-to.pdf> <./fig/AqOH0TLS_tsurf_
+xH2O_GCM_Kasting_WP-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/AqOH0TLS_FNIR_xH2O_247mbar.eps>
+(epstopdf)                    date: 2016-12-29 22:23:41
+(epstopdf)                    size: 26155 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_FNIR_xH2O_247mbar-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2016-12-29 22:23:48
+(epstopdf)                    size: 8836 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_FNIR_xH2O_247
+mbar-eps-converted-to.pdf fig/AqOH0TLS_FNIR_xH2O_247mbar.eps>
+(epstopdf)             \includegraphics on input line 377.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_FNIR_xH2O_247mbar-eps-converted-to.pdf, id=257, 361.35pt x 252.94
+5pt>
+File: fig/AqOH0TLS_FNIR_xH2O_247mbar-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use fig/AqOH0TLS_FNIR_xH2O_247mbar-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_FNIR_xH2O_247mbar-eps-converted-to.pdf us
+ed on input line 377.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+Package epstopdf Info: Source file: <fig/transmission.eps>
+(epstopdf)                    date: 2016-12-30 01:57:46
+(epstopdf)                    size: 44498 bytes
+(epstopdf)             Output file: <fig/transmission-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-12-30 01:58:09
+(epstopdf)                    size: 27904 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/transmission-eps-conve
+rted-to.pdf fig/transmission.eps>
+(epstopdf)             \includegraphics on input line 392.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/transmission-eps-converted-to.pdf, id=258, 434.62375pt x 282.05376pt>
+File: fig/transmission-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/transmission-eps-converted-to.pdf>
+Package pdftex.def Info: fig/transmission-eps-converted-to.pdf used on input li
+ne 392.
+(pdftex.def)             Requested size: 245.26653pt x 159.1713pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 412.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 412.
+Package epstopdf Info: Source file: <fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X
+.eps>
+(epstopdf)                    date: 2016-12-29 22:26:01
+(epstopdf)                    size: 24511 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-12-29 22:26:40
+(epstopdf)                    size: 8006 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_GJ876_q_sensi
+tivity_changeS0X-eps-converted-to.pdf fig/AqOH0TLS_GJ876_q_sensitivity_changeS0
+X.eps>
+(epstopdf)             \includegraphics on input line 420.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X-eps-converted-to.pdf, id=259, 361.3
+5pt x 252.945pt>
+File: fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X-eps-convert
+ed-to.pdf used on input line 420.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/AqOH0TLS_GJ876_q_sensitivity_changeP.e
+ps>
+(epstopdf)                    date: 2016-12-29 22:26:01
+(epstopdf)                    size: 24281 bytes
+(epstopdf)             Output file: <fig/AqOH0TLS_GJ876_q_sensitivity_changeP-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2016-12-29 22:26:40
+(epstopdf)                    size: 8247 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/AqOH0TLS_GJ876_q_sensi
+tivity_changeP-eps-converted-to.pdf fig/AqOH0TLS_GJ876_q_sensitivity_changeP.ep
+s>
+(epstopdf)             \includegraphics on input line 441.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/AqOH0TLS_GJ876_q_sensitivity_changeP-eps-converted-to.pdf, id=264, 361.35p
+t x 252.945pt>
+File: fig/AqOH0TLS_GJ876_q_sensitivity_changeP-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use fig/AqOH0TLS_GJ876_q_sensitivity_changeP-eps-converted-to.pdf>
+Package pdftex.def Info: fig/AqOH0TLS_GJ876_q_sensitivity_changeP-eps-converted
+-to.pdf used on input line 441.
+(pdftex.def)             Requested size: 245.26653pt x 171.68768pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./GCM_qstrato.bbl
+Overfull \vbox (35.12pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (35.12pt too high) has occurred while \output is active []
+
+ [5 <./fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat-eps-converted-to.pdf> <./fig/AqOH0T
+LS_FNIR_xH2O_247mbar-eps-converted-to.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 19.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 19.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+) [6 <./fig/transmission-eps-converted-to.pdf> <./fig/AqOH0TLS_GJ876_q_sensitiv
+ity_changeS0X-eps-converted-to.pdf> <./fig/AqOH0TLS_GJ876_q_sensitivity_changeP
+-eps-converted-to.pdf>]
+<fig/rad_comparison_AqOH0TLS_GJ876S12P21L40Q.pdf, id=393, 631.2192pt x 222.6568
+5pt>
+File: fig/rad_comparison_AqOH0TLS_GJ876S12P21L40Q.pdf Graphic file (type pdf)
+ <use fig/rad_comparison_AqOH0TLS_GJ876S12P21L40Q.pdf>
+Package pdftex.def Info: fig/rad_comparison_AqOH0TLS_GJ876S12P21L40Q.pdf used o
+n input line 486.
+(pdftex.def)             Requested size: 410.4955pt x 144.80336pt.
+
+<fig/rad_comparison_diff_AqOH0TLS_GJ876S12P21L40Q.pdf, id=394, 619.71527pt x 22
+2.65685pt>
+File: fig/rad_comparison_diff_AqOH0TLS_GJ876S12P21L40Q.pdf Graphic file (type p
+df)
+ <use fig/rad_comparison_diff_AqOH0TLS_GJ876S12P21L40Q.pdf>
+Package pdftex.def Info: fig/rad_comparison_diff_AqOH0TLS_GJ876S12P21L40Q.pdf u
+sed on input line 487.
+(pdftex.def)             Requested size: 410.4955pt x 147.49077pt.
+
+
+Package natbib Warning: There were undefined citations.
+
+[7 <./fig/rad_comparison_AqOH0TLS_GJ876S12P21L40Q.pdf> <./fig/rad_comparison_di
+ff_AqOH0TLS_GJ876S12P21L40Q.pdf
+
+pdfTeX warning: pdflatex (file ./fig/rad_comparison_diff_AqOH0TLS_GJ876S12P21L4
+0Q.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+
+>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
+ (./GCM_qstrato.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 507.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
+Package rerunfilecheck Info: File `GCM_qstrato.out' has not changed.
+(rerunfilecheck)             Checksum: 607AC93F8DB161942F085A174530AA57;1059.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9044 strings out of 493014
+ 129437 string characters out of 6133351
+ 254045 words of memory out of 5000000
+ 12385 multiletter control sequences out of 15000+600000
+ 12762 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,8n,51p,631b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on GCM_qstrato.pdf (7 pages, 639910 bytes).
+PDF statistics:
+ 583 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+

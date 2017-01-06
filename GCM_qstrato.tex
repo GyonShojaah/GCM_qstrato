@@ -161,11 +161,15 @@ We check the accuracy of the radiation by comparing the radiation calculation in
 
 The model was configured to have horizontal grids with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 60$ km in the case of the Earth). 
 
+Our atmosphere is 1 bar N$_2$-dominated atmosphere with 1 ppm CO$_2$, to match the assumption of \citet{Kopparapu2016}. 
+
 Throughout the paper, we consider synchronously rotating planets for the relevance to the future transmission observations of close-in systems \memo{mention the possibility of non-synchronously rotating situation?}. 
 We consider aqua planets, i.e., the planets are wholly covered with water. 
-As for the treatment of ocean, we considered q-flux ocean with 900 m deoth for the fiducial runs for simplicity. However, in Section \ref{ss:sensitivity_ocean} we also show the results of the runs with fully dynamic ocean, to quantify the sensitivity of the results to the assumption of ocean. 
+However, the current configuration of the model does not allow us to have a ocean pixel at the south pole. Therefore for convenience we place 1 ``land'' pixel at the south pole. We assume that this tiny fraction of land pixel does not have a significant effect on the global climate of the planet. \memo{?}
 
-Our atmosphere is 1 bar N$_2$-dominated atmosphere with 1 ppm CO$_2$, to match the assumption of \citet{Kopparapu2016}. 
+Unlike the majority of the previous GCM works on the terrestrial planets, we calculate the full dynamics of ocean for our fiducial set of runs. 
+We assume 900 meter depth ocean except for the south pole. 
+In Section \ref{ss:sensitivity_ocean}, we also present the results with the q-flux ocean model with zero heat transport, a treatment regularly used in exoplanet GCM community, in order to quantify the sensitivity to the assumption of ocean. 
 
 In our experiments, we mainly changed two parameters: the total incident flux normalized by the solar constant, $S_X$, and the spectral types of the star. 
 For the latter, four types of stars are considered: 
@@ -179,6 +183,7 @@ The orbital period (= spin period) is changed according to the Kepler's 3rd law,
 
 Our fiducial models with varying incident spectra typically equilibrate in \memo{??}. 
 After the steady state is reached, we averaged the 3-dimensional atmospheric profiles over 10 Earth years. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[htp]

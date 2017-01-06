@@ -135,6 +135,7 @@ We also present mock transmission spectra based on GCM outputs in order to evalu
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model}
+\label{s:model}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{GCM experiments}
@@ -160,7 +161,7 @@ We check the accuracy of the radiation by comparing the radiation calculation in
 
 The model was configured to have horizontal grids with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 60$ km in the case of the Earth). 
 
-We consider synchronously rotating planets for the relevance to the future transmission observations of close-in systems \memo{mention the possibility of non-synchronously rotating situation?}. 
+Throughout the paper, we consider synchronously rotating planets for the relevance to the future transmission observations of close-in systems \memo{mention the possibility of non-synchronously rotating situation?}. 
 We consider aqua planets, i.e., the planets are wholly covered with water. 
 As for the treatment of ocean, we considered q-flux ocean with 900 m deoth for the fiducial runs for simplicity. However, in Section \ref{ss:sensitivity_ocean} we also show the results of the runs with fully dynamic ocean, to quantify the sensitivity of the results to the assumption of ocean. 
 
@@ -408,60 +409,68 @@ This
 \label{ss:sensitivity_ocean}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-So far, we have presented the results using fully-dynamic ocean. 
-Instead of calculating the full dynamics of the ocean, it is also possible to assume so-called ``slab'' ocean model \memo{explanation}. 
-The slab ocean, the equilibration time can be much shorter; with our configurations, the models equilibrate in $\sim $ 30 Earth years. 
-Indeed slab ocean treatment has been regularly used in the published work of 3-dimensional atmospheric modeling for exoplanets. 
-Therefore, we checked whether our results is sensitive to the treatment of ocean by comparing our fiducial results with those using ''slab'' ocean model. 
-
-The calculation of the dynamics and thermal properties of ocean is an issue of GCM simulations, because the full treatment of dynamics of ocean requires a significant amount of time (\memo{give some numbers}) to equilibrate \memo{why?}. 
-
-
-
-Thus, we 
-
-\begin{itemize}
-\item Likely Conclusion: \water mixing ratio is not so sensitive to the ocean model (dynamic ocean v.s. q-flux ocean with zero ocean heat transport).  
-\end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
     \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X.eps}
     \end{center}
-\caption{}                                                                                                             
+\caption{Sensitivity of \water mixing ratio to the ocean computation schemes. Black: our fiducial results with dynamic ocean. Blue: the results with ``slab ocean'' approximation. }
 \label{fig:change_ocean}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+So far, we have presented the results using fully-dynamic ocean. 
+Instead of the full treatment of the ocean, it is also possible to assume so-called ``slab ocean'' model \memo{explanation}. 
+Assuming the slab ocean, the equilibration time can be much shorter; with our configurations, the models typically equilibrate in $\sim $ 30 Earth years in the model time. 
+Indeed slab ocean treatment has been regularly used in the published works of 3-dimensional atmospheric modeling for exoplanets with GCM. 
+Therefore, we checked whether our results are sensitive to the treatment of ocean by comparing our fiducial results shown in Section \ref{s:results} with those using ``slab'' ocean model. 
 
+Figure \ref{fig:change_ocean} compares the \preslevel ~mbar \water mixing ratio for GJ876 as a function of total incident flux, using ``slab ocean'' model with our fiducial results. 
+There is a minor difference between the two, with the maximum difference being about the factor of 5 where the models with dynamic ocean tend to have lower \water mixing ratio in the upper atmosphere. 
+This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the sub-stellar point is lowered, weakening the convergence and convection there.
+As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed. 
+
+Overall, however, the ``slab ocean'' approximation gives a reasonable order-of-magnitude estimate for \water mixing ratio in the upper atmosphere. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Effect of Orbital Period}
 \label{ss:sensitivity_Porbit}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-\item Conclusion: the orbital period has the secondary effect. Cite \citet{Yang2013}, \citet{Kopparapu2016}. 
-\end{itemize}
+In our fiducial set of experiments, we changed the orbital rotation period (=spin rotation period) according to the Kepler's 3rd law to be consistent with the total incident flux the planet receives. 
+Therefore, strictly speaking, the change in \water mixing ratio presented above has to include both the effect of the varying incident flux and the effect of the spin rotation period. 
+In this section, we separate these effects for the scientific interest, while admitting the configurations do not realize. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
     \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeP.eps}
     \end{center}
-\caption{}                                                                                                             
+\caption{The dependence of \water mixing ratio on the orbital(=spin) rotation period. \memo{what if with dynamic ocean?}}                                                                                                             
 \label{fig:changeP}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+Figure \ref{fig:changeP} summarizes the results of the \water mixing ratio as a function of orbital(=spin) rotation period. 
+The rotation period is changed from 4 Earth days to 1 Earth year. 
+We find the trend where it increases as the rotation period decreases. 
+This may also be explained by the \memo{Again, I am not sure.}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and Discussion}
 \label{s:summary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this paper, we limit our discussion on the \water mixing ratio in the upper atmosphere to the effects of the total incident flux, spectral energy distribution, and the orbital rotation period (which equals, on the assumption of the synchronous rotation, spin rotation period). 
+These parameters are among the limited number of properties that can be constrained relatively easily from the observations of exoplanets. 
+In principle, however, \water mixing ratio in the upper atmosphere also depends on the geophysical parameters including the surface gravity and atmospheric pressure, as well as the photochemistry that depends on detailed atmospheric composition. 
+They could be constrained by the retrieval from the observed planetary spectra, or otherwise could rather be inferred from the \water mixing ratio. 
+The dependence on these planetary properties will be discussed elsewhere. 
+
+
+
+
 
 \acknowledgments
 

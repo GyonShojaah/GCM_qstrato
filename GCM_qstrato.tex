@@ -56,7 +56,7 @@ Detectability of \water absorption features in transmission spectra primarily de
 %
 While the stratospheric \water mixing ratio of the Earth is as low as $10^{-6}$ due to the cold trap, the efficiency of the cold trap depends on the atmospheric properties. 
 %
-Here we study the 3-dimensional distributions of \water for synchronously rotating aqua planets using the GCM, {\it ROCKE3D}, and examine the effect of the incident star spectra. 
+Here we study the 3-dimensional distributions of \water for synchronously rotating aqua planets using the GCM, \modelE, and examine the effect of the incident star spectra. 
 %
 We observe a gradual increase of \water mixing ratio in response to the increased incident flux, while the surface temperature around the substellar point is moderate. 
 %
@@ -140,13 +140,12 @@ We also present mock transmission spectra based on GCM outputs in order to evalu
 \subsection{GCM experiments}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!bh]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/star_spectra_GCM_all.eps}
+    \includegraphics[width=\hsize]{fig/star_spectra.pdf}
     \end{center}
-\caption{The spectra of the star considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are ..(Sun), \citet{Segura2003} (HD 22049), ...(Kepler-186), and \citet{Domagal-Goldman2014} (GJ876) \memo{TO BE REVISED}. }
+\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \memo{?} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). \memo{what kind of resolution would be relevant?}}
 \label{fig:star_spectra}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,8 +171,6 @@ For the latter, four types of stars are considered: Sun (G2V; 5776K), HD 22049 \
 These four spectra are shown in Figure \ref{fig:star_spectra}. 
 
 The orbital period (= spin period) is changed according to the Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. While the incident flux and the orbital period are changed simultaneously for the fiducial runs, we also isolate the effect of the orbital period in Section \ref{ss:sensitivity_Porbit}. 
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -407,11 +404,21 @@ This
 \label{ss:sensitivity_ocean}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+So far, we have presented the results using fully-dynamic ocean. 
+Instead of calculating the full dynamics of the ocean, it is also possible to assume so-called ``slab'' ocean model \memo{explanation}. 
+The slab ocean, the equilibration time can be much shorter; with our configurations, the models equilibrate in $\sim $ 30 Earth years. 
+Indeed slab ocean treatment has been regularly used in the published work of 3-dimensional atmospheric modeling for exoplanets. 
+Therefore, we checked whether our results is sensitive to the treatment of ocean by comparing our fiducial results with those using ''slab'' ocean model. 
+
+The calculation of the dynamics and thermal properties of ocean is an issue of GCM simulations, because the full treatment of dynamics of ocean requires a significant amount of time (\memo{give some numbers}) to equilibrate \memo{why?}. 
+
+
+
+Thus, we 
 
 \begin{itemize}
 \item Likely Conclusion: \water mixing ratio is not so sensitive to the ocean model (dynamic ocean v.s. q-flux ocean with zero ocean heat transport).  
 \end{itemize}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

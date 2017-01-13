@@ -156,13 +156,15 @@ We use a 3-dimensional GCM named {\it ROCKE-3D} \citep{way2016,ROCKE3D} \memo{ci
 This is a generalization from the GCM called {\it ModelE2} \citep{Schmidt2014}, which has been developed for the Earth at NASA's Goddard Institute for Space Studies. 
 The basic architecture of ROCKE-3D is same as the version used by \citet{way2016}, but the radiation module has been replaced by UK Met Office's {\it Socrates} \citep{Edwards1996} after the paper was published. 
 {\it Socrates} utilizes the correlated-k method to compute radiative transfer. 
-We used 6 and 9 bands for short wave and long wave, respectively. 
+We used 29 and 9 bands for short wave and long wave, respectively. 
 We paid special attention to the accuracy of the radiative transfer because the radiation scheme specialized for the Earth system may no longer be accurate when we change the spectral types of the star and/or \water mixing ratio becomes extreme (see the result section below). 
 We check the accuracy of the radiation by comparing the radiation calculation in the GCM with the higher-resolution calculations, and found the reasonable match;  see Appendix \ref{ap:radiation} for more details. 
 
 The model was configured to have horizontal grids with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 60$ km in the case of the Earth). 
 
 Our atmosphere is 1 bar N$_2$-dominated atmosphere with 1 ppm CO$_2$, to match the assumption of \citet{Kopparapu2016}. 
+We will briefly discuss the dependence on the mixing ratio of CO$_2$ in Section \ref{s:sensitivity}. 
+Photochemistry is disabled in our model. 
 
 Throughout the paper, we consider synchronously rotating planets for the relevance to the future transmission observations of close-in systems \memo{mention the possibility of non-synchronously rotating situation?}. 
 We consider aqua planets, i.e., the planets are wholly covered with water. 

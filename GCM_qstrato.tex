@@ -30,15 +30,14 @@
 \def\PD#1#2{\frac{\partial #1}{\partial #2}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\shorttitle{Water Vapor in Upper Atmospheres of Temperate Terrestrial Exoplanets}
+\shorttitle{NIR-Driven Moist Upper Atmospheres of Temperate Terrestrial Exoplanets}
 \shortauthors{Fujii et al.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Modeling of Water Vapor in the Upper Atmospheres of 
-\\Temperate Earth-size Planets}
+\title{NIR-Driven Moist Upper Atmospheres of Synchronously Rotating Temperate Terrestrial Exoplanets}
 \author{Yuka Fujii}
 \affil{NPP fellow, Universities Space Research Association}
 \affil{Goddard Institute for Space Studies, 2880 Broadway, New York, NY}
@@ -147,14 +146,38 @@ We also present mock transmission spectra based on GCM outputs in order to evalu
     \begin{center}
     \includegraphics[width=\hsize]{fig/star_spectra.pdf}
     \end{center}
-\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \memo{?} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). \memo{what kind of resolution would be relevant?}}
+\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \citet{Allard2012} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). \memo{what kind of resolution would be relevant?}}
 \label{fig:star_spectra}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[btp]
+\caption{Stellar Properties}
+\begin{center}
+\begin{tabular}{ccllllrr} \hline \hline
+%
+Star & Type & $T_{\rm eff}$ & $L$~[$L_{\odot}$] & $M$~[$M_{\odot}$] & $R$~[$R_{\odot}$] & reference & source of spectrum \\ \hline
+%
+Sun & G2V & 5772~K & 1 & 1 & 1 & - & \citet{Kurucz1995} \\ 
+%
+HD 22049 & K2V & 5039~K & 0.32 & 0.82 & 0.74 & \citet{Baines2012} & \citet{Segura2003} \\
+%
+Kepler 186 & M1V & 3755~K & 0.055 & 0.544 & 0.523 & \citet{Torres2015} & \citet{Allard2012} \\
+%
+GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{Domagal-Goldman2014} \\ \hline
+\end{tabular}
+\end{center}
+\label{tbl:stellar_properties}
+\end{table*}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 We use a 3-dimensional GCM named \modelE \ \citep{Way2017}. 
 This is a generalization from the GCM called {\it ModelE2} \citep{Schmidt2014}, which has been developed for the Earth at NASA's Goddard Institute for Space Studies. 
-The basic architecture of ROCKE-3D is the same as the version used by \citet{way2016}, but the radiation module has been replaced by the UK Met Office's {\it Socrates} \citep{Edwards1996} after the paper was published. 
+The basic architecture of ROCKE-3D is the same as the version used by \citet{Way2016}, but the radiation module has been replaced by the UK Met Office's {\it Socrates} \citep{Edwards1996} after the paper was published. 
 {\it Socrates} utilizes the correlated-k method to compute radiative transfer. 
 We used 29 and 9 bands for short wave and long wave, respectively. 
 We paid special attention to the accuracy of the radiative transfer because radiation schemes developed for the Earth system may no longer be accurate when we change the spectral types of the star and/or \water mixing ratio becomes extreme (see the result section below). 
@@ -177,41 +200,21 @@ The current configuration of the model does not allow us to have a ocean pixel a
 %We assume 900 meter depth ocean except for the south pole. 
 %In Section \ref{ss:sensitivity_ocean}, we also present the results with the q-flux ocean model with zero heat transport, a treatment regularly used in exoplanet GCM community, in order to quantify the sensitivity to the assumption of ocean. 
 
-In our experiments, we mainly changed two parameters: the total incident flux normalized by the solar constant, $S_X$, and the spectral types of the star. 
+In our experiments, we mainly changed two parameters: the total incident flux and the spectral types of the star. 
 For the latter, four types of stars are considered: 
 Sun (G2V; 5776K), 
-HD 22049 (K2V, 5084K, $0.82M_{\odot }$, $0.73R_{\odot }$), 
-Kepler-186 (M1V, 3755K, $0.54M_{\odot }$, $0.52R_{\odot }$)\memo{need to ask Nancy who should be cited for Kepler-186}, and 
-GJ876 (M4V, 3473K, $0.334M_{\odot }$, $0.36R_{\odot }$). 
-The spectra are obtained from \citet{Segura2003}, ??, and \citet{Domagal-Goldman2014}, respectively, and shown in Figure \ref{fig:star_spectra}. 
+HD 22049 (K2V, 5084K), 
+Kepler-186 (M1V, 3755K), and 
+GJ876 (M4V, 3473K). 
+The spectra of HD 22049 and GJ876 are obtained from \citet{Segura2003} and \citet{Domagal-Goldman2014}, respectively, 
+while the spectrum of Kepler-186 is a modeled one using BT-Settl model \citep{Allard2012} based on the stellar parameters reported in Table S1 of \citet{Quintana2014}. 
+The physical parameters of these stars as well as the references are summarized in Table \ref{tbl:stellar_properties}, and the spectra are displayed in Figure \ref{fig:star_spectra}. 
 
 The orbital period (= spin period) is changed according to the Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. While the incident flux and the orbital period are changed simultaneously for the fiducial set of runs, we also isolate the effect of the orbital period in Section \ref{ss:sensitivity_Porbit}. 
 
 Our fiducial models with varying incident spectra typically equilibrate in \memo{??}. 
 After the steady state is reached, we average the 3-dimensional atmospheric profiles over 10 Earth years. 
 From the averaged data, we record \water mixing ratio in the upper part of the atmosphere, $x_{H2O}$, as well as related parameters introduced below. 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table*}[htp]
-\caption{Star Properties}
-\begin{center}
-\begin{tabular}{ccllllrr} \hline \hline
-%
-Star & Type & $T_{\rm eff}$ & $L$~[$L_{\odot}$] & $M$~[$M_{\odot}$] & $R$~[$R_{\odot}$] & reference & source of spectrum \\ \hline
-%
-Sun & G2V & 5772~K & 1 & 1 & 1 & - & \citet{Kurucz1995} \\ 
-%
-HD 22049 & K2V & 5039~K & 0.32 & 0.82 & 0.74 & \citet{Baines2012} & \citet{Segura2003} \\
-%
-Kepler 186 & M1V & 3755~K & 0.055 & 0.544 & 0.523 & \citet{Torres2015} & \memo{?} \\
-%
-GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{Domagal-Goldman2014} \\ \hline
-\end{tabular}
-\end{center}
-\label{default}
-\end{table*}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,17 +224,6 @@ GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{D
 In order to quantify the effect of \water mixing ratio on the absorption features of \water in the transmission spectrum, 
 we also simulate it based on the outputs of GCM experiments, setting the model planet in a transiting geometry. 
 
-First, the vertical profiles of temperature, water vapor, and cloud particles along the ``limb'' are obtained by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
-%(The ``limb'' corresponds to the boundary between the dayside and the nightside, in other words a great circle that passes $\pm 90^{\circ} $ longitude measured from the substellar point.)
-
-Then, we trace the optical paths of the transmitted ray according to the profile of the refraction index, in the same way as described in \citet{vanderWerf2008}, following \citet{Misra2014}. 
-
-After that, the spectral opacity at different points along the path is calculated considering Rayleigh scattering and the absorption by atmospheric constituents \memo{and clouds?}, but not including the effect of multiple scattering. 
-To compute the absorption coefficient by atmospheric molecules, we use high-resolution line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
-Each line in the HITRAN 2012 database is convolved with the Voigt profile which takes account of Lorentzian pressure broadening and Doppler broadening, 
-and the cross sections are computed at varying pressures and temperatures, with a constant interval of the wavenumber grids : $\Delta k = 1\,{\rm cm}^{-1}$. 
-The pressure and temperature grids are $P = \{10^{-5},\, 10^{-4},\,...,\,10^3\}$ mbar and $T = \{100,\, 150,\,...,\, 400\}$ K. 
-The cross section at a particular point along the optical path is obtained by interpolating the values at these lattice points. 
 
 Let us consider a spherical coordinate $(b, \theta )$ on the spherical plane centered at the planetary center. 
 Denote the spectral optical depth along the ray that exits the planetary atmosphere at $(b, \theta )$ by $\tau (\lambda; b, \theta )$, 
@@ -256,8 +248,23 @@ Transmission spectra are regularly represented by ``effective altitude'', $h_{\r
 %%%
 In Section \ref{ss:result_TransmissionSpectra}, we use both the effective altitude $h_{\rm eff}  (\lambda)$ and $\Delta F (\lambda)$ to represent the transmission spectra. 
 
+In order to obtain the optical thickness $\tau (\lambda; b, \theta )$, we first  obtained the vertical profiles of temperature, water vapor, and cloud particles along the ``limb'' are obtained by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
+Then, we trace the optical paths of the transmitted ray according to the profile of the refraction index, in the same way as described in \citet{vanderWerf2008}, following \citet{Misra2014}. 
+After that, the spectral opacity at different points along the path is calculated considering Rayleigh scattering and the absorption by atmospheric constituents and cloud particles, but not including the effect of multiple scattering. 
 
+To compute the absorption coefficient by atmospheric molecules, we use high-resolution line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
+Each line in the HITRAN 2012 database is convolved with the Voigt profile which takes account of Lorentzian pressure broadening and Doppler broadening, 
+and the cross sections are computed at varying pressures and temperatures, with a constant interval of the wavenumber grids : $\Delta k = 1\,{\rm cm}^{-1}$. 
+The pressure and temperature grids are $P = \{10^{-5},\, 10^{-4},\,...,\,10^3\}$ mbar and $T = \{100,\, 150,\,...,\, 400\}$ K. 
+The cross section at a particular point along the optical path is obtained by interpolating the values at these lattice points. 
 
+Including the optical effect of clouds is tricky. 
+Precisely speaking, one needs to know the size distribution and the spatial distribution of the cloud particles. 
+In this paper, we include the effect of clouds in a simple manner. 
+Namely, we assume that the radius of liquid cloud particles is $10 \mu {\rm m}$ and that of ice cloud particles is $30 \mu {\rm m}$. 
+They are similar to the typical values of Earth clouds, and typical values found in GCM outputs. 
+We also assume that the cloud particles are uniformly located. 
+\memo{Write more!!}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
@@ -269,10 +276,24 @@ In Section \ref{ss:result_TransmissionSpectra}, we use both the effective altitu
 \label{ss:result_H2Omixingratio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[!tb]
+    \begin{minipage}{0.5\hsize}
+\includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O.pdf}
+    \end{minipage}
+    \begin{minipage}{0.5\hsize}
+\includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
+    \end{minipage}
+    \caption{Profiles of temperature and \water mixing ratio along the equator, for GJ876 (a M4V star; left) and for Sun (right), with different total incident flux ($S_X$). The blank area near the top is above the model top that is  0.14 mbar. }
+\label{fig:3Dprofile_equator}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 Before examining the dependence of the \water mixing ratio in the upper atmosphere, we shall show the 3-dimensional profiles of temperature and water vapor. 
 This is because we need to know at which altitude the mixing ratio of the \water becomes relatively uniform, to identify what kind of \water mixing ratio can be regarded as representative of the humidity in the upper atmosphere. 
 
-Figures \ref{fig:3Dprofile_equator_GJ876} and \ref{fig:3Dprofile_equator_Sun} exhibit the profiles of temperature and \water mixing ratio along the equator for planets around GJ876 (M4V) and around the Sun (G2V), respectively, with varying incident flux. 
+Figures \ref{fig:3Dprofile_equator} exhibits the profiles of temperature and \water mixing ratio along the equator for planets around GJ876 (M4V) and around the Sun (G2V), respectively, with varying incident flux. 
 In all panels, the substellar point corresponds to the longitude of $0^{\circ }$. 
 In general, temperature and \water mixing ratio strongly depend on the distance from the substellar point near the surface, but are fairly uniform in the upper part of the atmosphere above 1 mbar, which is 40-50 km depending on the atmospheric temperature profiles. 
 In all of the runs introduced below, the spatial variation of the \water mixing ratio above ?? mbar is within ??\% \memo{will be filled later based on dynamic ocean runs}. 
@@ -280,25 +301,7 @@ Indeed the cloud content in these layers is typically on the oder of $10^{-6} $ 
 
 Therefore, in the following, we use \water mixing ratio at \preslevel mbar as a representative of \water in the upper atmosphere. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!hbt]
-    \begin{center}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O.pdf}
-    \end{center}
-    \caption{Profiles of temperature and \water mixing ratio along the equator, for GJ876 (a M4V star). The blank area near the top is above the model top that is  0.14 mbar. }
-\label{fig:3Dprofile_equator_GJ876}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!hbt]
-    \begin{center}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
-    \end{center}
-    \caption{Same as \ref{fig:3Dprofile_equator_GJ876} but for a planet around the Sun.}
-\label{fig:3Dprofile_equator_GJ876}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We also observe optically thick clouds around the sub-stellar point and the resultant increase of planetary albedo as a function of total incident flux (not shown in figures), consistent with \citet{Yang2013,Yang2014}, \citet{Kopparapu2016} and \citet{Way2016}. 
 This indicates the climate-stabilizing effect of clouds, having a negative feedback for the surface temperature, which is pointed out by \citet{Yang2013}. 
@@ -355,17 +358,16 @@ We will examine this in the next subsection.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[htb]
     \begin{center}
-    \includegraphics[width=0.8\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.eps}
+    \includegraphics[width=1\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
+    \includegraphics[width=1\hsize]{fig/AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
     \end{center}
 \caption{From left to right, the vertical profiles of temperature, \water mixing ratio, short-wave heating rate, and upward velocity, averaged over the sub-stellar point within the distance of $0.2R_{\oplus }$, for a planet around GJ876 with varying total incident flux. }                                                                                                             
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-At large incident flux, simultaneously with the increases of \water mixing ratio and the heating rate, a substantial vertical motion of the air develops above the convection layers \memo{increase of incident flux => heating rate}. 
-This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
-
-
+At large incident flux, increase of the heating rate initiate a vertical motion of the air above the convection layers. 
+% This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
 The development of the large-scale circulation can be naturally explained as follows. 
 When the incident flux increases, the heating rate due to the absorption by water vapor also increases. 
 The air will then react by rising and adiabatically cooling according to the continuity equation for the potential temperature $\Theta $:
@@ -385,11 +387,13 @@ The latent heating, $Q_l$, is negligible compared to radiative heating above the
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator_Sun}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
 Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value (with negative sign) for $\omega $, which means the upward motion develops. 
-This upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
+
+This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere.
+The upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
 This interplay between the radiative heating and water vapor transport eventually finds the steady states where $d\Theta/dt = 0$, leaving the steady circulation in the upper atmosphere around the sub-stellar point. 
 
 This positive feedback of \water mixing ratio in the upper atmosphere would make a slight difference in the initial radiation field result in order-of-magnitude increase of water vapor. 
-As a result, even though the surface temperature increase with $S_x$ is modest, the upper atmosphere gains moisture.  
+As a result, even though the surface temperature increase with $S_X$ is modest, the upper atmosphere gains moisture.  
 
 This picture suggests that the driving factor is the incident flux that reacts with water vapor efficiently, which is the near-infrared part of the incident flux. 
 Indeed, as shown in Figure \ref{fig:qOH0TLS_FNIR_xH2O_247mbar}, a good correlation is found between the \water ratio in the upper atmosphere and the near-infrared portion of the incident flux, integrated over 0.9-3 $\mu {\rm m}$ (the interval is somewhat arbitrary), insensitively to the stellar spectral types. 
@@ -415,7 +419,7 @@ we simulated the transmission spectra for the modeled planets around one of our 
 Figure \ref{fig:transmission} shows the transmission spectra in the cases of $S_X=1.0$ and $1.2$, where \water mixing ratio at \preslevel is roughly $10^{-4}$ and $3\cdot 10^{-3}$. 
 The vertical profiles at the sub-stellar points are shown in Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \water mixing ratio is even higher at the medium altitude (10-30 km). 
 
-\memo{effect of clouds}git
+\memo{effect of clouds}
 In the atmosphere above 10~km, the ice cloud contents, at the maximum $10^{-4}$ [kg/kg]. 
 
 

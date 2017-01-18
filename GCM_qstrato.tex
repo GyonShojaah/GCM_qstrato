@@ -17,7 +17,8 @@
 \renewcommand{\bibname}{References}
 
 \def\water{H$_2$O }
-\def\preslevel{2.47}
+\def\xwater{$x_{\rm H2O,\,1mbar}$ }
+\def\preslevel{1.39 mbar\ }
 \def\modelE{{\it ROCKE-3D}}
 \def\CHHHH{CH$_4$}
 \def\COO{CO$_2$}
@@ -59,7 +60,7 @@ Here we study the 3-dimensional distributions of \water for synchronously rotati
 %
 We observe a gradual increase of \water mixing ratio in response to the increased incident flux, while the surface temperature around the substellar point is moderate over a wide range of instellation. 
 %
-At higher incident flux, we find a large-scale circulation in the upper part of the atmosphere, presumably originating from the high heating rate due to the enhanced absorption by abundant \water in the upper atmosphere. 
+At higher incident flux, we find a large-scale circulation in the upper part of the atmosphere, driven by the radiative heating due to the absorption by \water in the upper atmosphere. 
 %
 The interplay between the efficient vertical transport of \water by this large-scale circulation and the radiative heating appears to play the key role in determining the steady state of the \water mixing ratio in the upper atmosphere.  
 %
@@ -212,9 +213,23 @@ The physical parameters of these stars as well as the references are summarized 
 
 The orbital period (= spin period) is changed according to the Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. While the incident flux and the orbital period are changed simultaneously for the fiducial set of runs, we also isolate the effect of the orbital period in Section \ref{ss:sensitivity_Porbit}. 
 
-Our fiducial models with varying incident spectra typically equilibrate in \memo{??}. 
+Our fiducial models with varying incident spectra typically equilibrate in  $\sim $ 30 Earth years in the model time. 
 After the steady state is reached, we average the 3-dimensional atmospheric profiles over 10 Earth years. 
 From the averaged data, we record \water mixing ratio in the upper part of the atmosphere, $x_{H2O}$, as well as related parameters introduced below. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[tb]
+    \begin{minipage}{0.5\hsize}
+\includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O.pdf}
+    \end{minipage}
+    \begin{minipage}{0.5\hsize}
+\includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
+    \end{minipage}
+    \caption{Profiles of temperature (upper panels) and \water mixing ratio (lower panels) along the equator, for GJ876 (a M4V star; left) and for Sun (right), with different total incident flux ($S_X$). The blank area near the top is above the model top that is  0.14 mbar. }
+\label{fig:3Dprofile_equator}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -246,48 +261,40 @@ Transmission spectra are regularly represented by ``effective altitude'', $h_{\r
 \Delta F(\lambda) = \frac{( R_{\rm p} + h_{\rm eff}(\lambda)  )^2}{R_{\star }^2}
 \end{equation}
 %%%
-In Section \ref{ss:result_TransmissionSpectra}, we use both the effective altitude $h_{\rm eff}  (\lambda)$ and $\Delta F (\lambda)$ to represent the transmission spectra. 
+In Section \ref{ss:result_TransmissionSpectra}, we use both the effective altitude $h_{\rm eff}  (\lambda)$ and $\Delta F (\lambda)$ to present the transmission spectra. 
 
-In order to obtain the optical thickness $\tau (\lambda; b, \theta )$, we first  obtained the vertical profiles of temperature, water vapor, and cloud particles along the ``limb'' are obtained by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
+In order to obtain the optical thickness $\tau (\lambda; b, \theta )$, we first  obtained the vertical profiles of temperature, water vapor, and cloud particles along the terminator (i.e., dayside-nightside boundary) by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
 Then, we trace the optical paths of the transmitted ray according to the profile of the refraction index, in the same way as described in \citet{vanderWerf2008}, following \citet{Misra2014}. 
-After that, the spectral opacity at different points along the path is calculated considering Rayleigh scattering and the absorption by atmospheric constituents and cloud particles, but not including the effect of multiple scattering. 
+After that, the spectral opacity at different points along the path is calculated considering Rayleigh scattering and the absorption by atmospheric molecules and cloud particles, but not including the effect of multiple scattering. 
 
 To compute the absorption coefficient by atmospheric molecules, we use high-resolution line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
 Each line in the HITRAN 2012 database is convolved with the Voigt profile which takes account of Lorentzian pressure broadening and Doppler broadening, 
 and the cross sections are computed at varying pressures and temperatures, with a constant interval of the wavenumber grids : $\Delta k = 1\,{\rm cm}^{-1}$. 
 The pressure and temperature grids are $P = \{10^{-5},\, 10^{-4},\,...,\,10^3\}$ mbar and $T = \{100,\, 150,\,...,\, 400\}$ K. 
-The cross section at a particular point along the optical path is obtained by interpolating the values at these lattice points. 
+The cross section at a given point along the optical path is obtained by interpolating the values at these lattice points. 
 
 Including the optical effect of clouds is tricky. 
-Precisely speaking, one needs to know the size distribution and the spatial distribution of the cloud particles. 
+Precisely speaking, one needs to know the size distribution and the spatial distribution of the cloud particles at the time scale of the planetary transit. 
 In this paper, we include the effect of clouds in a simple manner. 
-Namely, we assume that the radius of liquid cloud particles is $10 \mu {\rm m}$ and that of ice cloud particles is $30 \mu {\rm m}$. 
+Namely, we assume that the radius of liquid cloud particles is $10~\mu {\rm m}$ and that of ice cloud particles is $30~\mu {\rm m}$. 
 They are similar to the typical values of Earth clouds, and typical values found in GCM outputs. 
-We also assume that the cloud particles are uniformly located. 
-\memo{Write more!!}
+We also assume that the cloud particles are uniformly distributed. 
+This would mean 
+\memo{!!!!!Write!!!!!}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 \label{s:results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General Trend in 3D Atmospheric Profiles}
 \label{ss:result_H2Omixingratio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}[!tb]
-    \begin{minipage}{0.5\hsize}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O.pdf}
-    \end{minipage}
-    \begin{minipage}{0.5\hsize}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
-    \end{minipage}
-    \caption{Profiles of temperature and \water mixing ratio along the equator, for GJ876 (a M4V star; left) and for Sun (right), with different total incident flux ($S_X$). The blank area near the top is above the model top that is  0.14 mbar. }
-\label{fig:3Dprofile_equator}
-\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 Before examining the dependence of the \water mixing ratio in the upper atmosphere, we shall show the 3-dimensional profiles of temperature and water vapor. 
@@ -295,17 +302,17 @@ This is because we need to know at which altitude the mixing ratio of the \water
 
 Figures \ref{fig:3Dprofile_equator} exhibits the profiles of temperature and \water mixing ratio along the equator for planets around GJ876 (M4V) and around the Sun (G2V), respectively, with varying incident flux. 
 In all panels, the substellar point corresponds to the longitude of $0^{\circ }$. 
-In general, temperature and \water mixing ratio strongly depend on the distance from the substellar point near the surface, but are fairly uniform in the upper part of the atmosphere above 1 mbar, which is 40-50 km depending on the atmospheric temperature profiles. 
-In all of the runs introduced below, the spatial variation of the \water mixing ratio above ?? mbar is within ??\% \memo{will be filled later based on dynamic ocean runs}. 
-Indeed the cloud content in these layers is typically on the oder of $10^{-6} $ [kg/kg], and the residence time is \memo{describe better why it is uniform.}
+In general, temperature and \water mixing ratio strongly depend on the distance from the substellar point near the surface, but are fairly uniform in the upper part of the atmosphere above 1 mbar, which is 35-50 km depending on the atmospheric temperature profiles. 
+In all of the runs introduced below, the spatial variation of the \water mixing ratio above ?? mbar is within ??\% 
+\memo{!!!!!Write!!!!!}. 
 
-Therefore, in the following, we use \water mixing ratio at \preslevel mbar as a representative of \water in the upper atmosphere. 
+Therefore, in the following, we denote \water mixing ratio at \preslevel layer by \xwater, and use it as a representative of \water abundance in the upper atmosphere. 
 
 
 
 We also observe optically thick clouds around the sub-stellar point and the resultant increase of planetary albedo as a function of total incident flux (not shown in figures), consistent with \citet{Yang2013,Yang2014}, \citet{Kopparapu2016} and \citet{Way2016}. 
 This indicates the climate-stabilizing effect of clouds, having a negative feedback for the surface temperature, which is pointed out by \citet{Yang2013}. 
-As shown in Figures \ref{fig:3Dprofile_equator_GJ876} and \ref{fig:3Dprofile_equator_Sun}, the maximum surface temperature does not exceed 320 K even in extreme cases in our experiments, where \water mixing ratio near the model top is as high as $10^{-3}$; we will discuss this in the subsequent sections. 
+As shown in Figure \ref{fig:3Dprofile_equator}, the maximum surface temperature does not exceed 320 K even in highly irradiated cases in our experiments, where \water mixing ratio near the model top is as high as $10^{-3}$; we will discuss this in the subsequent sections. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -315,38 +322,28 @@ As shown in Figures \ref{fig:3Dprofile_equator_GJ876} and \ref{fig:3Dprofile_equ
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
+\begin{figure*}[!tb]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/AqOH0TLS_xH2O_3mbar_all.eps}
+    \includegraphics[width=\hsize]{fig/xH2O_3panels.pdf}
     \end{center}
-\caption{Water mixing ratio at \preslevel mbar as a function of total incident flux. The colors represent the stellar types: Sun (navy), HD22048 (green), Kepler-186 (orange), and GJ876 (red). Dashed lines and red dots are adopted from \citet{Kasting1993} and \citet{Wordsworth2013}, respectively.}                                                                                                             
+\caption{Water mixing ratio at \preslevel mbar as a function of total incident flux (left), the surface temperature around the sub-stellar point (center), and the near-infrared portion of the incident flux integrated over 0.9-3.0 $\mu $m (right). The colors represent the stellar types: Sun (navy), HD22048 (green), Kepler-186 (orange), and GJ876 (red). Dashed lines are adopted from \citet{Kasting1993}. }                                                                                                             
 \label{fig:xH2O_S0X}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-    \begin{center}
-    \includegraphics[width=\hsize]{fig/AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP.eps}
-    \end{center}
-\caption{Water mixing ratio at \preslevel mbar as a function of the surface temperature around the sub-stellar point. \memo{TO BE REVISED}}                                                                                                             
-\label{fig:AqOH0TLS_tsurf_xH2O_GCM_Kasting_WP}
-\end{figure}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we examine in more detail how \water mixing ratio in the upper atmosphere depends on the incident flux (the total flux plus the spectral distribution) when other parameters are fixed. 
 
-Figure \ref{fig:xH2O_S0X} presents \water mixing ratio at \preslevel ~mbar versus the total incident flux, $S_X$. 
-Overall, we find a gradual increase of \water mixing ratio as a function of the total incident flux. 
+Figure \ref{fig:xH2O_S0X} presents \xwater versus the total incident flux normalized by the solar constant, indicated by $S_X$ in the following. 
+Overall, we find a gradual increase of \xwater as a function $S_X$. 
 The slope is much more gradual than suggested by 1D models, in particular those  of \citet{Kasting1993} and \citet{Wordsworth2013} with small CO$_2$ mixing ratio, which typically predict a rapid transition from an Earth-like dry stratosphere to a \water-dominated atmosphere. 
-Our result that \water mixing ratio more slowly responds to the incident flux is qualitatively consistent with \citet{Yang2013} who studied synchronously rotating planets around M-type and K-type stars using CAM3 with an emphasis on the stability of the climate. 
+Our result that \water mixing ratio responds more slowly to the incident flux is qualitatively consistent with \citet{Yang2013} who studied synchronously rotating planets around M-type and K-type stars using CAM3 with an emphasis on the stability of the climate. 
 Note that we cannot directly compare with their results as the assumptions do not match perfectly; specifically, \cite{Yang2013} assumed a super-Earth with larger radius ($R=2R_{\oplus}$) and higher gravity ($g=1.4g_{\oplus}$), a N$_2$-dominated atmosphere with 400 ppm of CO$_2$, and a 60-days orbital period. 
 The dependence on these other planetary parameters will be investigated in the future. 
 
 Because these are synchronously rotating planets which form climate-stabilizing clouds around the sub-stellar point, one might think that the stabilized surface temperature would explain the gradual response of \water to the increased total incident flux. 
-To see the effect of the surface temperature, we now plot the same \water mixing ratio at \preslevel mbar but as a function of surface temperature around the sub-stellar points where the most convection occurs. 
+To see the effect of the surface temperature, we now plot \xwater as a function of surface temperature around the sub-stellar points where the most convection occurs. 
 It is then clearly seen that the \water mixing ratio starts to rise at a fairly modest surface temperature and increases even more dramatically as a function of surface temperature than 1D models suggest. 
-This implies two things: 1) the moderate temperature contributes to the gradual increase of \water mixing ratio as a function of incident flux, but at the same time, 2) there are other processs that are responsible for its increase. 
+This implies two things: 1) the moderate temperature contributes to the gradual increase of \water mixing ratio as a function of incident flux, but at the same time, 2) there are other processes that are responsible for its increase. 
 We will examine this in the next subsection. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -361,12 +358,12 @@ We will examine this in the next subsection.
     \includegraphics[width=1\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
     \includegraphics[width=1\hsize]{fig/AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
     \end{center}
-\caption{From left to right, the vertical profiles of temperature, \water mixing ratio, short-wave heating rate, and upward velocity, averaged over the sub-stellar point within the distance of $0.2R_{\oplus }$, for a planet around GJ876 with varying total incident flux. }                                                                                                             
+\caption{From left to right, the vertical profiles of temperature, \water mixing ratio, short-wave heating rate, and upward velocity, averaged over the sub-stellar point within the distance of $0.2R_{\oplus }$, for a planet around GJ876 (top) and around the Sun (bottom) with varying total incident flux. The cross marks indicate the altitude at \preslevel where  $x_{\rm H2O}$ are measured. }
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-At large incident flux, increase of the heating rate initiate a vertical motion of the air above the convection layers. 
+At large incident flux, increase of the heating rate initiates a vertical motion of the air above the convection layers. 
 % This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
 The development of the large-scale circulation can be naturally explained as follows. 
 When the incident flux increases, the heating rate due to the absorption by water vapor also increases. 
@@ -386,53 +383,41 @@ where $Q_r$ and $Q_l$ are the radiative and latent heatings, $\{ u, v, \omega \}
 The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. 
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator_Sun}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
-Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value (with negative sign) for $\omega $, which means the upward motion develops. 
+Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means the upward motion develops. 
 
-This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere.
 The upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
 This interplay between the radiative heating and water vapor transport eventually finds the steady states where $d\Theta/dt = 0$, leaving the steady circulation in the upper atmosphere around the sub-stellar point. 
+% This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere.
+
 
 This positive feedback of \water mixing ratio in the upper atmosphere would make a slight difference in the initial radiation field result in order-of-magnitude increase of water vapor. 
-As a result, even though the surface temperature increase with $S_X$ is modest, the upper atmosphere gains moisture.  
+As a result, while the surface temperature increases with $S_X$ monly modestly, the upper atmosphere gains moisture.  
 
 This picture suggests that the driving factor is the incident flux that reacts with water vapor efficiently, which is the near-infrared part of the incident flux. 
 Indeed, as shown in Figure \ref{fig:qOH0TLS_FNIR_xH2O_247mbar}, a good correlation is found between the \water ratio in the upper atmosphere and the near-infrared portion of the incident flux, integrated over 0.9-3 $\mu {\rm m}$ (the interval is somewhat arbitrary), insensitively to the stellar spectral types. 
 This 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-    \begin{center}
-    \includegraphics[width=\hsize]{fig/AqOH0TLS_FNIR_xH2O_247mbar.eps}
-    \end{center}
-\caption{Water mixing ratio at \preslevel ~mbar as a function of the near-infrared portion of the incident flux, integrated over 0.9-3.0 $\mu $m. }                                                                                                             
-\label{fig:qOH0TLS_FNIR_xH2O_247mbar}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Transmission Spectra}
 \label{ss:result_TransmissionSpectra}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In order to demonstrate how the \water mixing ratio is translated into the absorption features in the transmission spectra, 
-we simulated the transmission spectra for the modeled planets around one of our M-type stars, GJ876. 
+In this subsection, we exhibit the transmission spectra for the modeled planets around one of our M-type stars, GJ876. 
 Figure \ref{fig:transmission} shows the transmission spectra in the cases of $S_X=1.0$ and $1.2$, where \water mixing ratio at \preslevel is roughly $10^{-4}$ and $3\cdot 10^{-3}$. 
 The vertical profiles at the sub-stellar points are shown in Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \water mixing ratio is even higher at the medium altitude (10-30 km). 
 
-\memo{effect of clouds}
+\memo{!!!WRITE!!!!!}
+\memo{Effect of clouds, effect of temperature.}
+
 In the atmosphere above 10~km, the ice cloud contents, at the maximum $10^{-4}$ [kg/kg]. 
-
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
     \includegraphics[width=\hsize]{fig/transit_GJ876.pdf}
     \end{center}
-\caption{Red: Modeled transmission spectra based on GCM experiments for planets around GJ876 (M4V) with $S_X=1.0$ (thick red) and $1.2$ (light red), whose vertical profiles at the sub-stellar points are show in Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective radius, while the right-hand side indicates the transit depth in ppm assuming the size of the star. The black line shows the transmission spectra based on US Standard model. }
+\caption{Red: Modeled transmission spectra based on GCM experiments for planets around GJ876 (M4V) with $S_X=0.6$ (dark red), $1.0$ (red) and $1.2$ (light red), with (solid) and without (dashed) clouds. The corresponding vertical profiles at the sub-stellar points are show in Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective radius, while the right-hand side indicates the transit depth in ppm assuming the size of the star. }
 \label{fig:transmission}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -443,35 +428,9 @@ In the atmosphere above 10~km, the ice cloud contents, at the maximum $10^{-4}$ 
 \label{s:sensitivity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Effect of Ocean Model}
-\label{ss:sensitivity_ocean}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this section, we examine the sensitivity of our results to the  assumptions we made. 
+In particular, we consider the effect of spin rotation period (Section \ref{ss:sensitivity_Porbit}) and the effect of the assumption of the simple thermodynamic ocean, and then briefly discuss the effect of the background CO$_2$ mixing ratio. 
 
-\memo{rewrite!!}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!h]
-    \begin{center}
-    \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeS0X.eps}
-    \end{center}
-\caption{Sensitivity of \water mixing ratio to the ocean computation schemes. Black: our fiducial results with dynamic ocean. Blue: the results with ``slab ocean'' approximation. }
-\label{fig:change_ocean}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-So far, we have presented the results using fully-dynamic ocean. 
-Instead of the full treatment of the ocean, it is also possible to assume so-called ``slab ocean'' model \memo{explanation}. 
-Assuming the slab ocean, the equilibration time can be much shorter; with our configurations, the models typically equilibrate in $\sim $ 30 Earth years in the model time. 
-Indeed slab ocean treatment has been regularly used in the published works of 3-dimensional atmospheric modeling for exoplanets with GCM. 
-Therefore, we checked whether our results are sensitive to the treatment of ocean by comparing our fiducial results shown in Section \ref{s:results} with those using ``slab'' ocean model. 
-
-Figure \ref{fig:change_ocean} compares the \preslevel ~mbar \water mixing ratio for GJ876 as a function of total incident flux, using ``slab ocean'' model with our fiducial results. 
-There is a minor difference between the two, with the maximum difference being about the factor of 5 where the models with dynamic ocean tend to have lower \water mixing ratio in the upper atmosphere. 
-This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the sub-stellar point is lowered, weakening the convergence and convection there.
-As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed. 
-
-Overall, however, the ``slab ocean'' approximation gives a reasonable order-of-magnitude estimate for \water mixing ratio in the upper atmosphere. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Effect of Orbital Period}
@@ -480,14 +439,14 @@ Overall, however, the ``slab ocean'' approximation gives a reasonable order-of-m
 
 In our fiducial set of experiments, we changed the orbital rotation period (=spin rotation period) according to the Kepler's 3rd law to be consistent with the total incident flux the planet receives. 
 Therefore, strictly speaking, the change in \water mixing ratio presented above has to include both the effect of the varying incident flux and the effect of varying spin rotation period. 
-In this section, we separate these effects for the scientific interest, while admitting the configurations that do not realize. 
+In this subsection, we separate these effects for the scientific interest, while admitting the configurations that do not realize. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
     \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeP.eps}
     \end{center}
-\caption{The dependence of \water mixing ratio on the orbital(=spin) rotation period. \memo{what if with dynamic ocean?}}                                                                                                             
+\caption{The dependence of \water mixing ratio on the orbital(=spin) rotation period. \memo{TO BE REVISED.}}                                                                                                             
 \label{fig:changeP}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -495,7 +454,50 @@ In this section, we separate these effects for the scientific interest, while ad
 Figure \ref{fig:changeP} summarizes the results of the \water mixing ratio as a function of orbital(=spin) rotation period. 
 The rotation period is changed from 4 Earth days to 1 Earth year. 
 We find the trend where it increases as the rotation period decreases. 
-This may also be explained by the \memo{Check the 3D profiles to explain this}. 
+This may also be explained by the 
+\memo{Check the 3D profiles to explain this}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Effect of Ocean Model}
+\label{ss:sensitivity_ocean}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+    \begin{center}
+    \includegraphics[width=0.7\hsize]{fig/xH2O_sensitivity.pdf}
+    \end{center}
+\caption{1.39 mbar \water mixing ratio of the models assuming dynamic ocean (blue diamond) and the models with Earth-like CO$_2$ mixing ratio (green hexagon), in comparison with the fiducial model with thermodynamic ocean and 1 ppm CO$_2$ (red down-triangle). }
+\label{fig:change_ocean}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+So far, we have used the thermodynamic ocean model with zero ocean heat transport and 50 m depth. 
+Indeed, this simplified treatment has been regularly used in the published works of 3-dimensional atmospheric modeling for exoplanets. 
+Yet, a more realistic treatment of ocean is to include the dynamics of ocean. 
+Therefore, we check whether our results are sensitive to the prescription of ocean by comparing our fiducial results and those using dynamic ocean module. 
+
+For this purpose, we ran the models for GJ 876 assuming 900 m deep dynamic ocean. 
+The models with the dynamic ocean model module typically equilibrated after a hundred to hundreds of Earth years. 
+In the same way as the fiducial models, we averaged the profile over 10 Earth years after the model reached the steady state. 
+
+Figure \ref{fig:change_ocean} shows \xwater for GJ876 with varying $S_X$ using the dynamic ocean module, in comparison with our fiducial results.  
+There is a minor difference between the two, with the maximum difference being about the factor of 5 where the models with dynamic ocean tend to have lower \xwater. 
+This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the sub-stellar point is lowered, weakening the convergence and convection there.
+As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed. 
+
+Overall, however, our fiducial models with thermodynamic ocean approximation give a reasonable order-of-magnitude estimate for \water mixing ratio in the upper atmosphere. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Effect of CO$_2$}
+\label{ss:sensitivity_ocean}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Our fiducial models assumed 1 ppm CO$_2$, which was an arbitrary choice. 
+Although the full investigation of the dependence of the CO$_2$ mixing ratio is beyond the scope of this paper, here we briefly mention how much the results are changed if we assume Earth-like CO$_2$ mixing ratio. 
+The results of the models with 300 ppm of CO$_2$ are plotted in Figure \ref{fig:change_ocean}. 
+As shown, this level of variation of CO$_2$ has a limited effect on the \water profile. 
+Larger amount of CO$_2$ up to CO$_2$-dominated atmosphere could have a more substantial effect in the 3D profiles \citep{Wordsworth2013}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -505,18 +507,21 @@ This may also be explained by the \memo{Check the 3D profiles to explain this}.
 
 We have investigated the response of \water profiles of synchronously rotating planets to the change in the incident flux. 
 We find a gradual (casi-exponential) increase of \water mixing ratio in the upper atmosphere as a function of incident flux, resulting in the several orders of magnitude variation. 
+
+Due to the stabilized surface temperature at the sub-stellar point, the increase of \water mixing ratio in response to larger incident flux is not caused by the deeper convective layers like previous 1D models suggest \memo{check}. 
+Instead, it is induced by the increased near-infrared portion of the incident flux. 
+The enhanced radiative heating due to the absorption by \water drives the upward motion of the air, efficiently transporting \water mixing ratio from the moist lower atmosphere to the upper atmosphere, further increasing the heating rate the upper atmosphere.
+As a result, the moisture in the upper atmosphere increases dramatically while the surface temperature below it remains temperate. 
+
 With $10^{-4}-10^{-3}$ mixing ratio of \water in the upper atmosphere together with the increased heating rate, \water absorption features in the transmission spectra may be increased by 2-3 times, loosening the observational demands for detections. 
 \memo{Effect of clouds!!}
-
-Due to the stabilized surface temperature at the sub-stellar point, \water mixing ratio in the upper atmosphere does not increase because of the strong convective layers like 1D models suggest \memo{check Wordsworth et al. 2015}. 
-Instead, the increase of the \water mixing ratio in the upper atmosphere is induced by the increased near-infrared portion of the incident flux, while the surface temperature is still temperate; when the heating rate is increased due to the increased near-infrared portion of the flux, the increased heating rate drives the upward motion of the air, efficiently transporting \water mixing ratio from the moist lower atmosphere to the upper atmosphere, further increasing the heating rate there. 
 
 While we used q-flux ocean model with zero ocean heat transport for simplicity, the comparable models with dynamic ocean are also performed to demonstrate that this approximation of ocean results in the minor effect in \water mixing ratio within an order of magnitude. 
 \memo{explain more}
 We also confirmed that the effect of the change in the orbital period has the secondary effect, resulting in an order of magnitude variation. 
 \memo{explain more}
 
-In this paper, we limit our discussion on the \water profiles to the effects of the total incident flux, spectral energy distribution (=the spectral types of the host star), and the orbital rotation period (=spin rotation period, on the assumption of the synchronous rotation). 
+In this paper, we limit our discussion on the \water profiles to the effects of the total incident flux and spectral energy distribution (=the spectral types of the host star). 
 These parameters are among the limited number of properties that can be constrained relatively easily from the observations of exoplanets. 
 In principle, however, \water distributions also depends on the geophysical parameters including the surface gravity and atmospheric pressure, as well as photochemistry that depends on detailed atmospheric composition. 
 They could perhaps be constrained by the retrieval from the observed planetary spectra to give an prediction for \water mixing ratio in the upper atmosphere, but  otherwise could rather be inferred from the \water mixing ratio. 
@@ -527,6 +532,7 @@ The dependence on these planetary properties will be the scope of future study.
 
 
 \acknowledgments
+Acknowledgement: USRA, Dave Spiegel, Mike, Max, Nancy, 
 
 \bibliography{GCM_qstrato_ref}
 
@@ -559,7 +565,7 @@ In general, we find a reasonable accuracy of the low-resolution calculation used
     \begin{center}
     \includegraphics[width=0.8\hsize]{fig/rad_comparison_SW29-SW280_AqOH0TLS_GJ876S12P20L40Q.pdf}
     \end{center}
-\caption{Comparison in upward flux (left), downward flux (right), and the heating rate (). }                                                                                                             
+\caption{Comparison in shortwave downward flux (left), upward flux (center), and the heating rate (left) between 29-band models used in GCM and 280-band models. The atmospheric profile assumed is the one at the substellar point of a planet around GJ 876 with $S_X=1.2$ (see the upper panels of Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}). }
 \label{fig:socrates}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

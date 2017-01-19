@@ -46,6 +46,7 @@
 \author{Anthony D. Del Genio}
 \author{David S. Amundsen}
 \affil{Goddard Institute for Space Studies, 2880 Broadway, New York, NY}
+\affil{Department of Applied Physics and Applied Mathematics, Columbia University, New York, NY 10025, USA}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
@@ -86,19 +87,22 @@ It also serves as important prior knowledge to prioritize the targets for identi
 Nevertheless, it has been pointed out that detecting molecular signatures on terrestrial planets is challenging \citep{Cowan2015}. 
 Earth-size planets are indeed small and the atmospheres are presumably thin, making atmospheric features in transit spectra typically at the order of ppm. 
 This requires a significant devotion of telescopes, even in the case where the observational noise is limited by stellar photon noise. 
-\water is particularly difficult because, while \water is a dominant opacity source of Earth's atmosphere, the mixing ratio of \water above the troposphere---where the transmission spectroscopy typically probes---is fairly small due to the ``cold trap'', i.e., water vapor evaporated from the surface is transported upward, but it condenses as air rises and most of it precipitates, leaving the stratosphere fairly dry. 
+\water is particularly difficult because, while \water is a dominant opacity source of Earth's atmosphere, the mixing ratio of \water above the troposphere---where the transmission spectroscopy typically probes---is fairly small due to the ``cold trap'', i.e., water vapor evaporated from the surface is transported upward, but it condenses as air rises and cools, and most of it precipitates, leaving the stratosphere fairly dry. 
 Several studies of modeling transmission spectra of the Earth found  undesirebly weak signatures of \water \citep[e.g.,][]{Ehrenreich2006, Kaltenegger2009, Betremieux2013, Misra2014}. 
 However, the efficiency of the cold trap depends on the atmospheric properties in general. 
 
 The mixing ratio in the stratosphere is also closely related to planetary water loss and thus planetary habitability. 
-\citet{Kasting1993} considered the maximum mixing ratio that would allow for a planet to sustain Earth-mass water over the Earth's age, $\sim 3 \times 10^{-3}$, as a criterion for the inner edge of the habitable zone (the threshold for the moist-greenhouse stage). 
+\citet{Kasting1993} considered the maximum stratospheric \water mixing ratio that would allow for a planet to sustain Earth-mass water over the Earth's age, $\sim 3 \times 10^{-3}$, as a criterion for the inner edge of the habitable zone (the threshold for the moist-greenhouse stage). 
 Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined the stratospheric \water with varying planetary properties, or equivalently the efficiency of the cold trap. 
 
 \citet{Kasting1993} and \citet{Kopparapu2013} used a simple 1D model with saturated troposphere and isothermal stratosphere to examine the response of the stratospheric \water mixing ratio to increased instellation. 
+They found a transition from an Earth-like dry atmosphere to the water-dominated atmosphere driven by the increase of the surface temperature, when the insolation increases from the solar constant only by 20\%. 
+The above-mentioned critical mixing ratio ($\sim 3 \times 10^{-3}$) is reached when the surface temperature is 340 K. 
 % 
 \citet{Wordsworth2013} used 1D radiative-convective models with different levels of CO$_2$ and found that in some range of parameters the efficiency of the cold trap is smaller than the Earth, which could lead to a significant loss of water. 
 %
 \citet{Rugheimer2013} and \citet{Rugheimer2015} combined 1D radiative-convective model with photochemical model to assess the effect of spectral energy distribution of incident stellar spectra on atmospheric profiles, and observed an enhanced water mixing ratio in the stratosphere for planets around late-type stars (while not discussed in detail). 
+
 
 Inevitably, 1D models rely on several assumptions that cannot be treated within the model, including the global transport of heat and water vapor as well as the effect of clouds. 
 Over several years, various 3-dimensional general circulation models (GCMs) revisited the atmospheric structure of terrestrial planets and have demonstrated the importance of taking account of the 3-dimensional circulation and climate heterogeneity. 
@@ -147,7 +151,7 @@ We also present mock transmission spectra based on GCM outputs in order to evalu
     \begin{center}
     \includegraphics[width=\hsize]{fig/star_spectra.pdf}
     \end{center}
-\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \citet{Allard2012} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). \memo{what kind of resolution would be relevant?}}
+\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The resolution is lowered for display purposes, but higher resolution spectra were used to calculate the correlated-k table weighted by the stellar spectrum. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \citet{Allard2012} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). The resolution of the spectrum was lowered from the original data just for display purposes. }
 \label{fig:star_spectra}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -194,7 +198,7 @@ Photochemistry is disabled in our model.
 We consider aquaplanets, i.e., planets whose surfaces are wholly covered with water for the fiducial runs for simplicity. 
 We use a thermodynamic ocean with 50 m depth. 
 However, in Section \ref{ss:sensitivity_ocean}, we also show the results of the runs with fully dynamic ocean, to quantify the sensitivity of the results to ocean heat transport. 
-The current configuration of the model does not allow us to have a ocean pixel at the south pole. Therefore for convenience we place 1 ``land'' pixel at the south pole. We assume that this tiny fraction of land pixel does not have a significant effect on the global climate of the planet. \memo{?}
+The current configuration of the model does not allow us to have a ocean pixel at the south pole. Therefore for convenience we place 1 ``land'' pixel at the south pole. We assume that this tiny fraction of land cover does not have a significant effect on the global climate of the planet. \memo{?}
 
 
 %Unlike the majority of the previous GCM works on the terrestrial planets, we calculate the full dynamics of ocean for our fiducial set of runs. 
@@ -203,19 +207,20 @@ The current configuration of the model does not allow us to have a ocean pixel a
 
 In our experiments, we mainly changed two parameters: the total incident flux and the spectral types of the star. 
 For the latter, four types of stars are considered: 
-Sun (G2V; 5776K), 
-HD 22049 (K2V, 5084K), 
-Kepler-186 (M1V, 3755K), and 
-GJ876 (M4V, 3473K). 
-The spectra of HD 22049 and GJ876 are obtained from \citet{Segura2003} and \citet{Domagal-Goldman2014}, respectively, 
+Sun (G2V), 
+HD 22049 (K2V), 
+Kepler-186 (M1V), and 
+GJ876 (M4V). 
+The spectra of HD~22049 and GJ~876 are obtained from \citet{Segura2003} and \citet{Domagal-Goldman2014}, respectively, 
 while the spectrum of Kepler-186 is a modeled one using BT-Settl model \citep{Allard2012} based on the stellar parameters reported in Table S1 of \citet{Quintana2014}. 
 The physical parameters of these stars as well as the references are summarized in Table \ref{tbl:stellar_properties}, and the spectra are displayed in Figure \ref{fig:star_spectra}. 
 
 The orbital period (= spin period) is changed according to the Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. While the incident flux and the orbital period are changed simultaneously for the fiducial set of runs, we also isolate the effect of the orbital period in Section \ref{ss:sensitivity_Porbit}. 
 
-Our fiducial models with varying incident spectra typically equilibrate in  $\sim $ 30 Earth years in the model time. 
+Our fiducial models with thermodynamic ocean typically equilibrate in  $\sim $ 30 Earth years in the model time. 
 After the steady state is reached, we average the 3-dimensional atmospheric profiles over 10 Earth years. 
-From the averaged data, we record \water mixing ratio in the upper part of the atmosphere, $x_{H2O}$, as well as related parameters introduced below. 
+All of the profiles described in the result section are based on the averaged data over 10 Earth years. 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -275,14 +280,25 @@ The cross section at a given point along the optical path is obtained by interpo
 
 Including the optical effect of clouds is tricky. 
 Precisely speaking, one needs to know the size distribution and the spatial distribution of the cloud particles at the time scale of the planetary transit. 
-In this paper, we include the effect of clouds in a simple manner. 
-Namely, we assume that the radius of liquid cloud particles is $10~\mu {\rm m}$ and that of ice cloud particles is $30~\mu {\rm m}$. 
-They are similar to the typical values of Earth clouds, and typical values found in GCM outputs. 
-We also assume that the cloud particles are uniformly distributed. 
-This would mean 
-\memo{!!!!!Write!!!!!}
-
-
+In this paper, we consider the effect of clouds only in an approximate manner with four assumptions. 
+%
+Firstly, we assume the radius of the cloud particles $r_{\rm cld}$ is $r_{\rm cld}=10~\mu {\rm m}$ (regardless of their phase), similar to the typical values found on the Earth as well as in our GCM simulations.  
+%
+Secondly, the scattering cross section is that of the geometric optics limit, i.e. $2 \pi r_{\rm cld}^2$; this includes the diffracted light that is scattered forward (whose cross section is $\pi r_{\rm cld}^2$), but this assumption does not change the result significantly. 
+%
+Thirdly, cloud particles are uniformly distributed within each grid cell. 
+%
+Fourthly, we compute the transmitted light based on the optical properties  averaged over 10 years, rather than computing it based on the instantaneous optical properties and then take the average over years. 
+%
+The third and fourth points above imply that the effects of clouds we find is the maximum among the possible realization, since loosening these assumptions makes the effective optical thickness due to clouds smaller. 
+In that sense, the reality would exist between the cloud-free transmission model and this simplified cloudy transmission model. 
+Under these assumptions, the absorption coefficient $\kappa $ is \memo{unnecessary detail?}
+%%%
+\begin{equation}
+\kappa = 2 \pi r_{\rm cld}^2 \cdot n = 3 \rho x_{\rm cld} / ( 2 r_{\rm cld} )
+\end{equation}
+%%%
+where $n$ is the number density of cloud particles, $\rho $ is the density of the ambient atmosphere, and $x_{\rm cld}$ is cloud water content. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
@@ -302,10 +318,9 @@ This is because we need to know at which altitude the mixing ratio of the \water
 
 Figures \ref{fig:3Dprofile_equator} exhibits the profiles of temperature and \water mixing ratio along the equator for planets around GJ876 (M4V) and around the Sun (G2V), respectively, with varying incident flux. 
 In all panels, the substellar point corresponds to the longitude of $0^{\circ }$. 
-In general, temperature and \water mixing ratio strongly depend on the distance from the substellar point near the surface, but are fairly uniform in the upper part of the atmosphere above 1 mbar, which is 35-50 km depending on the atmospheric temperature profiles. 
-In all of the runs introduced below, the spatial variation of the \water mixing ratio above ?? mbar is within ??\% 
-\memo{!!!!!Write!!!!!}. 
-
+In general, temperature and \water mixing ratio strongly depend on the distance from the substellar point near the surface, but are fairly uniform in the upper part of the atmosphere. 
+Above 1 mbar, which is 35-50 km depending on the atmospheric temperature profiles, \water mixing ratio become horizontally uniform within a few tens of percents. 
+There is vertical gradient but that does not change one order of magnitude above 1 mbar. 
 Therefore, in the following, we denote \water mixing ratio at \preslevel layer by \xwater, and use it as a representative of \water abundance in the upper atmosphere. 
 
 
@@ -394,7 +409,7 @@ This positive feedback of \water mixing ratio in the upper atmosphere would make
 As a result, while the surface temperature increases with $S_X$ monly modestly, the upper atmosphere gains moisture.  
 
 This picture suggests that the driving factor is the incident flux that reacts with water vapor efficiently, which is the near-infrared part of the incident flux. 
-Indeed, as shown in Figure \ref{fig:qOH0TLS_FNIR_xH2O_247mbar}, a good correlation is found between the \water ratio in the upper atmosphere and the near-infrared portion of the incident flux, integrated over 0.9-3 $\mu {\rm m}$ (the interval is somewhat arbitrary), insensitively to the stellar spectral types. 
+Indeed, as shown in the right panel of Figure \ref{fig:xH2O_S0X}, a good correlation is found between the \water ratio in the upper atmosphere and the near-infrared portion of the incident flux, integrated over 0.9-3 $\mu {\rm m}$ (the interval is somewhat arbitrary), insensitively to the stellar spectral types. 
 This 
 
 
@@ -444,7 +459,7 @@ In this subsection, we separate these effects for the scientific interest, while
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeP.eps}
+    \includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_q_sensitivity_changeP.pdf}
     \end{center}
 \caption{The dependence of \water mixing ratio on the orbital(=spin) rotation period. \memo{TO BE REVISED.}}                                                                                                             
 \label{fig:changeP}
@@ -465,7 +480,7 @@ This may also be explained by the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=0.7\hsize]{fig/xH2O_sensitivity.pdf}
+    \includegraphics[width=0.9\hsize]{fig/xH2O_sensitivity.pdf}
     \end{center}
 \caption{1.39 mbar \water mixing ratio of the models assuming dynamic ocean (blue diamond) and the models with Earth-like CO$_2$ mixing ratio (green hexagon), in comparison with the fiducial model with thermodynamic ocean and 1 ppm CO$_2$ (red down-triangle). }
 \label{fig:change_ocean}

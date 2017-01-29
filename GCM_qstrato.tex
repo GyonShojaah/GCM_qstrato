@@ -255,34 +255,17 @@ All of the profiles described in the result section are based on the averaged da
 
 In order to quantify the effect of \water mixing ratio on the absorption features of \water in the transmission spectrum, 
 we also simulate it based on the outputs of GCM experiments, setting the model planet in a transiting geometry. 
+We follow the procedure described in Appendix B of \citet{Way2017}, which is briefly summarized below. 
 
-
-Let us consider a spherical coordinate $(b, \theta )$ on the spherical plane centered at the planetary center. 
-Denote the spectral optical depth along the ray that exits the planetary atmosphere at $(b, \theta )$ by $\tau (\lambda; b, \theta )$, 
-the fraction which is blocked along the optical path that exits the atmosphere at the altitude between $b$ and $b+db$ and at the angle between $\theta $ and $\theta + d\theta $, $f(b, \theta ) \, db \, d\theta$, is 
-%%%
-\begin{equation}
-f(\lambda; b, \theta ) \, d\theta \, db = ( 1 - e^{-\tau (\lambda; b, \theta )} ) \, b \, db \, d\theta 
-\end{equation}
-%%%
-Using $f(b, \theta )$, the transit depth, $\Delta F$, is found by
-%%%
-\begin{equation}
-\pi R_{\star } ^2 \, \Delta F (\lambda) = \pi b_{\rm min}^2 + \int_0^{2\pi} d\theta \int_{b_{\rm min}}^{b_{\rm max}} db \, f(\lambda; b, \theta )
-\end{equation}
-%%%
-where $b_{\rm min}$ is the smallest impact parameter where the transmitted ray comes through, and $b_{\rm max}$ is the impact parameter at which planetary atmosphere may be regarded as completely transparent, which we assume $b_{\rm max} = R_{\rm p}$ + 100 km where $R_{\rm p}$ is the planetary radius. 
-Transmission spectra are regularly represented by ``effective altitude'', $h_{\rm eff}$, which is given by
-%%%
-\begin{equation}
-\Delta F(\lambda) = \frac{( R_{\rm p} + h_{\rm eff}(\lambda)  )^2}{R_{\star }^2}
-\end{equation}
-%%%
-In Section \ref{ss:result_TransmissionSpectra}, we use both the effective altitude $h_{\rm eff}  (\lambda)$ and $\Delta F (\lambda)$ to present the transmission spectra. 
-
-In order to obtain the optical thickness $\tau (\lambda; b, \theta )$, we first  obtained the vertical profiles of temperature, water vapor, and cloud particles along the terminator (i.e., dayside-nightside boundary) by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
-Then, we trace the optical paths of the transmitted ray according to the profile of the refraction index, in the same way as described in \citet{vanderWerf2008}, following \citet{Misra2014}. 
+First, we obtained the vertical profiles of temperature, water vapor, and cloud particles along the terminator (i.e., dayside-nightside boundary) by linearly interpolating the profiles of the GCM grid points adjacent to the terminator. 
+Then, we trace the optical paths of the transmitted ray according to the profile of the refraction index, from the observer toward the stellar disk, in the same way as described in \citet{vanderWerf2008}, following \citet{Misra2014}. 
 After that, the spectral opacity at different points along the path is calculated considering Rayleigh scattering and the absorption by atmospheric molecules and cloud particles, but not including the effect of multiple scattering. 
+The spectral signatures of the planetary atmosphere are discussed in terms of the transit depth $\Delta F(\lambda )$ where $\lambda $ is the wavelength, as well as the effective height, $h_{\rm eff}$, which is given by
+%%%
+\begin{equation}
+\Delta F(\lambda) = \frac{( R_{\rm p} + h_{\rm eff}(\lambda)  )^2}{R_{\star }^2}. 
+\end{equation}
+%%%
 
 To compute the absorption coefficient by atmospheric molecules, we use high-resolution line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
 Each line in the HITRAN 2012 database is convolved with the Voigt profile which takes account of Lorentzian pressure broadening and Doppler broadening, 

@@ -194,7 +194,7 @@ We check the accuracy of the radiation by comparing the radiation calculation in
 The model was configured to have horizontal grids with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 65$ km in the case of the Earth). 
 Throughout the paper, we consider synchronously rotating planets for their  relevance to the future transmission observations of close-in systems. 
 
-Our atmosphere is 1 bar N$_2$-dominated with 1 ppm CO$_2$, to match the assumption of \citet{Kopparapu2016}. 
+Our atmosphere is 1 bar N$_2$-dominated with 1 ppm CO$_2$, after  \citet{Kopparapu2016}. 
 We will briefly discuss the dependence on the mixing ratio of CO$_2$ in Section \ref{s:sensitivity}. 
 We did not include aerosols. 
 Photochemistry is disabled in our model. 
@@ -209,7 +209,7 @@ The current configuration of the model does not allow us to have an ocean pixel 
 %We assume 900 meter depth ocean except for the south pole. 
 %In Section \ref{ss:sensitivity_ocean}, we also present the results with the q-flux ocean model with zero heat transport, a treatment regularly used in exoplanet GCM community, in order to quantify the sensitivity to the assumption of ocean. 
 
-In our experiments, we mainly changed two parameters: the total incident flux and the spectral type of the star. 
+In our experiments, we mainly changed two parameters: the total incident flux, denoted by $S_X$, and the spectral type of the star. 
 For the latter, four types of stars are considered: 
 Sun (G2V), 
 HD 22049 (K2V), 
@@ -219,11 +219,12 @@ The spectra of HD~22049 and GJ~876 are obtained from \citet{Segura2003} and \cit
 while the spectrum of Kepler-186 is a modeled one using BT-Settl model \citep{Allard2012} based on the stellar parameters reported in Table S1 of \citet{Quintana2014}. 
 The physical parameters of these stars as well as the references are summarized in Table \ref{tbl:stellar_properties}, and the spectra are displayed in Figure \ref{fig:star_spectra}. 
 
-The orbital period (= spin period) is changed according to Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. While the incident flux and the orbital period are changed simultaneously for the fiducial set of runs, we also isolate the effect of the orbital period in Section \ref{ss:sensitivity_Porbit}. 
+The orbital period (= spin period) is changed according to Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. Thus, the incident flux and the spin period are changed simultaneously for the fiducial set of runs. 
+However, we also isolate the effect of the spin period in Section \ref{ss:sensitivity_Porbit}. 
 
 Our fiducial models with thermodynamic ocean typically equilibrate in  $\sim $ 30 Earth years in model time. 
 After the steady state is reached, we average the 3-dimensional atmospheric profiles over an integer number of orbits that is approximately 10 Earth years. 
-All of the profiles described in the result section are based on the averaged data over 10 Earth years. 
+All of the profiles described in the result section are based on the averaged data created this way. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -259,7 +260,7 @@ The spectral signatures of the planetary atmosphere are discussed in terms of th
 \end{equation}
 %%%
 
-To compute the absorption coefficient by atmospheric molecules, we use high-resolution line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
+To compute the absorption coefficient by atmospheric molecules, we use line-by-line opacity tables based on HITRAN 2012 database \citep{Rothman2013}, prepared separately from the correlated-k opacity used in the GCM. 
 Each line in the HITRAN 2012 database is convolved with the Voigt profile which takes account of Lorentzian pressure broadening and Doppler broadening, 
 and the cross sections are computed at varying pressures and temperatures, with a constant interval of the wavenumber grids : $\Delta k = 1\,{\rm cm}^{-1}$. 
 The pressure and temperature grids are $P = \{10^{-5},\, 10^{-4},\,...,\,10^3\}$ mbar and $T = \{100,\, 150,\,...,\, 400\}$ K. 
@@ -275,7 +276,7 @@ Secondly, the scattering cross section is that of the geometric optics limit, i.
 %
 Thirdly, cloud particles are uniformly distributed within each grid cell. 
 %
-Fourthly, we compute the transmitted light based on the optical properties  averaged over 10 years, rather than computing it based on the instantaneous optical properties and then take the average over years. 
+Fourthly, we compute the transmitted light based on the optical properties  averaged over 10 Earth years, rather than computing it based on the instantaneous optical properties and then take the average over years. 
 %
 The third and fourth points above imply that the effects of clouds we find is the maximum among the possible realization, since loosening these assumptions makes the effective optical thickness due to clouds smaller. 
 In that sense, the reality would exist between the cloud-free transmission model and this simplified cloudy transmission model. 
@@ -315,7 +316,7 @@ Therefore, in the following, we denote globally averaged \water mixing ratio at 
 
 
 We also observe optically thick clouds around the sub-stellar point and the resultant increase of planetary albedo as a function of total incident flux (not shown in figures), consistent with \citet{Yang2013,Yang2014}, \citet{Kopparapu2016} and \citet{Way2016}. 
-This indicates the climate-stabilizing effect of clouds, having a negative feedback for the surface temperature, which is pointed out by \citet{Yang2013}. 
+This indicates the climate-stabilizing effect of clouds, which is pointed out by \citet{Yang2013}. 
 As shown in Figure \ref{fig:3Dprofile_equator}, the maximum surface temperature does not exceed 320 K even in highly irradiated cases in our experiments, where \water mixing ratio near the model top is as high as $10^{-3}$; we will discuss this in the subsequent sections. 
 
 
@@ -372,7 +373,7 @@ The dispersion among the different columns is negligible compared to the changes
 At large incident flux, we observe the development of the vertical motion of the air above the convection layers, concurrently with the increase in \water mixing ratio and the heating rate in the upper atmosphere. 
 This large-scale circulation can be naturally explained as follows. 
 
-When the incident flux increases, the heating rate due to the absorption of radiation by water vapor, mainly in near-infrared, also increases. 
+When the incident flux increases, the heating rate due to the absorption of radiation by water, mainly in near-infrared, also increases. 
 The air will then react by rising and adiabatically cooling according to the conservation equation for the potential temperature $\Theta $:
 %%%
 \begin{equation}
@@ -389,7 +390,7 @@ where $Q_r$ and $Q_l$ are the radiative and latent heating rates, $\{ u, v, \ome
 The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. 
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
-Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means the upward motion develops. 
+Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means that the upward motion develops. 
 The upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
 This interplay between the radiative heating and water vapor transport eventually finds the steady state where $d\Theta/dt = 0$, leaving the  circulation in the upper atmosphere around the sub-stellar point. 
 % This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 

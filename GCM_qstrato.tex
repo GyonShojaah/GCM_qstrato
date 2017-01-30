@@ -380,7 +380,7 @@ The dispersion among the different columns is negligible compared to the changes
 At large incident flux, we observe the development of the vertical motion of the air above the convection layers, concurrently with the increase in \water mixing ratio and the heating rate in the upper atmosphere. 
 This large-scale circulation can be naturally explained as follows. 
 
-When the incident flux increases, the heating rate due to the absorption by water vapor also increases. 
+When the incident flux increases, the heating rate due to the absorption of radiation by water vapor, mainly in near-infrared, also increases. 
 The air will then react by rising and adiabatically cooling according to the conservation equation for the potential temperature $\Theta $:
 %%%
 \begin{equation}
@@ -398,25 +398,32 @@ The latent heating, $Q_l$, is negligible compared to radiative heating above the
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
 Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means the upward motion develops. 
-
 The upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
 This interplay between the radiative heating and water vapor transport eventually finds the steady state where $d\Theta/dt = 0$, leaving the  circulation in the upper atmosphere around the sub-stellar point. 
-% This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere.
+% This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
 
+We also found the radiative heating by cloud particles above convective layers also plays a role in warming up the atmosphere there. 
+We have to recall here that cloud particles are absorptive in the near infrared range, while the convergence of radiative flux of cloud layers is minimal at visible wavelengths.  
+In order to see the sensitivity to the radiative effect of clouds above convective layers, we created the models that are comparable to the fiducial models but turn off the influence of cloud particles above 237 mbar ($\sim 11$ km for the runs shown below) in the radiation calculations (i.e., clouds particles in the upper atmosphere are transparent to radiation). 
+Figure \ref{fig:GJ876_heat_cld} displays the comparison between such ``transparent high clouds'' models (black, dotted) with the fiducial models (red solid), for $S_X=1.0$ and $1.2$ with the incident spectrum of GJ~876. 
+While these high clouds have minimal effect on the surface temperature and atmospheric profiles below convection layers, it is seen that radiative heating above the convection layer is substantially suppressed without the radiative effect of clouds, leading to the colder, and drier upper atmosphere. 
+Note that we still see heating attributed to water vapor in the ``transparent high clouds'' models, for example radiative heating around 25 km in the case of $S_X=1.2$, while the higher atmosphere remains dry. 
 
+In summary, atmospheric vertical motion and the radiative heating by water vapor and cloud particles interact with each other with mutually positive feedbacks, and thus a modest increase of the incident radiative flux, $S_X$, can result in an almost order-of-magnitude increase of water vapor, while the surface temperature increases only modestly. 
+
+% In summary, radiative heating by water vapor and cloud particles 
+%This positive feedback between the radiative heating rate and \water mixing ratio in the upper atmosphere would make a modest increase of the radiative flux result in an almost order-of-magnitude increase of water vapor. 
+%As a result, while the surface temperature increases with $S_X$ only modestly, the upper atmosphere gains moisture more rapidly. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[htb]
     \begin{center}
     \includegraphics[width=1\hsize]{fig/GJ876_heat_cld.pdf}
     \end{center}
-\caption{}
+\caption{Comparison between the fiducial models for GJ~876 (red for $S_X=1.0$ and light red for $S_X=1.2$) and the comparable ``transparent high clouds'' models where the radiative effect of high clouds above 237 mbar are turned off (dashed black for $S_X=1.0$ and dashed gray for $S_X=1.2$). The vertical profiles of temperature, \water mixing ratio, short-wave heating rate, cloud fraction, ice cloud content, and liquid cloud content, are averaged of $0.2R_{\oplus }$ of the substellar point. }
 \label{fig:GJ876_heat_cld}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-This positive feedback between the radiative heating rate and \water mixing ratio in the upper atmosphere would make a modest increase of the radiative flux result in an almost order-of-magnitude increase of water vapor. 
-As a result, while the surface temperature increases with $S_X$ only modestly, the upper atmosphere gains moisture more rapidly.  
 
 This picture suggests that the driving factor is the incident flux that reacts with water vapor efficiently, which is the near-infrared part of the incident flux. 
 Indeed, as shown in the right panel of Figure \ref{fig:xH2O_S0X}, a good correlation is found between the \water mixing ratio in the upper atmosphere and the near-infrared portion of the incident flux, integrated over 0.9-3 $\mu {\rm m}$ (the interval is somewhat arbitrary), insensitive to the stellar spectral types. 
@@ -463,7 +470,7 @@ A more realistic modeling of cloud particles will be the scope of future work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sensitivity to varying parameters}
+\section{Sensitivity to the model parameters}
 \label{s:sensitivity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

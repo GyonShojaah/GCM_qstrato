@@ -95,10 +95,10 @@ Thus, modeling of \water profile is essential for evaluating the observability o
 
 The mixing ratio of \water in the stratosphere is also closely related to planetary water loss and thus planetary habitability. 
 \citet{Kasting1993} considered the maximum stratospheric \water mixing ratio that would allow for a planet to sustain Earth-mass water over the Earth's age, $\sim 3 \times 10^{-3}$, as a criterion for the inner edge of the habitable zone (the threshold for the moist-greenhouse stage). 
-Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined the stratospheric \water with varying planetary properties, or equivalently the efficiency of the cold trap. 
+Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined the stratospheric \water, or equivalently the efficiency of the cold trap, with varying planetary properties. 
 
 \citet{Kasting1993} and \citet{Kopparapu2013} used a simple 1D model with saturated troposphere and isothermal stratosphere to examine the response of the stratospheric \water mixing ratio to increased instellation. 
-They found a transition from an Earth-like dry atmosphere to the water-dominated atmosphere driven by the increase of the surface temperature, when the insolation increases from the solar constant only by 20\%. 
+They found a transition from an Earth-like dry atmosphere to the water-dominated atmosphere driven by the increase of the surface temperature, when the instellation increases from the solar constant only by 20\%. 
 The above-mentioned critical mixing ratio ($\sim 3 \times 10^{-3}$) is reached when the surface temperature is 340 K. 
 
 
@@ -152,7 +152,7 @@ We also present mock transmission spectra based on GCM outputs in order to evalu
     \begin{center}
     \includegraphics[width=\hsize]{fig/star_spectra.pdf}
     \end{center}
-\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \citet{Allard2012} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). The resolution of the spectrum was lowered from the original data just for display purposes. The gray short vertical lines on the horizontal line indicates the short-wave bands used in GCM. }
+\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The data sources are \citet{Kurucz1995} (Sun), \citet{Segura2003} (HD 22049), \citet{Allard2012} (Kepler-186), and \citet{Domagal-Goldman2014} (GJ876). The resolution of the spectrum was lowered from the original data just for display purposes. The gray short vertical lines on the horizontal line indicates the bounds of the short-wave bands used in GCM. }
 \label{fig:star_spectra}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,20 +184,11 @@ We use a GCM named \modelE \ \citep{Way2017} to obtain 3-dimensional atmospheric
 \modelE \ is a generalization from the GCM called ModelE2 \citep{Schmidt2014}, which has been developed for the Earth at NASA's Goddard Institute for Space Studies. 
 %
 The version of the model used here is the same as that used by \citet{Way2016}, and presented in more detail in \citet{Way2017}.
-However, the radiation scheme has been replaced by the Suite of Community Radiative Transfer codes based on Edwards and Slingo\footnote{\url{https://code.metoffice.gov.uk/trac/socrates}}~\citep[SOCRATES,][]{EdwardsSlingo1996,Edwards1996} as described in \citet{Way2017}. 
+However, the radiation scheme has been replaced by the Suite of Community Radiative Transfer codes that uses the correlated-k method based on Edwards and Slingo\footnote{\url{https://code.metoffice.gov.uk/trac/socrates}}~\citep[SOCRATES,][]{EdwardsSlingo1996,Edwards1996} as described in \citet{Way2017}. 
 The configuration of the long-wave (thermal) radiation scheme adopted here is as described in \citet{Way2017}, and is the same as that used by the UK Met Office for global atmosphere configuration 7.0 \citep[GA7.0][]{Walters2017}. 
-For short-wave (stellar) radiation we use 29 bands, as indicated by the black vertical lines in Figure \ref{fig:star_spectra}, and wavelengths are weighted internally in each band by each stellar spectrum when deriving $k$-coefficients and cloud optical properties to improve accuracy. 
-We have SW bands are concentrated in the near-IR regions where H2O absorbs strongly to increase the accuracy of the SW heating
-
-
+For short-wave (stellar) radiation we use 29 bands to ensure accuracy of the short-wave absorption, as indicated by the black vertical lines in Figure \ref{fig:star_spectra} and in Table \ref{tab:short-wave}
+The wavelengths are weighted internally in each band by each stellar spectrum when deriving $k$-coefficients and cloud optical properties to further improve accuracy. 
 Overlapping gaseous absorption is treated using equivalent extinction~\citep{Edwards1996,Amundsen2016}, and vertical cloud overlap is treated using the mixed maximum-random overlap assumption. 
-
-
-%The basic architecture of ROCKE-3D is the same as the version used by \citet{Way2016}, but the radiation module has been replaced by the UK Met Office's {\it Socrates} \citep{Edwards1996} after the paper was published. 
-%{\it Socrates} utilizes the correlated-k method to compute radiative transfer. 
-We used 29 and 9 bands for short wave and long wave, respectively, and the correlated-k method was used to compute radiative transfer. 
-We put many bands in the near-IR region where \water absorbs (Figure \ref{fig:star_spectra}) to ensure accuracy of the SW absorption. 
-%We paid special attention to the accuracy of the radiative transfer because radiation schemes developed for the Earth system may no longer be accurate when we change the spectral types of the star and/or \water mixing ratio becomes extreme (see the result section below). 
 We check the accuracy of the radiation by comparing the radiation calculation in the GCM with higher-resolution calculations, and find a good match;  see Appendix \ref{ap:radiation} for more details. 
 
 The model was configured to have horizontal grids with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 65$ km in the case of the Earth). 
@@ -610,7 +601,7 @@ We appreciate the supported by the NASA's NExSS project.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper, we applied a GCM named ROCKE-3D to planets around the stars with different spectral types. 
-In doing so, a special caution needed to be taken regarding the accuracy of the radiative transfer calculation, because the baseline model of ROCKE-3D has been developed for the Earth, and the radiative transfer calculation was optimized for solar insolation. 
+In doing so, a special caution needed to be taken regarding the accuracy of the radiative transfer calculation, because the baseline model of ROCKE-3D has been developed for the Earth, and the radiative transfer calculation was optimized for solar spectrum. 
 We therefore implemented the SOCRATES radiation scheme, which is easier to generalize to different planetary conditions.
 
 In order to check the accuracy of the radiative transfer calculation used in the GCM, we compare it with a more accurate high-spectral-resolution calculation assuming the same (1-dimensional) atmospheric profile. 

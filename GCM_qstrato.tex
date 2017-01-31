@@ -57,7 +57,7 @@ Detectability of \water absorption features in transmission spectra primarily de
 %
 While the stratospheric \water mixing ratio of the Earth is as low as $10^{-6}$ due to the cold trap, the efficiency of the cold trap depends on the atmospheric properties. 
 %
-Here we study the 3-dimensional distributions of \water for synchronously rotating aquaplanets using the general circulation model {\it ROCKE-3D} and examine the effect of the incident stellar spectra. 
+Here we study the 3-dimensional distributions of \water for synchronously rotating aquaplanets using the general circulation model {\it ROCKE-3D} and examine the effect of total incident flux and the spectral type of the star.  
 %
 We observe a gradual increase of \water mixing ratio in response to the increased incident flux, while the surface temperature around the substellar point is moderate over a wide range of instellation. \memo{Explain better...}
 %
@@ -278,14 +278,13 @@ Fourthly, we compute the transmitted light based on the optical properties  aver
 %
 The third and fourth points above imply that the effects of clouds we find is the maximum among the possible realization, since loosening these assumptions makes the effective optical thickness due to clouds smaller. 
 In that sense, the reality would exist between the cloud-free transmission model and this simplified cloudy transmission model. 
-Under these assumptions, the absorption coefficient $\kappa $ is \memo{unnecessary detail?}
-%%%
+Under these assumptions, the absorption coefficient $\kappa $ is %%%
 \begin{equation}
 \kappa = 2 \pi r_{\rm cld}^2 \cdot n = 3 \rho x_{\rm cld} / ( 2 \rho_{\rm H2O} r_{\rm cld} )
 \end{equation}
 %%%
 where $n$ is the number density of cloud particles, $\rho $ is the density of the ambient atmosphere, $x_{\rm cld}$ is cloud water content, and $\rho_{\rm H2O}$ is the density of liquid/solid water which is assumed to be $1 {\rm g/cm}^3$. 
-The uncertainties in the particle radius, scattering cross section, and the cloud water content could change the absorption coefficient by a factor of a few \memo{??}. 
+The uncertainties in the particle radius, scattering cross section, and the cloud water content could change the absorption coefficient by a factor of a few \memo{does this sound reasonable?}. 
 
 
 
@@ -303,8 +302,6 @@ The uncertainties in the particle radius, scattering cross section, and the clou
 
 Before examining the dependence of the \water mixing ratio in the upper atmosphere, we discuss the 3-dimensional profiles of temperature and water vapor. 
 This is because we need to know at which altitude the mixing ratio of the \water becomes relatively uniform, to identify what kind of \water mixing ratio can be regarded as representative of the humidity in the upper atmosphere. 
-
-\memo{Explain the inversion of the temperature?}
 
 Figure \ref{fig:3Dprofile_equator} exhibits the profiles of temperature and \water mixing ratio along the equator for planets around GJ876 (M4V) and around the Sun (G2V), respectively, with varying incident flux. 
 In all panels, the substellar point corresponds to the longitude of $0^{\circ }$. 
@@ -371,27 +368,27 @@ We will examine this in the next subsection.
 In Figure \ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, we show the vertical  profiles of temperature, \water mixing ratio, short wave heating rate, and the upward velocity, averaged over the region around the sub-stellar point within the distance of $0.2R_{\oplus }$. 
 The dispersion among the different columns is negligible compared to the changes due to varying $S_X$. 
 At large incident flux, we observe the development of the vertical motion of the air above the convection layers, concurrently with the increase in \water mixing ratio and the heating rate in the upper atmosphere. 
-This large-scale circulation can be naturally explained as follows. 
+This large-scale circulation can be explained as follows. 
 
 When the incident flux increases, the heating rate due to the absorption of radiation by water, mainly in near-infrared, also increases. 
 The air will then react by rising and adiabatically cooling according to the conservation equation for the potential temperature $\Theta $:
-\memo{what is the symbol for $dz/dt$? We should use it, because we don't use $\omega $. }
 %%%
 \begin{equation}
-\frac{d\Theta }{dt} + ( {\bf v} \cdot \nabla ) \, \Theta = Q_r + Q_l, \label{eq:conserv_energy}
+\frac{d\Theta }{dt} + ( {\bf v} \cdot \nabla ) \, \Theta = \frac{ Q_r + Q_l }{\rho c_p} \label{eq:conserv_energy}
 \end{equation}
 %%%
 or
 %%%
 \begin{equation}
-\frac{d\Theta }{dt} + u \frac{d\Theta }{dx} + v \frac{d\Theta }{dy} + \omega \frac{d\Theta }{dp} = Q_r + Q_l. \label{eq:conserv_energy_2}
+\frac{d\Theta }{dt} + u \frac{d\Theta }{dx} + v \frac{d\Theta }{dy} + w \frac{d\Theta }{dz} = \frac{ Q_r + Q_l }{\rho c_p}. \label{eq:conserv_energy_2}
 \end{equation}
 %%%
-where $Q_r$ and $Q_l$ are the radiative and latent heating rates, $\{ u, v, \omega \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis; $\omega \equiv  dp/dt$), respectively. 
-The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. \memo{why? and unit of $Q$.}
+where $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere, $\rho $ is atmospheric density, $\{ u, v, w \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis), respectively. 
+The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. 
+\memo{why?}
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
-Because the upper atmosphere is stable against convection, i.e., $d \Theta / d p < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means that the upward motion develops. 
+Because the upper atmosphere is stable against convection, i.e., $d \Theta / d z > 0 $, larger (positive) $Q_r$ leads to a larger $w$, which means that the upward motion develops. 
 The upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the absorption by water. 
 This interplay between the radiative heating and water vapor transport eventually finds the steady state where $d\Theta/dt = 0$, leaving the  circulation in the upper atmosphere around the sub-stellar point. 
 % This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
@@ -490,8 +487,9 @@ In the same way as the fiducial models, we averaged the profile over approximate
 
 Figure \ref{fig:change_ocean} shows \xwater for GJ876 with varying $S_X$ using the dynamic ocean module, in comparison with our fiducial results.  
 There is a minor difference between the two, with the maximum difference being about the factor of 5 where the models with dynamic ocean tend to have lower \xwater. 
-This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the sub-stellar point is lowered, weakening the convergence and convection there.
-As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed \memo{???}. 
+\memo{Explain why. }
+%This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the sub-stellar point is lowered, weakening the convergence and convection there.
+%As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed \memo{???}. 
 
 Overall, however, our fiducial models with thermodynamic ocean approximation give a reasonable order-of-magnitude estimate for \water mixing ratio in the upper atmosphere. 
 
@@ -536,7 +534,7 @@ In this subsection, we check the effect of varying spin rotation period while fi
     \begin{center}
     \includegraphics[width=\hsize]{fig/xH2O_Prot.pdf}
     \end{center}
-\caption{The dependence of \water mixing ratio on the orbital(=spin) rotation period. }                                                                                                             
+\caption{The dependence of \water mixing ratio on the spin rotation period. The host star spectrum is GJ~876 with $S_X=1$. In all cases the planet is assumed to be synchronously rotating. }
 \label{fig:changeP}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -545,7 +543,7 @@ Figure \ref{fig:changeP} summarizes the results of the \water mixing ratio as a 
 The rotation period is changed from 4 Earth days to 1 Earth year. 
 We find the trend where it increases as the rotation period decreases. 
 This may also be explained by the 
-\memo{Check the 3D profiles to explain this}. 
+\memo{Explain this}. 
 
 
 

@@ -383,10 +383,10 @@ The air will then react by rising and adiabatically cooling according to the con
 or
 %%%
 \begin{equation}
-\frac{\partial \Theta }{\partial t} + u \frac{d\Theta }{dx} + v \frac{d\Theta }{dy} + w \frac{d\Theta }{dz} = \frac{ Q_r + Q_l }{\rho c_p}. \label{eq:conserv_energy_2}
+\frac{\partial \Theta }{\partial t} + u \frac{d\Theta }{dx} + v\frac{d\Theta }{dy} + \omega \frac{d\Theta }{dP} = \frac{ Q_r + Q_l }{\rho c_p}. \label{eq:conserv_energy_2}
 \end{equation}
 %%%
-where $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere, $\rho $ is atmospheric density, $\{ u, v, w \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis), respectively. 
+where $P$ is the pressure, $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere, $\rho $ is atmospheric density, $\{ u, v, \omega \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis; $\omega \equiv dP/dt$), respectively. 
 The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. 
 \memo{why?}
 Likewise, around the sub-stellar point, the vertical advection may be expected to dominate over the horizontal advection since horizontal gradients are small (Figure \ref{fig:3Dprofile_equator}), thus the second and the third terms in equation (\ref{eq:conserv_energy_2}) may be dropped as an approximation. 

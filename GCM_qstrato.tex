@@ -377,13 +377,13 @@ When the incident flux increases, the heating rate due to the absorption of radi
 The air will then react by rising and adiabatically cooling according to the conservation equation for the potential temperature $\Theta $:
 %%%
 \begin{equation}
-\frac{d\Theta }{dt} + ( {\bf v} \cdot \nabla ) \, \Theta = \frac{ Q_r + Q_l }{\rho c_p} \label{eq:conserv_energy}
+\frac{\partial \Theta }{\partial t} + ( {\bf v} \cdot \nabla ) \, \Theta = \frac{ Q_r + Q_l }{\rho c_p} \label{eq:conserv_energy}
 \end{equation}
 %%%
 or
 %%%
 \begin{equation}
-\frac{d\Theta }{dt} + u \frac{d\Theta }{dx} + v \frac{d\Theta }{dy} + w \frac{d\Theta }{dz} = \frac{ Q_r + Q_l }{\rho c_p}. \label{eq:conserv_energy_2}
+\frac{\partial \Theta }{\partial t} + u \frac{d\Theta }{dx} + v \frac{d\Theta }{dy} + w \frac{d\Theta }{dz} = \frac{ Q_r + Q_l }{\rho c_p}. \label{eq:conserv_energy_2}
 \end{equation}
 %%%
 where $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere, $\rho $ is atmospheric density, $\{ u, v, w \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis), respectively. 

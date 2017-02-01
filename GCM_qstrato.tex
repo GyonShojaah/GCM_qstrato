@@ -18,7 +18,7 @@
 \renewcommand{\bibname}{References}
 
 \def\water{H$_2$O }
-\def\xwater{\dsa{$x_\text{\water}$}}
+\def\xwater{$x_\text{\water}$}
 \def\preslevel{1.39 mbar\ }
 \def\modelE{ROCKE-3D}
 \def\CHHHH{CH$_4$}
@@ -64,7 +64,7 @@ While the stratospheric \water mixing ratio of the Earth is as low as $10^{-6}$ 
 %
 Here we study the three-dimensional distribution of \water for synchronously rotating aquaplanets using the general circulation model ROCKE-3D, and examine the effects of total incident flux and stellar spectral type.  
 %
-We observe a more gradual increase of \water mixing ratio in response to the increased incident flux than one-dimensional models suggest, in \dsa{agreement} with the climate-stabilizing effect of clouds around the substellar points previously observed in GCM applied to synchronously rotating planets. 
+We observe a more gradual increase of \water mixing ratio in response to the increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar points previously observed in GCM applied to synchronously rotating planets. 
 %
 However, the \water mixing ratio in the upper atmosphere starts to increase  while the surface temperature is still moderate. 
 %
@@ -107,7 +107,7 @@ The mixing ratio of \water in the stratosphere is also closely related to planet
 Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined stratospheric \water, or equivalently, the efficiency of the cold trap, with varying planetary properties. 
 
 \citet{Kasting1993} and \citet{Kopparapu2013} used a simple one-dimensional (1D) model with a saturated troposphere and an isothermal stratosphere to examine the response of the stratospheric \water mixing ratio to increased instellation. 
-They found a transition from an Earth-like dry atmosphere to \dsa{a} water-dominated atmosphere, driven by the increase of the surface temperature, with only a 20\% increase in instellation relative to the solar constant. 
+They found a transition from an Earth-like dry atmosphere to a water-dominated atmosphere, driven by the increase of the surface temperature, with only a 20\% increase in instellation relative to the solar constant. 
 The above-mentioned critical mixing ratio ($\sim 3 \times 10^{-3}$) is reached when the surface temperature is 340 K. 
 
 
@@ -396,8 +396,8 @@ This upward motion of the atmosphere transports water vapor from the moist lower
 This interplay between the radiative heating and water vapor transport eventually finds a steady state where $d\Theta/dt = 0$, leaving a stable circulation in the upper atmosphere around the substellar point. 
 % This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
 
-We also found the radiative heating by cloud particles above convective layers to also play a role in warming up the upper atmosphere. 
-Cloud particles are absorptive in the near-infrared range, although the convergence of radiative flux of cloud layers is minimal at visible wavelengths. \dsa{@@@ I do not understand the previous sentence.}  
+We also found the radiative heating by cloud particles above convective layers to also play a role in warming up the upper atmosphere, as cloud particles are absorptive in the near-infrared range. 
+%\dsa{@@@ I do not understand the previous sentence.}  
 In order to see the radiative effect of clouds above convective layers, we created models that are comparable to the fiducial models, but where the  influence of cloud particles above 237 mbar ($\sim 11$ km for the runs shown below) has been turned off in the radiation calculations (i.e., clouds particles in the upper atmosphere are transparent to radiation). 
 Figure \ref{fig:GJ876_heat_cld} displays the comparison between such ``transparent high clouds'' models (black, dotted) and fiducial models (red solid), for $S_X=1.0$ and $1.2$ with the incident spectrum of GJ~876. 
 While these high clouds have a minimal effect on the surface temperature and atmospheric profiles below the convection layers, it is seen that radiative heating above the convection layer is substantially suppressed without the radiative effect of clouds, leading to a colder, and drier upper atmosphere. 
@@ -446,9 +446,9 @@ These clouds around the terminator presumably form from water vapor that is tran
 %
 % But water vapor can be transported from the substellar point to the terminator, and to the extent that it either gently rises and cools adiabatically as it does so, or cools radiatively as it does so, it can saturate and form thin clouds at the terminator.  It has to be one or a combination of those mechanisms that is responsible for forming those clouds.
 %
-Although these tenuous clouds at high altitude would be optically thin \yf{vertically}, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
+Although these tenuous clouds at high altitude would be optically thin vertically, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
 We must note, however, that our calculation is likely to overestimate the opacity of clouds as discussed in Section \ref{ss:method_TransmissionSpectra} partly because we used spatially and temporally averaged cloud properties of individual GCM grid cells; in that sense the reality would exist somewhere between the solid and dashed lines in Figure~\ref{fig:transmission}.
-\yf{Additional uncertainties come from other assumptions we made. } 
+Additional uncertainties come from other assumptions we made. 
 A more realistic inclusion of clouds in our simulated transmission spectra will be the scope of future work. 
 
 
@@ -561,7 +561,7 @@ We find a gradual (quasi-exponential) increase of \water mixing ratios in the up
 
 Due to the relatively stable surface temperature at the substellar point, the increase of \water mixing ratio in response to larger incident flux is not primarily caused by the increased surface temperature as previous 1D models suggest. 
 Instead, it is induced by the increased near-infrared portion of the incident flux. 
-The enhanced radiative heating due to the absorption by \water drives an upward motion of the air, which takes over \yf{from convection} the role of transporting \water from the moist lower atmosphere to the upper atmosphere , further increasing the heating rate in the upper atmosphere.
+The enhanced radiative heating due to the absorption by \water drives an upward motion of the air, which takes over from convection \yf{YF: Two ``from''s in one sentence, but cannot think of a better way.} the role of transporting \water from the moist lower atmosphere to the upper atmosphere , further increasing the heating rate in the upper atmosphere.
 As a result, the moisture in the upper atmosphere increases dramatically while the surface below it remains temperate. 
 This picture is supported by the good correlation between the \water mixing ratio at \preslevel and the near-infrared portion of the incident radiation, regardless of the spectral type of the host star. 
 

@@ -33,6 +33,7 @@
 
 \definecolor{blue}{RGB}{0,0,255}
 \newcommand{\dsa}[1]{{\color{blue}#1}}
+\newcommand{\yf}[1]{{\color{orange}#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \shorttitle{NIR-Driven Moist Upper Atmospheres of Temperate Terrestrial Exoplanets}
@@ -334,7 +335,7 @@ As shown in Fig.~\ref{fig:3Dprofile_equator}, the maximum surface temperature do
     \begin{center}
     \includegraphics[width=\hsize]{fig/xH2O_3panels.pdf}
     \end{center}
-\caption{Water mixing ratio at \preslevel mbar as a function of total incident flux (left), the surface temperature around \dsa{(@@@ do you mean \textit{at} the substellar point?)} the substellar point (center), and the near-infrared portion of the incident flux integrated bewteen 0.9 and 3.0 \textmu m (right). The colors represent the stellar types: Sun (navy), HD~22048 (green), Kepler-186 (orange), and GJ~876 (red). Dashed lines are adopted from \citet{Kasting1993}. }                                                                                                             
+\caption{Water mixing ratio at \preslevel mbar as a function of total incident flux (left), the surface temperature around \dsa{(@@@ do you mean \textit{at} the substellar point?)} the substellar point \yf{averaged within $0.2R_\earth$ of the substellar point} (center), and the near-infrared portion of the incident flux integrated bewteen 0.9 and 3.0 \textmu m (right). The colors represent the stellar types: Sun (navy), HD~22048 (green), Kepler-186 (orange), and GJ~876 (red). Dashed lines are adopted from \citet{Kasting1993}. }                                                                                                             
 \label{fig:xH2O_S0X}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -388,8 +389,7 @@ or
 \end{equation}
 %%%
 where $P$ is the pressure, $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere at constant pressure, $\rho $ is atmospheric density, $\{ u, v, \omega \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis; $\omega \equiv dP/dt$), respectively. 
-The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates, so it may be dropped. 
-\memo{why?}
+The latent heating, $Q_l$, is negligible compared to radiative heating above the altitude to which convection penetrates (not shown), so it may be dropped. 
 Likewise, around the substellar point, the vertical advection dominates over the horizontal advection since horizontal gradients are small (Fig.~\ref{fig:3Dprofile_equator}), thus the second and the third terms in Eq.~(\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
 Because the upper atmosphere is stable against convection, i.e., $d \Theta / d P < 0 $, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means that an upward motion develops. 
@@ -447,9 +447,10 @@ These clouds around the terminator presumably form from water vapor that is tran
 %
 % But water vapor can be transported from the substellar point to the terminator, and to the extent that it either gently rises and cools adiabatically as it does so, or cools radiatively as it does so, it can saturate and form thin clouds at the terminator.  It has to be one or a combination of those mechanisms that is responsible for forming those clouds.
 %
-Although these tenuous clouds at high altitude would be optically thin \memo{??} if viewed from the ground, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
-We must note, however, that our calculation is likely to overestimate the opacity of clouds as discussed in Section \ref{ss:method_TransmissionSpectra} because we used spatially and temporally averaged cloud properties of individual GCM grid cells. \dsa{@@@ In addition to the other assumptions, right?}
+Although these tenuous clouds at high altitude would be optically thin \yf{vertically}, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
+We must note, however, that our calculation is likely to overestimate the opacity of clouds as discussed in Section \ref{ss:method_TransmissionSpectra} because we used spatially and temporally averaged cloud properties of individual GCM grid cells. \dsa{@@@ In addition to the other assumptions, right?} 
 Thus the reality would exist somewhere between the solid and dashed lines in Figure~\ref{fig:transmission}.
+\yf{Additional uncertainties come from other assumptions we made. } 
 A more realistic inclusion of clouds in our simulated transmission spectra will be the scope of future work. 
 
 

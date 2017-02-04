@@ -474,7 +474,7 @@ A more realistic inclusion of clouds in our simulated transmission spectra will 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section we examine the sensitivity of our results to some of our assumptions. 
-In particular, we discuss the effect of the assumption of a simple thermodynamic ocean, the effect of the background CO$_2$ mixing ratio, and the effect of the spin rotation period (Section \ref{ss:sensitivity_Porbit}). 
+In particular, we discuss the effect of the assumption of a simple thermodynamic ocean, the effect of the background CO$_2$ mixing ratio, and the effect of the spin period (Section \ref{ss:sensitivity_Porbit}). 
 
 
 
@@ -524,17 +524,30 @@ Larger amounts of CO$_2$ up to that of a CO$_2$-dominated atmosphere could have 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Effect of Orbital Period}
+\subsection{Effect of Spin Period}
 \label{ss:sensitivity_Porbit}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In our fiducial set of experiments, we changed the orbital rotation period according to the Kepler's 3rd law to be consistent with the total incident flux the planet receives. 
-Because we consider synchronously rotating planets, the spin rotation period has also been changed to match the orbital period. 
-Thus, strictly speaking, the change in \water mixing ratio presented in Fig.~\ref{fig:xH2O_S0X} includes both the effect of the varying incident flux ($S_X$) and the effect of varying rotation period. 
+\memo{YF: This subsection has been revised substantially. }
+
+In our fiducial set of experiments, we changed the planetary spin period together with the incident spectra, because we consider synchronously rotating planets and the orbital period (to which spin period is equated) must change to be consistent with the total incident flux and the host star mass according to the Kepler's 3rd law. 
+Thus, strictly speaking, the change in \water mixing ratio presented in Figure~\ref{fig:xH2O_S0X} includes the effect of both the varying incident flux and the varying spin period. 
 %Although in Section \ref{s:results} we have discussed \water mixing ratio as a function of $S_X$, 
-It is known that the spin rotation period has non-negligible effects on the atmospheric circulation \citep{Yang2013, Kopparapu2016, Way2016} and could consequently change \xwater. 
-In this subsection, we investigate the effect of varying spin rotation period while fixing the total incident flux as well as keeping the assumption of synchronous rotation. 
-% This admittedly leads to the configurations that do not realize, but tells us the degree of the effect of spin rotation period. 
+Meanwhile, it is well known that the spin period has first order effects on the atmospheric circulation and hence potentially affect \xwater. 
+
+In order to isolate the effect of spin rotation, we performed the experiments where we varied the spin period while keeping the incident flux fixed at $S_X=1$ with the GJ~876 spectrum, but allowing the planet to remain in synchronous rotation. 
+The effect of varying spin period on \xwater is presented in Figure~\ref{fig:changeP}. 
+We find that the \xwater becomes smaller as the spin period gets very short.  %, most prominent at spin period smaller than 30 days. 
+Our interpretation of this tendency is as follows. 
+
+In the cases of slow rotation (long spin period) the day-night circulation dominates the atmosphere. 
+As the spin period becomes shorter, however, the atmosphere develops upper level zonal winds, as demonstrated in the previous papers \citep{Merlis2010, Edson2011, Kopparapu2016}. 
+%The transition is characterized by the Rossby deformation radius larger than planetary radius, which is .  
+%
+The zonal wind along the equator which is seen in the shorter period runs (not shown) efficiently moves cloud particles eastward and reduces the cloud cover fraction, resulting in the higher surface temperature \citep{Kopparapu2016}.  
+Consistently, in the runs with the shorter spin period, the convection at the substellar point is more vigorous, which make the convection top higher and colder. 
+Moreover, water vapor transported upward by convection is efficiently transported to the night side by zonal wind; the water vapor mixing ratio in the night side increases by about an order of magnitude when the rotation period becomes shorter from 365 Earth days to 4 Earth days. 
+Theses processes are likely to lead to the smaller water vapor mixing ratio for shorter period runs. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -542,15 +555,11 @@ In this subsection, we investigate the effect of varying spin rotation period wh
     \begin{center}
     \includegraphics[width=\hsize]{fig/xH2O_Prot.pdf}
     \end{center}
-\caption{The dependence of \water mixing ratio on the spin rotation period. The host star spectrum is GJ~876 with $S_X=1$. In all cases the planet is assumed to be synchronously rotating. }
+\caption{The dependence of \water mixing ratio on the spin period. The host star spectrum is GJ~876 with $S_X=1$. In all cases the planet is assumed to be synchronously rotating. }
 \label{fig:changeP}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Figure \ref{fig:changeP}  shows the effect of varying the rotation period while keeping the broadband incident stellar flux fixed and allowing the orbital period to vary so as to allow the planet to remain in synchronous rotation.  Thus, the incident flux and orbital period are no longer consistent with each other, but the experiment allows us to isolate the effect of planet rotation, which is known to have first order effects on atmospheric circulation and climate.
-We find that the \water mixing ratio increases as the rotation period increases. 
-This may also be explained by the 
-\memo{Explain this}. 
 
 
 

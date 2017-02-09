@@ -17,9 +17,9 @@
 
 \renewcommand{\bibname}{References}
 
-\def\water{H$_2$O }
+\def\water{H$_2$O}
 \def\xwater{$x_\text{\water}$}
-\def\preslevel{1.39 mbar\ }
+\def\preslevel{1.39 mbar}
 \def\modelE{ROCKE-3D}
 \def\CHHHH{CH$_4$}
 \def\COO{CO$_2$}
@@ -35,7 +35,7 @@
 \newcommand{\dsa}[1]{{\color{blue}#1}}
 \newcommand{\yf}[1]{{\color{orange}#1}}
 
-\newcommand{\wv}{water vapor\ }
+\newcommand{\wv}{water vapor}
 %\def\wv{water vapor}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,7 +50,7 @@
 \author{Yuka Fujii}
 
 \affil{NPP fellow, Universities Space Research Association}
-\affil{Goddard Institute for Space Studies, 2880 Broadway, New York, NY}
+\affil{NASA Goddard Institute for Space Studies, 2880 Broadway, New York, NY}
 \affil{Earth-Life Science Institute, Tokyo Institute of Technology, Ookayama, Meguro, Tokyo 152-8550, Japan}
 
 \author{Anthony D. Del Genio}
@@ -62,26 +62,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-\water is a key molecule in characterizing atmospheres of temperate terrestrial planets, and observations of transmission spectra are expected to play a primary role in detecting its signatures in the near future. 
+\water{} is a key molecule in characterizing atmospheres of temperate terrestrial planets, and observations of transmission spectra are expected to play a primary role in detecting its signatures in the near future. 
 %
-Detectability of \water absorption features in transmission spectra depends on the mixing ratio of \wv in the upper part of the atmosphere. 
+Detectability of \water{} absorption features in transmission spectra depends on the mixing ratio of \wv{} in the upper part of the atmosphere. 
 %
-While the stratospheric \wv mixing ratio of the Earth is as low as $10^{-6}$ due to the cold trap, the efficiency of the cold trap depends on atmospheric properties. 
+While the stratospheric \wv{} mixing ratio of the Earth is as low as $10^{-6}$ due to the cold trap, the efficiency of the cold trap depends on atmospheric properties. 
 %
-Here we study the three-dimensional distribution of atmospheric \water for synchronously rotating aquaplanets using the general circulation model ROCKE-3D, and examine the effects of total incident flux and stellar spectral type.  
+Here we study the three-dimensional distribution of atmospheric \water{} for synchronously rotating aquaplanets using the general circulation model ROCKE-3D, and examine the effects of total incident flux and stellar spectral type.  
 %
-We observe a more gradual increase of \wv mixing ratio in response to the increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar point previously observed in GCMs applied to synchronously rotating planets. 
+We observe a more gradual increase of \wv{} mixing ratio in response to the increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar point previously observed in GCMs applied to synchronously rotating planets. 
 %
-However, the \wv mixing ratio in the upper atmosphere starts to increase  while the surface temperature is still moderate. 
+However, the \wv{} mixing ratio in the upper atmosphere starts to increase  while the surface temperature is still moderate. 
 %
-This is explained by the circulation in the upper atmosphere, which is seen in the runs with high incident flux, driven by the radiative heating caused by absorption by \wv and cloud particles in the upper atmosphere. 
+This is explained by the circulation in the upper atmosphere, which is seen in the runs with high incident flux, driven by the radiative heating caused by absorption by \wv{} and cloud particles in the upper atmosphere. 
 % At higher incident flux, we find a large-scale circulation in the upper part of the atmosphere, driven by the radiative heating due to the absorption by \water in the upper atmosphere. 
 %
-The interplay between this circulation, causing efficient vertical transport of \wv, and the radiative heating may play the key role in determining the steady state of the \wv mixing ratio in the upper atmosphere. 
+The interplay between this circulation, causing efficient vertical transport of \wv{}, and the radiative heating may play the key role in determining the steady state of the \wv{} mixing ratio in the upper atmosphere. 
 %
-Consistently, the \wv mixing ratio is found to be well correlated with the near-infrared portion of the incident flux. 
+Consistently, the \wv{} mixing ratio is found to be well correlated with the near-infrared portion of the incident flux. 
 %
-Our results imply that various levels of \wv mixing ratios in the upper atmosphere may be expected for synchronously rotating temperate terrestrial planets, and that for the more highly irradiated ones the \water absorption features in the transmission spectra are strengthened by factor of a few, loosening the observational demands for a direct \water detection. 
+Our results imply that various levels of \wv{} mixing ratio in the upper atmosphere may be expected for synchronously rotating temperate terrestrial planets, and that for the more highly irradiated ones the \water{} absorption features in the transmission spectra are strengthened by a factor of a few, loosening the observational demands for a direct \water{} detection. 
 %
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,23 +94,23 @@ Our results imply that various levels of \wv mixing ratios in the upper atmosphe
 \section{Introduction}
 \label{s:intro}
 
-One of the primary interests in future observations of Earth-sized planets is the presence of \water, both as a tracer of habitable conditions and as a clue to the origin and evolutional pathways of the planets. 
+One of the primary interests in future observations of Earth-sized planets is the presence of \water{}, both as a tracer of habitable conditions and as a clue to the origin and evolutional pathways of the planets. 
 Its spectral signatures may be targeted in the near future through transmission spectroscopy using JWST or next-generation ground-based telescopes.
 %
-Although \water signatures have been detected in the atmospheres of hot Jupiters \citep[e.g.][]{Sing2016}, detecting molecular signatures including \water on temperate terrestrial planets is exceedingly challenging \citep{Cowan2015}, 
+Although \water{} signatures have been detected in the atmospheres of hot Jupiters \citep[e.g.][]{Sing2016}, detecting molecular signatures including \water{} on temperate terrestrial planets is exceedingly challenging \citep{Cowan2015}, 
 because of the small planetary radius and the small scale height (due to the lower temperature and presumably larger mean molecular weight).  
 %The signal is typically 1-10 ppm even for a planet around 
 %This requires a significant devotion of telescopes, even in the case where the observational noise is limited by stellar photon noise. 
-\water signatures of temperate planets are particularly difficult to observe because, while it is a dominant opacity source of Earth's atmosphere, the \wv  mixing ratio above the troposphere---where transmission spectroscopy typically probes---is fairly small due to the ``cold trap'', i.e., \wv evaporated from the surface is transported upward, but condenses as air rises and cools, and most of it precipitates, leaving the stratosphere fairly dry. 
-Several studies of modeling transmission spectra of the Earth found undesirably weak signatures of \wv \citep[e.g.][]{Ehrenreich2006, Kaltenegger2009, Betremieux2013, Misra2014}. 
+\water signatures of temperate planets are particularly difficult to observe because, while it is a dominant opacity source of Earth's atmosphere, the \wv{}  mixing ratio above the troposphere---where transmission spectroscopy typically probes---is fairly small due to the ``cold trap'', i.e., \wv{} evaporated from the surface is transported upward, but condenses as air rises and cools, and most of it precipitates, leaving the stratosphere fairly dry. 
+Several studies of modeling transmission spectra of the Earth found undesirably weak signatures of \wv{} \citep[e.g.][]{Ehrenreich2006, Kaltenegger2009, Betremieux2013, Misra2014}. 
 However, the efficiency of the cold trap depends on the atmospheric properties in general. 
-Thus, modeling the \wv mixing ratio profiles is an issue of interest in the context of evaluating the observability of atmospheric signatures of transiting terrestrial planets. 
+Thus, modeling the \wv{} mixing ratio profiles is an issue of interest in the context of evaluating the observability of atmospheric signatures of transiting terrestrial planets. 
 
-The mixing ratio of \wv in the stratosphere is also closely related to planetary water loss and thus planetary habitability. 
-\citet{Kasting1993} considered the maximum stratospheric \wv mixing ratio that would allow for a planet to sustain an amount of water equivalent to Earth's oceans over the Earth's age, $\sim 3 \times 10^{-3}$, as a criterion for the inner edge of the habitable zone (the threshold for the moist-greenhouse stage). 
-Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined stratospheric \wv, or equivalently, the efficiency of the cold trap, with varying planetary properties. 
+The mixing ratio of \wv{} in the stratosphere is also closely related to planetary water loss and thus planetary habitability. 
+\citet{Kasting1993} considered the maximum stratospheric \wv{} mixing ratio that would allow for a planet to sustain an amount of water equivalent to Earth's oceans over the Earth's age, $\sim 3 \times 10^{-3}$, as a criterion for the inner edge of the habitable zone (the threshold for the moist-greenhouse stage). 
+Motivated mainly by this ``habitability'' aspect, atmospheric models with different levels of complexity have examined stratospheric \wv{}, or equivalently, the efficiency of the cold trap, with varying planetary properties. 
 
-\citet{Kasting1993} and \citet{Kopparapu2013} used a simple one-dimensional (1D) model with a saturated troposphere and an isothermal stratosphere to examine the response of the stratospheric \wv mixing ratio to increased instellation. 
+\citet{Kasting1993} and \citet{Kopparapu2013} used a simple one-dimensional (1D) model with a saturated troposphere and an isothermal stratosphere to examine the response of the stratospheric \wv{} mixing ratio to increased instellation. 
 They found a transition from an Earth-like dry atmosphere to a water-dominated atmosphere, driven by the increase of the surface temperature, with only a 20\% increase in instellation relative to the solar constant. 
 The above-mentioned critical mixing ratio ($\sim 3 \times 10^{-3}$) is reached when the surface temperature is 340 K. 
 \yf{\citet{Kodama2015} also showed a similarly rapid transition to the water-dominated atmosphere as a function of incident flux using a 1D radiative-convective model after \citet{Abe1988}. }
@@ -137,7 +137,7 @@ In particular, the 3D climate of habitable-zone planets around late-type stars m
 They primarily studied the highest instellation that allows for the model to converge as a proxy for the inner edge. 
 While they also presented the stratospheric water vapor, the discussion was limited. 
 
-Motivated by these works on the stabilized climate of planets around late-type stars, we are specifically interested in the \wv transport into the upper atmosphere, not only because it affects the water loss rate (and thus conventional criterion for habitable conditions) but also because it limits our ability to detect \water signatures through transmission spectroscopy. 
+Motivated by these works on the stabilized climate of planets around late-type stars, we are specifically interested in the \wv{} transport into the upper atmosphere, not only because it affects the water loss rate (and thus conventional criterion for habitable conditions) but also because it limits our ability to detect \water{} signatures through transmission spectroscopy. 
 %
 Indeed, planets around later type stars are best suited for future transit observations for several reasons, including the higher transit probability, larger signals in transmission spectra, and the abundance of late-type stars in the nearby universe. 
 
@@ -145,12 +145,12 @@ Indeed, planets around later type stars are best suited for future transit obser
 %Some of the 1D atmospheric models \citep{Rugheimer2013, Rugheimer2015} as well as 3D models \citep{Godolt2015} infer orders of magnitude larger water vapor mixing ratio in the stratosphere on planets around late-type stars with similar instellation as the Earth receives, 
 %while other 3D GCM models show stratospheric mixing ratio of order of $10^{-6}$ even for planets around M-type stars. 
 
-\yf{In order to obtain better insights into the processes that control \wv mixing ratio in the upper atmosphere of synchronously rotating terrestrial planets with surface water, we conduct series of experiments using the \modelE \ GCM, which calculates the atmospheric dynamic, thermodynamic, and radiative fields up to $0.1$ mbar ($\sim $65 km in the case of the Earth), sufficiently resolving the stratosphere. }
+\yf{In order to obtain better insights into the processes that control \wv{}  mixing ratio in the upper atmosphere of synchronously rotating terrestrial planets with surface water, we conduct series of experiments using the \modelE{} GCM, which calculates the atmospheric dynamic, thermodynamic, and radiative fields up to $0.1$ mbar ($\sim $65 km in the case of the Earth), sufficiently resolving the stratosphere. }
 % for \yf{Earth-like planets with surface liquid water, }
 %planets which receive an amount of energy from the host star similar to the Earth. 
 %Using \modelE \ , we calculate the atmospheric dynamic, thermodynamic, and radiative fields up to $0.1$ mbar ($\sim $65 km in the case of the Earth), to be able to sufficiently resolve the stratosphere. 
-We specifically study the dependence of the \wv mixing ratio on the incident flux (total incident flux and the spectral type), fixing planetary parameters (radius, gravity, atmospheric composition, and atmospheric pressure). 
-We also present synthetic transmission spectra based on GCM outputs in order to evaluate the detectability of \water signatures with future transmission spectroscopy. 
+We specifically study the dependence of the \wv{} mixing ratio on the incident flux (total incident flux and the spectral type), fixing planetary parameters (radius, gravity, atmospheric composition, and atmospheric pressure). 
+We also present synthetic transmission spectra based on GCM outputs in order to evaluate the detectability of \water{} signatures with future transmission spectroscopy. 
 
 
 
@@ -252,7 +252,7 @@ All of the results presented in this paper are based on the averaged data create
     \begin{minipage}{0.5\hsize}
 \includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
     \end{minipage}
-    \caption{Profiles of temperature (upper panels) and \wv mixing ratio (lower panels) along the equator, for GJ~876 (a M4V star; left) and for Sun (right), with different total normalized incident flux ($S_X$). The blank area near the top is above the model top ($< 0.14$ mbar).}
+    \caption{Profiles of temperature (upper panels) and \wv{} mixing ratio (lower panels) along the equator, for GJ~876 (a M4V star; left) and for Sun (right), with different total normalized incident flux ($S_X$). The blank area near the top is above the model top ($< 0.14$ mbar).}
 \label{fig:3Dprofile_equator}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -263,7 +263,7 @@ All of the results presented in this paper are based on the averaged data create
 \label{ss:method_TransmissionSpectra}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We also simulate transmission spectra based on the outputs of our GCM experiments, setting the model planet in a transiting geometry, in order to quantify the absorption features of \wv.  
+We also simulate transmission spectra based on the outputs of our GCM experiments, setting the model planet in a transiting geometry, in order to quantify the absorption features of \wv{}.  
 We follow the procedure described in Appendix B of \citet{Way2017}, which is briefly summarized below. 
 
 First, we obtained the vertical profiles of temperature, water vapor, and cloud particles along the terminator (i.e., dayside-nightside boundary) by linearly interpolating the profiles of the GCM gridpoints adjacent to the terminator. 
@@ -317,18 +317,18 @@ The uncertainties in the particle radius, scattering cross section, and the clou
 \label{ss:result_H2Omixingratio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Before examining the dependence of the \wv mixing ratio in the upper atmosphere, we discuss the 3D \yf{structure (structures?)} of temperature and water vapor as we need to know at which altitude the mixing ratio of \wv becomes relatively uniform in order to identify a suitable \wv mixing ratio that can be regarded as representative of the humidity in the upper atmosphere. 
+Before examining the dependence of the \wv{} mixing ratio in the upper atmosphere, we discuss the 3D \yf{structure (structures?)} of temperature and water vapor as we need to know at which altitude the mixing ratio of \wv{} becomes relatively uniform in order to identify a suitable \wv{} mixing ratio that can be regarded as representative of the humidity in the upper atmosphere. 
 
-Figure~\ref{fig:3Dprofile_equator} shows the \yf{structure (structures?)} of temperature and the \wv mixing ratio along the equator for the planets around GJ~876 (M4V) and around the Sun (G2V), respectively, for varying incident flux normalized by the solar constant ($S_X$). 
+Figure~\ref{fig:3Dprofile_equator} shows the \yf{structure (structures?)} of temperature and the \wv{} mixing ratio along the equator for the planets around GJ~876 (M4V) and around the Sun (G2V), respectively, for varying incident flux normalized by the solar constant ($S_X$). 
 In all panels the substellar point corresponds to $0^{\circ }$ longitude. 
-In general, the temperature and the \wv mixing ratio near the surface strongly depend on the distance from the substellar point, but are fairly uniform in the upper part of the atmosphere. 
-Above 1 mbar, which is located bewteen 35 and 50 km altitude depending on the atmospheric temperature profiles, the \wv mixing ratio becomes horizontally uniform within a few tens of percent. 
-Therefore, in the following, we denote the globally averaged \wv mixing ratio at \preslevel by \xwater, and use it as representative of \wv abundance in the upper atmosphere. 
+In general, the temperature and the \wv{} mixing ratio near the surface strongly depend on the distance from the substellar point, but are fairly uniform in the upper part of the atmosphere. 
+Above 1 mbar, which is located bewteen 35 and 50 km altitude depending on the atmospheric temperature profiles, the \wv{} mixing ratio becomes horizontally uniform within a few tens of percent. 
+Therefore, in the following, we denote the globally averaged \wv{} mixing ratio at \preslevel{} by \xwater{}, and use it as representative of \wv{} abundance in the upper atmosphere. 
 %\memo{explain why it is uniform. }
 
 We also observe optically thick clouds around the substellar point and a resulting increase of the planetary albedo as a function of total incident flux (not shown in figures), consistent with \citet{Yang2013,Yang2014}, \citet{Kopparapu2016} and \citet{Way2016}. 
 %This indicates the climate-stabilizing effect of clouds, which is pointed out by \citet{Yang2013}. 
-As shown in Fig.~\ref{fig:3Dprofile_equator}, the maximum surface temperature does not exceed 320 K even in the highly irradiated cases in our experiments where the \wv mixing ratio near the model top is as high as $10^{-3}$; we will discuss this in the subsequent sections. 
+As shown in Fig.~\ref{fig:3Dprofile_equator}, the maximum surface temperature does not exceed 320 K even in the highly irradiated cases in our experiments where the \wv{} mixing ratio near the model top is as high as $10^{-3}$; we will discuss this in the subsequent sections. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -342,7 +342,7 @@ As shown in Fig.~\ref{fig:3Dprofile_equator}, the maximum surface temperature do
     \begin{center}
     \includegraphics[width=\hsize]{fig/xH2O_3panels.pdf}
     \end{center}
-\caption{Water vapor mixing ratio at \preslevel mbar as a function of total incident flux (left), the surface temperature \yf{averaged within $0.2R_\earth$ of the substellar point} (center), and the near-infrared portion of the incident flux integrated bewteen 0.9 and 3.0 \textmu m (right). The colors represent the stellar types: Sun (navy), HD~22048 (green), Kepler-186 (orange), and GJ~876 (red). Dashed lines are adapted from \citet{Kasting1993}. }                                                                                                             
+\caption{Water vapor mixing ratio at \preslevel{} mbar as a function of total incident flux (left), the surface temperature \yf{averaged within $0.2R_\earth$ of the substellar point} (center), and the near-infrared portion of the incident flux integrated bewteen 0.9 and 3.0 \textmu m (right). The colors represent the stellar types: Sun (navy), HD~22048 (green), Kepler-186 (orange), and GJ~876 (red). Dashed lines are adapted from \citet{Kasting1993}. }                                                                                                             
 \label{fig:xH2O_S0X}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -351,15 +351,15 @@ In this section, we examine in more detail how the \wv mixing ratio in the upper
 
 The left panel of Fig.~\ref{fig:xH2O_S0X} presents \xwater versus $S_X$. 
 Overall, we find an increase of \xwater as a function of $S_X$. 
-However, the slope is much more gradual than suggested by 1D models, in particular those  of \citet{Kasting1993} and \citet{Wordsworth2013} with a small CO$_2$ mixing ratio, which typically predict a rapid transition from an Earth-like dry stratosphere to a \water-dominated atmosphere. 
-Our result that the \wv mixing ratio responds more slowly to the incident flux is qualitatively consistent with \citet{Yang2013}, who studied synchronously rotating planets around M-type and K-type stars using CAM3 with an emphasis on the stability of the climate. 
+However, the slope is much more gradual than suggested by 1D models, in particular those  of \citet{Kasting1993} and \citet{Wordsworth2013} with a small CO$_2$ mixing ratio, which typically predict a rapid transition from an Earth-like dry stratosphere to a \water{}-dominated atmosphere. 
+Our result that the \wv{} mixing ratio responds more slowly to the incident flux is qualitatively consistent with \citet{Yang2013}, who studied synchronously rotating planets around M-type and K-type stars using CAM3 with an emphasis on the stability of the climate. 
 Note that we cannot directly compare to their results as our assumptions do not match perfectly; specifically, \cite{Yang2013} assumed a super-Earth with larger radius ($R=2R_\earth$) and higher gravity ($g=1.4g_\earth$), an N$_2$-dominated atmosphere with 400 ppm of CO$_2$, and a 60-day orbital period. 
 The dependence on these other planetary parameters will be investigated in a future paper. 
 
-Because these are synchronously rotating planets where the surface temperature is stabilized by the optically thick clouds around the substellar point, one might think that this stabilized surface temperature would explain the slow  response of \wv to the increased total incident flux. 
-To see the effect of the surface temperature, we have plotted \xwater as a function of surface temperature around the substellar point where convection is strongest (Fig.~\ref{fig:xH2O_S0X}, middle panel). 
-It is then clearly seen that the \wv mixing ratio starts to rise at a fairly modest surface temperature and increases even more dramatically as a function of surface temperature than 1D models suggest. 
-This indicates that the increasing surface temperature cannot by itself explain the increased stratospheric \wv mixing ratios. 
+Because these are synchronously rotating planets where the surface temperature is stabilized by the optically thick clouds around the substellar point, one might think that this stabilized surface temperature would explain the slow  response of \wv{} to the increased total incident flux. 
+To see the effect of the surface temperature, we have plotted \xwater{} as a function of surface temperature around the substellar point where convection is strongest (Fig.~\ref{fig:xH2O_S0X}, middle panel). 
+It is then clearly seen that the \wv{}  mixing ratio starts to rise at a fairly modest surface temperature and increases even more dramatically as a function of surface temperature than 1D models suggest. 
+This indicates that the increasing surface temperature cannot by itself explain the increased stratospheric \wv{} mixing ratios. 
 We will examine this in the next subsection. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -374,12 +374,12 @@ We will examine this in the next subsection.
     \includegraphics[width=1\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
     \includegraphics[width=1\hsize]{fig/AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
     \end{center}
-\caption{From left to right, the vertical profiles of temperature, \wv mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel where \xwater is measured. }
+\caption{From left to right, the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel{} where \xwater{} is measured. }
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, we show the vertical profiles of temperature, \wv mixing ratio, short-wave heating rate, and upward velocity, averaged over the region within a distance $0.2R_\earth$ from the substellar point. 
+In Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, we show the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged over the region within a distance $0.2R_\earth$ from the substellar point. 
 The \yf{variability of the profiles in the individual gridboxes that contribute to the average}
 %dispersion among the different columns 
 is negligible compared to the changes due to varying $S_X$. 
@@ -387,8 +387,8 @@ is negligible compared to the changes due to varying $S_X$.
 \yf{Rising motion exists at most altitudes in the substellar region.  In the troposphere, where moist convection occurs, large-scale vertical motion is relatively insensitive to Sx.  Above the convective layers, though, large-scale upward motion increases strongly with incident flux,}
 %
 %At large incident flux, we observe the development of a vertical motion of the air above the convection layers, 
-concurrently with the increase in \wv mixing ratio and heating rate in the upper atmosphere. 
-This large-scale circulation can be explained as follows: When the incident flux increases, the heating rate due to the absorption of short-wave radiation by \wv, mainly \yf{in the near-infrared regime}, also increases. 
+concurrently with the increase in \wv{} mixing ratio and heating rate in the upper atmosphere. 
+This large-scale circulation can be explained as follows: When the incident flux increases, the heating rate due to the absorption of short-wave radiation by \wv{}, mainly \yf{in the near-infrared regime}, also increases. 
 The air then reacts by rising and adiabatically cooling according to the conservation equation for the potential temperature $\Theta $:
 %%%
 \begin{equation}
@@ -406,7 +406,7 @@ The latent heating, $Q_l$, is negligible compared to radiative heating above the
 Likewise, around the substellar point, the vertical advection dominates over the horizontal advection since horizontal gradients are small (Fig.~\ref{fig:3Dprofile_equator}), thus the second and the third terms in Eq.~(\ref{eq:conserv_energy_2}) may be dropped as an approximation. 
 Then, the increase of heating rate, $Q_r$, has the effect of increasing the fourth term in the left-hand side of equation (\ref{eq:conserv_energy_2}). 
 Because the upper atmosphere is stable against convection, i.e., $\partial \Theta / \partial p < 0 $ \yf{[YF's COMMENT] I revised this to partial derivative. Let me know if I am wrong}, larger (positive) $Q_r$ leads to a larger absolute value for $\omega $ (with negative sign), which means that stronger upward motion develops. 
-This upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the short-wave absorption by \wv. 
+This upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at altitude, further increasing the short-wave absorption by \wv{}. 
 This interplay between the radiative heating and water vapor transport eventually finds a steady state where $\partial \Theta/\partial t = 0$, leaving a stable circulation in the upper atmosphere around the substellar point. 
 % This circulation could take over the role of transporting water vapor from the convection that takes place in the lower atmosphere. 
 
@@ -415,10 +415,10 @@ We also found the radiative heating by cloud particles above convective layers t
 In order to see the radiative effect of clouds above convective layers, we created models that are comparable to the fiducial models, but where the  influence of cloud particles above the 237 mbar level ($\sim 11$ km for the runs shown below) has been turned off in the radiation calculations (i.e., clouds particles in the upper atmosphere are transparent to radiation). 
 Figure~\ref{fig:GJ876_heat_cld} displays the comparison between such ``transparent high clouds'' models (black, dotted) and fiducial models (red solid), for $S_X=1.0$ and $1.2$ with the incident spectrum of GJ~876. 
 While these high clouds have a minimal effect on the surface temperature and atmospheric profiles below the convection layers, it is seen that radiative heating above the convection layer is substantially suppressed without the radiative effect of clouds, leading to a colder, and drier upper atmosphere. 
-Note that we still see heating attributed to water vapor in the ``transparent high clouds'' models, for example \yf{\wv and short-wave heating at 20-30 km altitude increase considerably from $S_X$ = 1.0 to $S_X$ = 1.2 even in the absence of cloud radiative effects, but the sensitivity to $S_X$ is weaker at higher altitudes. }
+Note that we still see heating attributed to water vapor in the ``transparent high clouds'' models, for example \yf{\wv{} and short-wave heating at 20-30 km altitude increase considerably from $S_X$ = 1.0 to $S_X$ = 1.2 even in the absence of cloud radiative effects, but the sensitivity to $S_X$ is weaker at higher altitudes. }
 %radiative heating around 25 km in the case of $S_X=1.2$, while the higher atmosphere remains dry. 
 
-In summary, atmospheric vertical motion and the radiative heating by water vapor and cloud particles interact with each other through positive feedbacks, and thus a modest increase of the incident radiative flux, $S_X$, can result in  an increase of \wv mixing ratio in the upper atmosphere of an order-of-magnitude \yf{or more}, while the surface temperature increases only modestly. 
+In summary, atmospheric vertical motion and the radiative heating by water vapor and cloud particles interact with each other through positive feedbacks, and thus a modest increase of the incident radiative flux, $S_X$, can result in  an increase of \wv{} mixing ratio in the upper atmosphere of an order-of-magnitude \yf{or more}, while the surface temperature increases only modestly. 
 
 % In summary, radiative heating by water vapor and cloud particles 
 %This positive feedback between the radiative heating rate and \water mixing ratio in the upper atmosphere would make a modest increase of the radiative flux result in an almost order-of-magnitude increase of water vapor. 
@@ -429,14 +429,14 @@ In summary, atmospheric vertical motion and the radiative heating by water vapor
     \begin{center}
     \includegraphics[width=1\hsize]{fig/GJ876_heat_cld.pdf}
     \end{center}
-\caption{Comparison between the fiducial $S_X=1.0$ (red) and $S_X=1.2$ (pink) models of of planets orbiting GJ~876 and the comparable ``transparent high clouds'' models where the radiative effect of high clouds above 237 mbar are turned off (dashed black for $S_X=1.0$ and dashed gray for $S_X=1.2$). The vertical profiles of temperature, \wv mixing ratio, short-wave heating rate, cloud fraction, ice cloud content, and liquid cloud content are averaged over the region within $0.2R_\earth$ of the substellar point. }
+\caption{Comparison between the fiducial $S_X=1.0$ (red) and $S_X=1.2$ (pink) models of of planets orbiting GJ~876 and the comparable ``transparent high clouds'' models where the radiative effect of high clouds above 237 mbar are turned off (dashed black for $S_X=1.0$ and dashed gray for $S_X=1.2$). The vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, cloud fraction, ice cloud content, and liquid cloud content are averaged over the region within $0.2R_\earth $ of the substellar point. }
 \label{fig:GJ876_heat_cld}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This picture suggests that the driving factor is the absorption of the incident flux by water vapor, which is the most efficient in the near-infrared part of the spectrum. 
-Indeed, as shown in the right panel of Fig.~\ref{fig:xH2O_S0X}, a good correlation is found between the \wv mixing ratio at \preslevel and the near-infrared portion of the incident flux, integrated bewteen 0.9 and 3 \textmu m (the interval is somewhat arbitrary), insensitive to the stellar spectral types. 
-Because the near-IR flux is an external parameter that can be found from direct observations of the host star, it would be a useful guide to predict the \wv  mixing ratio for a planet \yf{given knowledge of its distance from the star}. 
+Indeed, as shown in the right panel of Fig.~\ref{fig:xH2O_S0X}, a good correlation is found between the \wv{} mixing ratio at \preslevel{} and the near-infrared portion of the incident flux, integrated bewteen 0.9 and 3 \textmu m (the interval is somewhat arbitrary), insensitive to the stellar spectral types. 
+Because the near-IR flux is an external parameter that can be found from direct observations of the host star, it would be a useful guide to predict the \wv{}  mixing ratio for a planet \yf{given knowledge of its distance from the star}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -445,14 +445,14 @@ Because the near-IR flux is an external parameter that can be found from direct 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this subsection, we show the transmission spectra for the modeled planets around one of our M-type stars, GJ~876. 
-Figure~\ref{fig:transmission} shows the transmission spectra for the $S_X=0.6$, $1.0$ and $1.2$ cases, where the \wv mixing ratio at \preslevel is roughly $10^{-6}$, $10^{-4}$ and $3\cdot 10^{-3}$, respectively. 
-The corresponding vertical profiles in the substellar region are shown in Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \wv mixing ratio is even higher at medium altitudes (10 to 30 km).
+Figure~\ref{fig:transmission} shows the transmission spectra for the $S_X=0.6$, $1.0$ and $1.2$ cases, where the \wv{} mixing ratio at \preslevel{} is roughly $10^{-6}$, $10^{-4}$ and $3\cdot 10^{-3}$, respectively. 
+The corresponding vertical profiles in the substellar region are shown in Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \wv{} mixing ratio is even higher at medium altitudes (10 to 30 km).
 Although refraction due to the planetary atmosphere is included, its effect on the transmission spectra of planets around late-type stars like GJ~876 is minor \citep{Betremieux2014,Misra2014}. 
 
 
 Without the opacity due to clouds (dashed lines in Fig.~\ref{fig:transmission}), the effective altitude of the water vapor absorption features increases from $\sim $10 km to $\sim $40 km when $S_X$ increases from $0.6$ to $1.2$. 
 This level of effective altitude of water signatures is comparable with the strongest features in the modeled visible-to-NIR transmission spectrum of the Earth \citep[e.g.,][]{Kaltenegger2009}.
-Thus, for the highly-irradiated cases shown here, \water signatures will be a natural target when trying to observe atmospheric signatures of planets similar to the Earth. 
+Thus, for the highly-irradiated cases shown here, \water{} signatures will be a natural target when trying to observe atmospheric signatures of planets similar to the Earth. 
 
 \yf{Clouds} are also present in the upper atmosphere around the terminator, and the inclusion of clouds substantially raises the baseline of the transmission spectra. 
 %These clouds around the \dsa{substellar} point are presumably transported from around the \dsa{substellar} point, and the cloud water content is at most $\sim 10^{-6}$ [kg/kg] near the cloud top (mostly icy particles) and $\sim 10^{-4}$ [kg/kg] toward the lower atmosphere (liquid particles). 
@@ -505,17 +505,16 @@ For this purpose, we ran the models for GJ~876 assuming a 900 m deep dynamic oce
 The models with the dynamic ocean typically equilibrated after a hundred to several hundred Earth years. 
 In the same way as the fiducial models, we averaged the atmospheric profiles  over approximately 10 Earth years after the model reached a steady state. 
 
-Figure~\ref{fig:change_ocean} shows \xwater for GJ~876 with varying $S_X$ both for our fiducial runs and those using the dynamic ocean module.  
+Figure~\ref{fig:change_ocean} shows \xwater{} for GJ~876 with varying $S_X$ both for our fiducial runs and those using the dynamic ocean module.  
 \yf{There are minor differences between the two, with the maximum difference being less than an order of magnitude. }
-\yf{The models with a dynamic ocean tend to have lower \xwater. 
-This presumably related to the fact the models with ocean heat transport results in smaller surface temperature gradient and less hence efficient convection in the substellar region. }
-
+\yf{The models with a dynamic ocean tend to have somewhat less \xwater{} than the models with zero ocean heat transport. }
+\yf{This appears to be related to the fact that ocean heat transport from the dayside to the nightside lowers the substellar surface temperature and weakens convection there, and thus there is less transport of water vapor to the upper atmosphere. }
 
 %\memo{Explain why. }
 %This is because \memo{I am not sure. This is just tentative. } with a dynamic ocean the heat absorbed by the surface is efficiently transported to the surrounding regions and the surface temperature at the \dsa{substellar} point is lowered, weakening the convergence and convection there.
 %As the top altitude of convection is lowered, saturated \water mixing ratio becomes smaller because the atmospheric pressure is larger at lower atmosphere while the water pressure is fixed \memo{???}. 
 
-Overall, however, our fiducial models with a thermodynamic ocean approximation give a reasonable order-of-magnitude estimate for \wv mixing ratio in the upper atmosphere. 
+Overall, however, our fiducial models with a thermodynamic ocean approximation give a reasonable order-of-magnitude estimate for \wv{} mixing ratio in the upper atmosphere. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
@@ -535,7 +534,7 @@ Overall, however, our fiducial models with a thermodynamic ocean approximation g
 Our fiducial models assumed 1 ppm CO$_2$, which was an arbitrary choice. 
 Although a full investigation of the dependence on the CO$_2$ mixing ratio is beyond the scope of this paper, here we briefly mention how much the results are changed if we assume an Earth-like CO$_2$ mixing ratio. 
 The results of the models with 300 ppm of CO$_2$ are plotted in Fig.~\ref{fig:change_ocean}. 
-As shown, this level of variation of CO$_2$ has a very small effect on the \wv profile. 
+As shown, this level of variation of CO$_2$ has a very small effect on the \wv{} profile. 
 Larger amounts of CO$_2$ up to that of a CO$_2$-dominated atmosphere could have a more substantial effect on the 3D profiles \citep{Wordsworth2013}. 
 
 
@@ -544,18 +543,16 @@ Larger amounts of CO$_2$ up to that of a CO$_2$-dominated atmosphere could have 
 \label{ss:sensitivity_Porbit}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\memo{YF: This subsection has been revised substantially. }
-
 In our fiducial set of experiments, we changed the planetary spin period together with the stellar flux for a given star, because we consider synchronously rotating planets and the orbital period (which is equal to the spin period) must change to be consistent with the total incident flux and the host star mass according to Kepler's 3rd law. 
-Thus, strictly speaking, the change in the \wv mixing ratio presented in Figure~\ref{fig:xH2O_S0X} includes the effect of both the varying incident flux and the varying spin period. 
+Thus, strictly speaking, the change in the \wv{} mixing ratio presented in Figure~\ref{fig:xH2O_S0X} includes the effect of both the varying incident flux and the varying spin period. 
 %Although in Section \ref{s:results} we have discussed \water mixing ratio as a function of $S_X$, 
-Meanwhile, it is well known that the spin period has first order effects on the atmospheric circulation and hence can potentially affect \xwater. 
+Meanwhile, it is well known that the spin period has first order effects on the atmospheric circulation and hence can potentially affect \xwater{}. 
 
 In order to isolate the effect of rotation, we performed the experiments where we varied the spin period while keeping the incident flux fixed at $S_X=1$ with the GJ~876 spectrum, but allowing the planet to remain in synchronous rotation. 
-The effect of varying spin period on \xwater is presented in Figure~\ref{fig:changeP}. 
+The effect of varying spin period on \xwater{} is presented in Figure~\ref{fig:changeP}. 
 \yf{It is considerably less than the dependence on $S_X$ seen in Figure~\ref{fig:xH2O_S0X}, i.e., the increase in stratospheric water vapor as the planet is moved closer to its star is mostly an intrinsic sensitivity to the stellar flux rather than an effect of the changing planet rotation as the orbital period changes.} 
 
-\yf{The spin effect is non-neglible, though;} we find that the \xwater becomes smaller as the spin period gets very short\yf{, i.e., increasing planet spin partly offsets the effect of increasing stellar flux.}  %, most prominent at spin period smaller than 30 days. 
+\yf{The spin effect is non-neglible, though;} we find that the \xwater{} becomes smaller as the spin period gets very short\yf{, i.e., increasing planet spin partly offsets the effect of increasing stellar flux.}  %, most prominent at spin period smaller than 30 days. 
 Our interpretation of this tendency is as follows. 
 \yf{At} slow rotation (long spin period) the day-night circulation dominates the atmosphere. 
 As the spin period becomes shorter, however, the atmosphere develops upper level zonal winds, as demonstrated in the previous papers \citep{Merlis2010, Edson2011, Kopparapu2016}. 
@@ -564,9 +561,9 @@ As the spin period becomes shorter, however, the atmosphere develops upper level
 The super-rotating zonal wind in the equatorial region is seen in the shorter period runs (not shown) efficiently \yf{transports water vapor from the dayside to the nightside and limits cloudiness in the substellar region}.
 % moves cloud particles eastward and reduces the cloud cover fraction,
 resulting in a higher surface temperature \citep{Kopparapu2016}.  
-Consistently, in the runs with the shorter spin period, the convection at the substellar point is more vigorous, which makes the convection top higher and colder and \yf{thus drier}. 
-Moreover, the \wv transported upward by convection is \yf{more} efficiently transported to the night side by the zonal wind, \yf{as noted above}; the water vapor mixing ratio \yf{on} the night side increases by about an order of magnitude when the rotation period decreases from 365 Earth days to 4 Earth days. 
-Theses processes are likely to lead to the smaller upper atmosphere \wv mixing ratio for shorter period runs. 
+Consistently, in the runs with the shorter spin period, \yf{the convection at the substellar point is deeper, and the temperature at the top of the convection where it moistens the atmosphere is colder, thus drier}. 
+Moreover, the \wv{} transported upward by convection is \yf{more} efficiently transported to the night side by the zonal wind, \yf{as noted above}; the water vapor mixing ratio \yf{on} the night side increases by about an order of magnitude when the rotation period decreases from 365 Earth days to 4 Earth days. 
+Theses processes are likely to lead to the smaller upper atmosphere \wv{} mixing ratio for shorter period runs. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -587,40 +584,41 @@ Theses processes are likely to lead to the smaller upper atmosphere \wv mixing r
 \label{s:summary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We have investigated the response of atmospheric \wv profiles of synchronously rotating planets to changes in the incident stellar flux. 
-We find a gradual (quasi-exponential) increase of \wv mixing ratios in the upper atmosphere as a function of total incident flux, resulting in a variation of several orders of magnitude as the total incident flux increases by a factor of two to three. 
+We have investigated the response of atmospheric \wv{} profiles of synchronously rotating planets to changes in the incident stellar flux. 
+We find a gradual (quasi-exponential) increase of \wv{} mixing ratios in the upper atmosphere as a function of total incident flux, resulting in a variation of several orders of magnitude as the total incident flux increases by a factor of two to three. 
 
-Due to the relatively stable surface temperature at the substellar point, the increase of \wv mixing ratio in response to larger incident flux is not primarily caused by the increased surface temperature as previous 1D models suggest. 
+Due to the relatively stable surface temperature at the substellar point, the increase of \wv{} mixing ratio in response to larger incident flux is not primarily caused by the increased surface temperature as previous 1D models suggest. 
 Instead, it is induced by \yf{the effect of } the increased near-infrared portion of the incident flux \yf{on the high-altitude circulation}. 
-The enhanced radiative heating due to the absorption by \wv \yf{and cloud particles} drives \yf{a large-scale} upward motion of the air \yf{at altitudes above those to which convection penetrates, taking over}
-the role of transporting \wv from the moist lower atmosphere to the upper atmosphere, and further increasing the heating rate in the upper atmosphere.
+The enhanced radiative heating due to the absorption by \wv{} \yf{and cloud particles} drives \yf{a large-scale} upward motion of the air \yf{at altitudes above those to which convection penetrates, taking over}
+the role of transporting \wv{} from the moist lower atmosphere to the upper atmosphere, and further increasing the heating rate in the upper atmosphere.
 As a result, the moisture in the upper atmosphere increases dramatically while the surface below it remains temperate. 
-This picture is supported by the good correlation between the \wv mixing ratio at \preslevel and the near-infrared portion of the incident radiation, regardless of the spectral type of the host star. 
+This picture is supported by the good correlation between the \wv{} mixing ratio at \preslevel{} and the near-infrared portion of the incident radiation, regardless of the spectral type of the host star. 
 
 Simulating transmission spectra based on the atmospheric profiles found by GCM experiments, 
-we demonstrate that the increase of the \wv mixing ratio at \preslevel from $10^{-6}$ to $3 \times 10^{-3}$ leads to an increase of the \water absorption depth by a factor of a few, making the effective altitude of the \water absorption features as high as 40~km. 
+we demonstrate that the increase of the \wv{} mixing ratio at \preslevel{} from $10^{-6}$ to $3 \times 10^{-3}$ leads to an increase of the \water{} absorption depth by a factor of a few, making the effective altitude of the \water{} absorption features as high as 40~km. 
 The presence of clouds in the high atmosphere at the terminator potentially increases the baseline effective altitude and thus weakens the absorption features. 
 We bracketed the effect of clouds in the transmission spectra, 
 although there are uncertainties in the detailed optical properties of cloud particles as well as in the cloud formation processes in any GCM treatment. 
 
-While we used a thermodynamic ocean model with zero ocean heat transport for simplicity, comparable experiments with a dynamic ocean are also performed to demonstrate that this approximation of an ocean \yf{has only a modest effect} on the \wv mixing ratio, the size of which is within about an order of magnitude \yf{or less}. 
+While we used a thermodynamic ocean model with zero ocean heat transport for simplicity, comparable experiments with a dynamic ocean are also performed to demonstrate that this approximation of an ocean \yf{has only a modest effect} on the \wv{} mixing ratio, the size of which is within about an order of magnitude \yf{or less}. 
 Varying the CO$_2$ mixing ratio from 1~ppm to 300~ppm has a negligible effect. 
-We also confirmed that changing the planet spin period only has a secondary effect on the \wv mixing ratio, resulting in an order of magnitude variation at most. 
+We also confirmed that changing the planet spin period only has a secondary effect on the \wv{} mixing ratio, resulting in an order of magnitude variation at most. 
 
 
-In this paper, we limit our discussion on the \wv profiles to the effects of the total incident flux and spectral energy distribution (i.e., the spectral type of the host star). 
+In this paper, we limit our discussion on the \wv{} profiles to the effects of the total incident flux and spectral energy distribution (i.e., the spectral type of the host star). 
 These parameters are among the limited number of properties that can be constrained relatively easily by observations. 
-In principle, however, \wv distributions also depend on geophysical parameters including the surface gravity, atmospheric pressure, \yf{and the planetary water abundance}, as well as photochemistry which depends on the detailed atmospheric composition. 
-These could perhaps be constrained by retrievals from observed planetary spectra to give a prediction of the \wv mixing ratio in the upper atmosphere, but otherwise could rather be inferred from the \wv mixing ratio. \dsa{@@@ What do you mean by the last part of this sentence (could be inferred from...)?}
-The dependence of the \wv mixing ratio on these planetary properties will be  the focus of future study. 
+In principle, however, \wv{} distributions also depend on geophysical parameters including the surface gravity, atmospheric pressure, \yf{and the planetary water abundance}, as well as photochemistry which depends on the detailed atmospheric composition. 
+%These could perhaps be constrained by retrievals from observed planetary spectra to give a prediction of the \wv mixing ratio in the upper atmosphere, but otherwise could rather be inferred from the \wv mixing ratio. 
+%\dsa{@@@ What do you mean by the last part of this sentence (could be inferred from...)?}
+The dependence of the \wv{} mixing ratio on these planetary properties will be  the focus of future study. 
 
 
 
 
 
 \acknowledgments
-We thank Michael J. Way and Nancy Y. Kiang for providing the boundary conditions for \modelE \ and for the helpful discussions. 
-The support from Maxwell Kelley and Igor Aleinov was critical in resolving the issues identified in the process of generalizing \modelE for exotic configurations considered in this paper. 
+We thank Michael J. Way and Nancy Y. Kiang for providing the boundary conditions for \modelE{} and for the helpful discussions. 
+The support from Maxwell Kelley and Igor Aleinov was critical in resolving the issues identified in the process of generalizing \modelE{} for exotic configurations considered in this paper. 
 Y.~F. is deeply grateful to David S. Spiegel for the insightful discussions on the simulation suite for transmission spectra. 
 Y.~F. also acknowledges the generous support from Universities Space Research Association (USRA) through the NASA Postdoctoral Program. 
 We acknowledge support from the NASA Astrobiology Program through the Nexus for Exoplanet System Science.
@@ -644,7 +642,7 @@ Our adopted short-wave bands in this study are given in Table \ref{tab:short-wav
 In order to check the accuracy of the short-wave radiative transfer calculation used in the GCM, we compare it to a more accurate higher resolution (280 bands) calculation using the same atmospheric profile. 
 We use the atmospheric profile at the substellar point of a planet around GJ~876 with $S_X=1.2$ (see Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}), but without clouds.
 % The atmospheric profile used in this test was the one at the substellar point of a planet around GJ~876 with $S_X=1.2$ (see Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}), but without clouds. 
-This profile was chosen because of its extremely high \wv mixing ratio, which is very different from that of the Earth. 
+This profile was chosen because of its extremely high \wv{} mixing ratio, which is very different from that of the Earth. 
 Assuming this profile, we calculated short-wave radiative fluxes with 29 bands (used in the GCM) and with 280 bands, with both the Sun and GJ~876 as the incident spectra.
 
 We show in Fig.~\ref{fig:socrates} the short-wave (stellar) downward fluxes, upward fluxes and heating rates we obtained.

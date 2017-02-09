@@ -36,19 +36,22 @@
 \newcommand{\yf}[1]{{\color{orange}#1}}
 
 \newcommand{\wv}{water vapor}
-%\def\wv{water vapor}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \shorttitle{NIR-Driven Moist Upper Atmospheres of Temperate Terrestrial Exoplanets}
 \shortauthors{Fujii et al.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{NIR-Driven Moist Upper Atmospheres of Synchronously Rotating Temperate Terrestrial Exoplanets}
-\author{Yuka Fujii}
 
+\title{NIR-Driven Moist Upper Atmospheres of Synchronously Rotating Temperate Terrestrial Exoplanets}
+
+\author{Yuka Fujii}
 \affil{NPP fellow, Universities Space Research Association}
 \affil{NASA Goddard Institute for Space Studies, 2880 Broadway, New York, NY}
 \affil{Earth-Life Science Institute, Tokyo Institute of Technology, Ookayama, Meguro, Tokyo 152-8550, Japan}
@@ -60,8 +63,9 @@
 \affil{Department of Applied Physics and Applied Mathematics, Columbia University, New York, NY 10025, USA}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
 
+\begin{abstract}
+%
 \water{} is a key molecule in characterizing atmospheres of temperate terrestrial planets, and observations of transmission spectra are expected to play a primary role in detecting its signatures in the near future. 
 %
 Detectability of \water{} absorption features in transmission spectra depends on the mixing ratio of \wv{} in the upper part of the atmosphere. 
@@ -75,7 +79,6 @@ We observe a more gradual increase of \wv{} mixing ratio in response to the incr
 However, the \wv{} mixing ratio in the upper atmosphere starts to increase  while the surface temperature is still moderate. 
 %
 This is explained by the circulation in the upper atmosphere, which is seen in the runs with high incident flux, driven by the radiative heating caused by absorption by \wv{} and cloud particles in the upper atmosphere. 
-% At higher incident flux, we find a large-scale circulation in the upper part of the atmosphere, driven by the radiative heating due to the absorption by \water in the upper atmosphere. 
 %
 The interplay between this circulation, causing efficient vertical transport of \wv{}, and the radiative heating may play the key role in determining the steady state of the \wv{} mixing ratio in the upper atmosphere. 
 %
@@ -84,6 +87,7 @@ Consistently, the \wv{} mixing ratio is found to be well correlated with the nea
 Our results imply that various levels of \wv{} mixing ratio in the upper atmosphere may be expected for synchronously rotating temperate terrestrial planets, and that for the more highly irradiated ones the \water{} absorption features in the transmission spectra are strengthened by a factor of a few, loosening the observational demands for a direct \water{} detection. 
 %
 \end{abstract}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -165,7 +169,7 @@ We also present synthetic transmission spectra based on GCM outputs in order to 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!bh]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/star_spectra.pdf}
+    \includegraphics[width=\hsize]{star_spectra.pdf}
     \end{center}
 \caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The data sources are listed in the right column of Table~\ref{tbl:stellar_properties}. The resolution of the spectrum was lowered from the original data just for display purposes. The bands used by the short-wave radiation scheme in the GCM are indicated by the short grey vertical lines.}
 \label{fig:star_spectra}
@@ -247,10 +251,10 @@ All of the results presented in this paper are based on the averaged data create
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tb]
     \begin{minipage}{0.5\hsize}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O.pdf}
+\includegraphics[width=\hsize]{AqOH0TLS_GJ876_temp_xH2O.pdf}
     \end{minipage}
     \begin{minipage}{0.5\hsize}
-\includegraphics[width=\hsize]{fig/AqOH0TLS_Sun_temp_xH2O.pdf}
+\includegraphics[width=\hsize]{AqOH0TLS_Sun_temp_xH2O.pdf}
     \end{minipage}
     \caption{Profiles of temperature (upper panels) and \wv{} mixing ratio (lower panels) along the equator, for GJ~876 (a M4V star; left) and for Sun (right), with different total normalized incident flux ($S_X$). The blank area near the top is above the model top ($< 0.14$ mbar).}
 \label{fig:3Dprofile_equator}
@@ -340,7 +344,7 @@ As shown in Fig.~\ref{fig:3Dprofile_equator}, the maximum surface temperature do
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[!tb]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/xH2O_3panels.pdf}
+    \includegraphics[width=\hsize]{xH2O_3panels.pdf}
     \end{center}
 \caption{Water vapor mixing ratio at \preslevel{} mbar as a function of total incident flux (left), the surface temperature \yf{averaged within $0.2R_\earth$ of the substellar point} (center), and the near-infrared portion of the incident flux integrated bewteen 0.9 and 3.0 \textmu m (right). The colors represent the stellar types: Sun (navy), HD~22048 (green), Kepler-186 (orange), and GJ~876 (red). Dashed lines are adapted from \citet{Kasting1993}. }                                                                                                             
 \label{fig:xH2O_S0X}
@@ -371,8 +375,8 @@ We will examine this in the next subsection.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[htb]
     \begin{center}
-    \includegraphics[width=1\hsize]{fig/AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
-    \includegraphics[width=1\hsize]{fig/AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
+    \includegraphics[width=1\hsize]{AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
+    \includegraphics[width=1\hsize]{AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
     \end{center}
 \caption{From left to right, the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel{} where \xwater{} is measured. }
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
@@ -427,7 +431,7 @@ In summary, atmospheric vertical motion and the radiative heating by water vapor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[htb]
     \begin{center}
-    \includegraphics[width=1\hsize]{fig/GJ876_heat_cld.pdf}
+    \includegraphics[width=1\hsize]{GJ876_heat_cld.pdf}
     \end{center}
 \caption{Comparison between the fiducial $S_X=1.0$ (red) and $S_X=1.2$ (pink) models of of planets orbiting GJ~876 and the comparable ``transparent high clouds'' models where the radiative effect of high clouds above 237 mbar are turned off (dashed black for $S_X=1.0$ and dashed gray for $S_X=1.2$). The vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, cloud fraction, ice cloud content, and liquid cloud content are averaged over the region within $0.2R_\earth $ of the substellar point. }
 \label{fig:GJ876_heat_cld}
@@ -473,7 +477,7 @@ A more realistic inclusion of clouds in our simulated transmission spectra will 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/transit_GJ876.pdf}
+    \includegraphics[width=\hsize]{transit_GJ876.pdf}
     \end{center}
 \caption{Red: Modeled transmission spectra based on GCM experiments for planets around GJ~876 (M4V) with $S_X=0.6$ (dark red), $1.0$ (red) and $1.2$ (pink), with (solid) and without (dashed) clouds. The corresponding vertical profiles in the substellar region are shown in Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective altitude, while the right-hand side indicates the transit depth in ppm using the size of the star from Table~\ref{tbl:stellar_properties}.}
 \label{fig:transmission}
@@ -519,7 +523,7 @@ Overall, however, our fiducial models with a thermodynamic ocean approximation g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=0.9\hsize]{fig/xH2O_sensitivity.pdf}
+    \includegraphics[width=0.9\hsize]{xH2O_sensitivity.pdf}
     \end{center}
 \caption{\wv mixing ratio at 1.39 mbar for the models using a dynamic ocean (blue diamonds) and the models with an Earth-like CO$_2$ mixing ratio (green pentagons), in comparison with the fiducial model with a thermodynamic ocean and 1 ppm CO$_2$ (red down-triangle). }
 \label{fig:change_ocean}
@@ -569,7 +573,7 @@ Theses processes are likely to lead to the smaller upper atmosphere \wv{} mixing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=\hsize]{fig/xH2O_Prot.pdf}
+    \includegraphics[width=\hsize]{xH2O_Prot.pdf}
     \end{center}
 \caption{The dependence of \wv mixing ratio on the spin period. The host star spectrum is GJ~876 with $S_X=1$. In all cases the planet is assumed to be synchronously rotating. }
 \label{fig:changeP}
@@ -640,8 +644,7 @@ We therefore modified the bands used by the short-wave radiation calculation in 
 Our adopted short-wave bands in this study are given in Table \ref{tab:short-wave}.
 
 In order to check the accuracy of the short-wave radiative transfer calculation used in the GCM, we compare it to a more accurate higher resolution (280 bands) calculation using the same atmospheric profile. 
-We use the atmospheric profile at the substellar point of a planet around GJ~876 with $S_X=1.2$ (see Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}), but without clouds.
-% The atmospheric profile used in this test was the one at the substellar point of a planet around GJ~876 with $S_X=1.2$ (see Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}), but without clouds. 
+We use the atmospheric profile at the substellar point of a planet around GJ~876 with $S_X=1.2$ (see Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}), but without clouds. 
 This profile was chosen because of its extremely high \wv{} mixing ratio, which is very different from that of the Earth. 
 Assuming this profile, we calculated short-wave radiative fluxes with 29 bands (used in the GCM) and with 280 bands, with both the Sun and GJ~876 as the incident spectra.
 
@@ -651,7 +654,7 @@ Differences between the 29 and 280 band configurations are small, $<$ 5 W/m$^2$ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[!htb]
     \begin{center}
-    \includegraphics[width=0.8\hsize]{fig/rad_comparison_SW29-SW280_AqOH0TLS_GJ876S12P20L40Q.pdf}
+    \includegraphics[width=0.8\hsize]{rad_comparison_SW29-SW280_AqOH0TLS_GJ876S12P20L40Q.pdf}
     \end{center}
 \caption{Comparison of shortwave downward fluxes (left), upward fluxes (center), and the heating rates (left) between the 29 band short-wave radiative transfer used in the GCM and the 280 band benchmark. The atmospheric profile assumed is the one at the substellar point of a planet around GJ 876 with $S_X=1.2$ (see the upper panels of Fig.~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}). }
 \label{fig:socrates}
@@ -697,19 +700,6 @@ Differences between the 29 and 280 band configurations are small, $<$ 5 W/m$^2$ 
    29 &       4.60  &   10.0 \\ \hline
 \end{tabular}
 \end{table}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure*}[!htb]
-%    \begin{center}
-%    \includegraphics[width=0.8\hsize]{rad_comparison_AqOH0TLS_GJ876S12P21L40Q.eps}
-%    \includegraphics[width=0.8\hsize]{rad_comparison_diff_AqOH0TLS_GJ876S12P21L40Q.pdf}
-%    \end{center}
-%\caption{}                                                                                                             
-%\label{fig:}
-%\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

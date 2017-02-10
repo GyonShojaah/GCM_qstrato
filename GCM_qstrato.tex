@@ -21,21 +21,20 @@
 \def\xwater{$x_\text{\water}$}
 \def\preslevel{1.39 mbar}
 \def\modelE{ROCKE-3D}
-\def\CHHHH{CH$_4$}
-\def\COO{CO$_2$}
-\def\COO{CO$_2$}
-\def\memo#1{\color{red}$[${\bf #1}$]$ \color{black}}
+\def\wv{water vapor}
 
-\def\Rp{R_{\rm p}}
-\def\Rtransit{R_{\rm transit}}
-\def\OD#1#2{\frac{d#1}{d#2}}
-\def\PD#1#2{\frac{\partial #1}{\partial #2}}
+%\newcommand{\wv}{water vapor}
+%\def\memo#1{\color{red}$[${\bf #1}$]$ \color{black}}
+%\def\Rp{R_{\rm p}}
+%\def\Rtransit{R_{\rm transit}}
+%\def\OD#1#2{\frac{d#1}{d#2}}
+%\def\PD#1#2{\frac{\partial #1}{\partial #2}}
 
-\definecolor{blue}{RGB}{0,0,255}
-\newcommand{\dsa}[1]{{\color{blue}#1}}
+%\definecolor{blue}{RGB}{0,0,255}
+%\newcommand{\dsa}[1]{{\color{blue}#1}}
 \newcommand{\yf}[1]{{\color{orange}#1}}
 
-\newcommand{\wv}{water vapor}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,7 +170,7 @@ We also present synthetic transmission spectra based on GCM outputs in order to 
     \begin{center}
     \includegraphics[width=\hsize]{star_spectra.pdf}
     \end{center}
-\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The data sources are listed in the right-most column of Table~\ref{tbl:stellar_properties}. The resolution of the spectrum was lowered from the original data just for display purposes. The bands used by the short-wave radiation scheme in the GCM are indicated by the short grey vertical lines.}
+\caption{The spectra of the stars considered in this paper. The flux is normalized so that the total incident flux matches the solar constant. The data sources are listed in the right-most column of Table~\ref{tbl:stellar_properties}. The resolution of the spectra was lowered from the original data just for display purposes. The bands used by the short-wave radiation scheme in the GCM are indicated by the short grey vertical lines.}
 \label{fig:star_spectra}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -378,7 +377,7 @@ We will examine this in the next subsection.
     \includegraphics[width=1\hsize]{AqOH0TLS_GJ876_temp_xH2O_vz_heat.pdf}
     \includegraphics[width=1\hsize]{AqOH0TLS_Sun_temp_xH2O_vz_heat.pdf}
     \end{center}
-\caption{From left to right, the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left-most panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel{} where \xwater{} is measured. }
+\caption{From left to right, the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left-most panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel{} where \xwater{} is measured. In the right-most panel, the altitudes with negative upward velocity are not shown. }
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

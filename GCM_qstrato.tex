@@ -24,7 +24,8 @@
 \def\modelE{ROCKE-3D}
 \def\wv{water vapor}
 
-\def\memoYF#1{{\bf #1}}
+%\def\memoYF#1{{\bf #1}}
+\def\memoYF#1{\color{red}#1\color{black}}
 
 \newcommand{\GG}[1]{}
 
@@ -180,8 +181,14 @@ has been replaced by the Suite of Community RAdiative Transfer codes based on Ed
 This radiation scheme uses the two-stream approximation of \citet{Zdunkowski1985} with a diffusivity of $D=1.66$ for the long-wave (thermal) component, and of \citet{Zdunkowski1980} with $D=2$ for the short-wave (stellar) component. 
 Opacities are treated using the correlated-$k$ method \citep{Lacis1991,Goody1989}, with $k$-terms derived using exponential sum fitting of transmissions~\citep{Wiscombe1977} based on HITRAN2012~\citep{Rothman2013}. 
 Overlapping gaseous absorption is treated using equivalent extinction~\citep{Edwards1996,Amundsen2016}. 
-\memoYF{Optical properties of clouds are computed based on the effective radius which is calculated within the model, assuming XXXX distribution for the water droplets particle size distribution and XXXX for the ice crystals. 
+\memoYF{The optical properties of liquid clouds are derived using Mie theory, assuming XXX size distribution (?) with the effective radius, diagnosed from the cloud water content assuming a specified number concentration for liquid clouds over ocean. 
+The optical properties ice crystals are based on the representation of ice aggregates with the effective dimension \citep{Baran2001} which is a function of temperature, as described in \citep{Edwards2007}. 
+% is described in Edwards et al. (2007), and is based on the representation of ice aggregates introduced by Baran et al. (2001), with the effective dimension De of ice aggregate particles calculated using a parametrization of De as a function of temperature. 
+Stratiform and convective clouds are treated separately, and if both are present in the same grid box they are treated as randomly overlapping to calculate the total cloud fraction within the grid box. 
+Vertical cloud overlap is treated using the maximum-random overlap assumption, where clouds in adjacent layers overlap maximally, while clouds separated by one or more layers overlap randomly. 
+%
 The vertical cloud overlap is treated using the mixed maximum-random overlap assumption, that is, clouds in adjacent layers overlap maximally, while clouds separated by one or more layers overlap randomly.}
+
 The configuration of the long-wave radiation scheme adopted here is the same as that used by the UK Met Office for global atmosphere configuration 7.0 \citep[GA7.0;][]{Walters2017}. 
 For short-wave radiation, we use 29 bands, as indicated by the grey vertical lines in Figure ~\ref{fig:star_spectra} and listed in Table \ref{tab:short-wave}, in order to ensure accuracy of the short-wave absorption. 
 The wavelengths are weighted internally in each band by each stellar spectrum when deriving $k$-coefficients and cloud optical properties to further improve accuracy. 
@@ -388,6 +395,18 @@ In summary, atmospheric vertical motion and the radiative heating by \wv{} and c
 \label{fig:GJ876_heat_cld}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[htb]
+    \begin{center}
+    \includegraphics[width=1\hsize]{vectormap_altitude-longitude_GJ876_Sun_z_1000.pdf}
+    \end{center}
+\caption{}
+\label{fig:vectormap}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 This picture suggests that the driving factor is the absorption of the incident flux by \wv{} and cloud particles, which is most efficient in the NIR part of the spectrum. 
 Indeed, as shown in the right panel of Figure~\ref{fig:xH2O_S0X}, a good correlation is found between the \wv{} mixing ratio at \preslevel{} and the NIR portion of the incident flux, integrated between 0.9 and 3 \textmu m (the interval is somewhat arbitrary), insensitive to the stellar spectral types. 
@@ -650,10 +669,7 @@ Convection is triggered when a parcel lifted one model layer becomes buoyant acc
 A downdraft forms at any level when an equal mixture of cloud and environment is negatively buoyant. Updraft convective condensate is partitioned into fractions that precipitate, detrain, and are carried upward by assuming a Marshall-Palmer particle size distribution and empirical size-fall speed relationships and calculating the fraction of the size distribution whose fall speed exceeds, is comparable to, or is less than the diagnosed updraft speed \citep{DelGenio2005}. 
 Detrained condensate is treated by the stratiform cloud microphysics (an updated version of \citet{DelGenio1996}). 
 Stratiform cloud fraction is diagnosed as a function of relative humidity and stability, while condensed water evolves using a prognostic equation that includes representation of all relevant microphysical source and sink processes.  
-Partitioning between the liquid and ice phase is specified as a function of temperature in the mixed phase temperature range, and then modified by a parameterization of diffusional growth of ice when snow falls into a supercooled liquid water layer.  
-Cloud effective radius is diagnosed from the cloud water content assuming a specified number concentration for liquid clouds over ocean and land and for ice clouds. 
-The effective radius is used with the condensed water path to diagnose the cloud optical thickness. }
-
+Partitioning between the liquid and ice phase is specified as a function of temperature in the mixed phase temperature range, and then modified by a parameterization of diffusional growth of ice when snow falls into a supercooled liquid water layer. }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -675,6 +691,11 @@ The effective radius is used with the condensed water path to diagnose the cloud
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+\end{document}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tb]
     \begin{minipage}{0.24\hsize}
@@ -692,8 +713,4 @@ The effective radius is used with the condensed water path to diagnose the cloud
 \caption{test}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\end{document}
-
 

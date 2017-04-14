@@ -66,7 +66,7 @@ H$_2$O is a key molecule in characterizing atmospheres of temperate terrestrial 
 Detectability of H$_2$O absorption features in transmission spectra depends on the \addYF{abundance} of water vapor in the upper part of the atmosphere. 
 While the stratospheric water vapor mixing ratio of the Earth is less than $10^{-5}$ due to the cold trap, the efficiency of the cold trap depends on atmospheric properties. 
 Here we study the three-dimensional distribution of atmospheric H$_2$O for synchronously rotating \addYF{Earth-size} aquaplanets using the general circulation model ROCKE-3D, and examine the effects of total incident flux and stellar spectral type.  
-We observe a more \addYF{gentle dependence on} of water vapor mixing ratio in response to increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar point previously observed in GCMs applied to synchronously rotating planets. 
+We observe a more \addYF{gentle increase of the} water vapor mixing ratio in response to increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar point previously observed in GCMs applied to synchronously rotating planets. 
 However, the water vapor mixing ratio in the upper atmosphere starts to increase while the surface temperature is still moderate. 
 This is explained by the circulation in the upper atmosphere, which is seen in the runs with high incident flux, causing efficient vertical transport of water vapor. 
 This circulation is driven by the radiative heating due to absorption by water vapor and cloud particles in the upper atmosphere. 
@@ -90,7 +90,7 @@ One of the primary interests in future observations of Earth-sized planets is th
 Its spectral signatures may be targeted in the near future through transmission spectroscopy using JWST or next-generation ground-based telescopes.
 %
 Although \water{} signatures have been detected in the atmospheres of hot Jupiters \citep[e.g.][]{Tinetti2007,Sing2016}, detecting molecular signatures, including \water{}, on temperate terrestrial planets is exceedingly challenging \citep{Cowan2015} because of the small planetary radius and the small scale height (due to the lower temperature and presumably larger mean molecular weight). 
-\changeYF{ \water{} signatures of temperate planets are particularly difficult to observe because, while it}{Besides, while \water{} } is a dominant opacity source of Earth's atmosphere, \changeYF{the \wv{} mixing ratio above the troposphere---where transmission spectroscopy typically probes--- is fairly small}{its signatures in the transmission spectra of temperate planets are not strong} due to the ``cold trap'', i.e., \wv{} evaporated from the surface is transported upward, but condenses as air rises and cools, and most of it precipitates, leaving the stratosphere \addYF{--where transmission spectroscopy typically probes---}fairly dry. 
+\changeYF{ \water{} signatures of temperate planets are particularly difficult to observe because, while it}{Besides, while \water{} } is a dominant opacity source of Earth's atmosphere, \changeYF{the \wv{} mixing ratio above the troposphere---where transmission spectroscopy typically probes--- is fairly small}{its signatures in the transmission spectra of temperate planets are not strong} due to the ``cold trap'', i.e., \wv{} evaporated from the surface is transported upward, but condenses as air rises and cools, and most of it precipitates, leaving the stratosphere\addYF{---where transmission spectroscopy typically probes---}fairly dry. 
 Several studies modeling transmission spectra of the Earth found \changeYF{undesirably weak}{modest} signatures of \wv{} \citep[e.g.][]{Ehrenreich2006, Kaltenegger2009, Betremieux2013, Misra2014}. 
 However, the efficiency of the cold trap depends on the atmospheric properties in general. 
 Thus, modeling the \wv{} mixing ratio profiles is an issue of interest in the context of evaluating the observability of atmospheric signatures of transiting terrestrial planets. 
@@ -145,7 +145,7 @@ We use the \modelE{} \ GCM \citep{Way2017} to obtain 3D atmospheric structures o
 %
 \addYF{The details of the ROCKE-3D GCM are presented in \citet{Way2017}.}
 
-\addYF{In the following, we first describe the specific configurations in our experiments to clarify our targets. Then, we also discuss in some detail the convection/cloud parameterizations and the radiation parameterization used in our GCM, because these are most important for our results among others. }
+\addYF{In the following, we first describe the specific configurations in our experiments to clarify our targets. Then, we also discuss in some detail the convection/cloud parameterizations and the radiation parameterization used in our GCM, as these are of particular importance to our results. }
 %\addYF{Of these, the most important for our results are the radiation parameterization and the convection/cloud parameterizations.  
 %We therefore discuss each of these in some detail below, followed by the description of other settings specific to our experiments in this paper. }
 %
@@ -250,7 +250,9 @@ Overlapping gaseous absorption is treated using equivalent extinction~\citep{Edw
 \addYF{The optical properties of liquid clouds were derived using Mie theory, with the effective radius diagnosed from the cloud water content assuming a specified number concentration for liquid clouds over ocean. 
 The optical properties of ice crystals is described in \citet{Edwards2007}, and are based on the representation of ice aggregates introduced by \citet{Baran2001}, with the effective dimension calculated using a parametrization based on temperature.
 % is described in Edwards et al. (2007), and is based on the representation of ice aggregates introduced by Baran et al. (2001), with the effective dimension De of ice aggregate particles calculated using a parametrization of De as a function of temperature. 
-Stratiform and convective clouds are treated separately, and if both are present in the same grid box they are treated as randomly overlapping to calculate the total cloud fraction within the grid box. }
+Stratiform and convective clouds are treated separately, and if both are present in the same grid box they are treated as randomly overlapping to calculate the total cloud fraction within the grid box. 
+Vertical cloud overlap is treated using the maximum-random overlap assumption, where clouds in adjacent layers overlap maximally, while clouds separated by one or more layers overlap randomly. }
+
 
 The configuration of the long-wave radiation scheme adopted here is the same as that used by the UK Met Office for global atmosphere configuration 7.0 \citep[GA7.0;][]{Walters2017}. 
 For short-wave radiation, we use 29 bands, as indicated by the grey vertical lines in Figure ~\ref{fig:star_spectra} and listed in Table \ref{tab:short-wave}, in order to ensure accuracy of the short-wave absorption. 
@@ -507,8 +509,7 @@ A more realistic inclusion of clouds in our simulated transmission spectra will 
 
 \addYF{%We do not discuss in detail the detectability of individual systems considered in this paper, because is depends significantly on the distance from the Earth, the instrumental properties and the observation strategy. 
 %Instead, 
-Regarding the detectability of these features, we give some numbers for references, assuming an idealized cases where observational uncertainty comes only from the photon-noise. 
-Assuming an Earth-size planet at 10 pc away and a 6.5~m telescope (having the James Webb Space Telescope in mind) with 30 \% throughput and the wavelength resolution $\mathcal{R}=$100, absorption features with 25~km differential altitude (e.g., the strongest features around 2.5~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after 500 hours of integration with an M4 star (assuming block body radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ876), or after 60 hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
+For idealized cases, where the only source of observational uncertainty is photon noise, we can evaluate the detectability of these features. For an Earth-sized planet 10 pc away, assuming a 6.5~m telescope (having the James Webb Space Telescope in mind) with 30 \% throughput and the wavelength resolution $\mathcal{R}=$100, absorption features with 25~km differential altitude (e.g., the strongest features around 2.5~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after 500 hours of integration with an M4 star (assuming block body radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ876), or after 60 hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -517,7 +518,7 @@ Assuming an Earth-size planet at 10 pc away and a 6.5~m telescope (having the Ja
     \includegraphics[width=\hsize]{transit_GJ876_USstandard.pdf}
     \end{center}
 \caption{Modeled transmission spectra based on GCM experiments for planets around GJ~876 (M4V) with $S_X=0.6$ (dark red), $1.0$ (red) and $1.2$ (pink), with (solid) and without (dashed) clouds. The corresponding vertical profiles in the substellar region are shown in Figure~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective altitude, while the right-hand side indicates the transit depth in ppm using the size of the star from Table~\ref{tbl:stellar_properties}. The spectral resolution is lowered to $R=100$. 
-\addYF{For a reference, the blue line shows the modeled transmission spectra of the Earth based on the US standard atmosphere. }}
+\addYF{For a reference, the blue line shows the modeled transmission spectrum of the Earth based on the US standard atmosphere. }}
 \label{fig:transmission}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

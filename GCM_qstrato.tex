@@ -109,10 +109,6 @@ This indicates that the efficiency of the transport from the surface depends on 
 
 Inevitably, 1D models rely on several assumptions that cannot be treated within the model, including the global transport of heat and water vapor, as well as the effect of clouds. 
 \revise{V}arious three-dimensional (3D) general circulation models (GCMs) revisited the atmospheric structure of terrestrial planets and have demonstrated the importance of accounting for the 3D circulation and climate heterogeneity \citep[e.g.][]{Ishiwatari2002,Abe2011,Leconte2013a,Leconte2013b,Wolf2014,Wolf2015}. 
-%
-%\revise{In particular, planets in the habitable zones around late-type stars may be synchronously rotating due to tidal locking \citep{Dole1964, Kasting1993}, although this need not always occur \citep{Goldreich1966,Leconte2015}.
-%In the case of synchronous rotation, the climate cannot be easily captured by 1D models \citep{Leconte2013b}. }  
-%
 \revise{Among others,} \citet{Yang2013} pointed out that for synchronously rotating planets, the convection around the substellar point produces optically thick clouds which increase the planetary albedo and contribute to keep the surface temperature moderate for a much wider range of instellation \citep[see also][]{Yang2014,Way2015,Kopparapu2016}. 
 \revise{This situation is of particular relevance to the planets in the habitable zones of late-type stars as they are likely to be synchronously rotating due to tidal locking \citep{Dole1964, Kasting1993}, although this need not always occur \citep{Goldreich1966,Leconte2015}. }
 They primarily studied the highest instellation that allows for the model to converge as a proxy for the inner edge. 
@@ -143,14 +139,9 @@ Finally, Section \ref{s:summary} summarizes our findings. %
 
 We use the \modelE{} \ GCM \citep{Way2017} to obtain 3D atmospheric structures of planets with varying total incident flux and spectral type of the star\revise{, focusing on the \water{} profile in the upper atmosphere}. 
 \modelE{} is a generalization of the ModelE2 GCM \citep{Schmidt2014}, which has been developed for the Earth at NASA's Goddard Institute for Space Studies. 
-%
 \revise{The details of the ROCKE-3D GCM are presented in \citet{Way2017}.}
 
 \revise{In the following, we first describe the specific configurations in our experiments to clarify our targets. Then, we also discuss in some detail the convection/cloud parameterizations and the radiation parameterization used in our GCM, as these are of particular importance to our results. }
-%\revise{Of these, the most important for our results are the radiation parameterization and the convection/cloud parameterizations.  
-%We therefore discuss each of these in some detail below, followed by the description of other settings specific to our experiments in this paper. }
-%
-%\revise{Because one of the major uncertainties in any GCMs is the cloud scheme, we give a brief description of the \modelE{} cloud scheme in Appendix \ref{ap:clouds} for completeness, although it is also discussed in \citet{Way2017}. }
 
 
 
@@ -187,7 +178,9 @@ GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{D
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Our Configurations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Throughout the paper, we exclusively consider synchronously rotating planets due to their relevance to future transmission observations of close-in systems as discussed in Section~\ref{s:intro}. 
 
@@ -218,8 +211,9 @@ Our fiducial models with a thermodynamic ocean typically equilibrate in $\sim $ 
 After the steady state is reached, we average the 3D atmospheric profiles over an integer number of orbits that is approximately equal to 10 Earth years. 
 All of the results presented in this paper are based on the averaged data created this way. 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Cloud Scheme}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \revise{%
 Convection is triggered when a parcel lifted one model layer becomes buoyant according to a virtual moist static energy test. 
@@ -236,32 +230,25 @@ Stratiform cloud fraction is diagnosed as a function of relative humidity and st
 Partitioning between the liquid and ice phase is specified as a function of temperature in the mixed phase temperature range, and then modified by a parameterization of diffusional growth of ice when snow falls into a supercooled liquid water layer. }
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Radiation Scheme}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \revise{For the radiation scheme, we adopt the Suite of Community RAdiative Transfer codes based on Edwards and Slingo\footnote{\url{https://code.metoffice.gov.uk/trac/socrates}}~\citep[SOCRATES,][]{EdwardsSlingo1996,Edwards1996} as described in \citet{Way2017}.}
-% The original ModelE2 radiation scheme } 
-% the radiation scheme
-%has been replaced by the Suite of Community RAdiative Transfer codes based on Edwards and Slingo\footnote{\url{https://code.metoffice.gov.uk/trac/socrates}}~\citep[SOCRATES,][]{EdwardsSlingo1996,Edwards1996} as described in \citet{Way2017}. 
 This radiation scheme uses the two-stream approximation of \citet{Zdunkowski1985} with a diffusivity of $D=1.66$ for the long-wave (thermal) component, and of \citet{Zdunkowski1980} with $D=2$ for the short-wave (stellar) component. 
 Opacities are treated using the correlated-$k$ method \citep{Lacis1991,Goody1989}, with $k$-terms derived using exponential sum fitting of transmissions~\citep{Wiscombe1977} based on HITRAN2012~\citep{Rothman2013}. 
 \revise{H$_2$O continuum absorption is treated using the CAVIAR continuum \citep{Ptashnik2011}.}
 Overlapping gaseous absorption is treated using equivalent extinction~\citep{Edwards1996,Amundsen2016}. 
 
 \revise{The optical properties of liquid clouds were derived using Mie theory, with the effective radius diagnosed from the cloud water content assuming a specified number concentration for liquid clouds over ocean and land. 
-The optical properties of ice crystals are described in \citet{Edwards2007}, and are based on the representation of ice aggregates introduced by \citet{Baran2001}, with the effective dimension calculated using a parametrization based on temperature.
-% is described in Edwards et al. (2007), and is based on the representation of ice aggregates introduced by Baran et al. (2001), with the effective dimension De of ice aggregate particles calculated using a parametrization of De as a function of temperature. 
+The optical properties of ice crystals are described in \citet{Edwards2007}, and are based on the representation of ice aggregates introduced by \citet{Baran2001}, with the effective dimension calculated using a parametrization based on temperature. 
 Convective and stratiform clouds are treated separately, and if both are present in the same grid box they are treated as randomly overlapping to calculate the total cloud fraction within the grid box. 
 Vertical cloud overlap is treated using the maximum-random overlap assumption, where clouds in adjacent layers overlap maximally, while clouds separated by one or more layers overlap randomly. }
-
 
 The configuration of the long-wave radiation scheme adopted here is the same as that used by the UK Met Office for global atmosphere configuration 7.0 \citep[GA7.0;][]{Walters2017}. 
 For short-wave radiation, we use 29 bands, as indicated by the grey vertical lines in Figure ~\ref{fig:star_spectra} and listed in Table \ref{tab:short-wave}, in order to ensure accuracy of the short-wave absorption. 
 The wavelengths are weighted internally in each band by each stellar spectrum when deriving $k$-coefficients and cloud optical properties to further improve accuracy. 
 We check the accuracy of the short-wave radiation scheme by comparing the flux and heating rate obtained with $29$ bands to higher-resolution calculations, and find a good match; see Appendix \ref{ap:radiation} for more details. 
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
@@ -318,8 +305,7 @@ Thirdly, that cloud particles are uniformly distributed within each grid cell.
 Fourthly, we compute the transmitted light based on the optical properties averaged over 10 Earth years, rather than computing it based on the instantaneous optical properties before taking the temporal average. 
 %
 The third and fourth points above imply that the effects of clouds we find are the largest among the possible realizations \revise{given the particle size distribution, because of the non-linear dependence of transmittance on the optical thickness}. 
-% since loosening these assumptions makes the effective cloud optical thickness smaller. 
-% In that sense, the reality would exist between the cloud-free transmission model and this simplified cloudy transmission model. 
+%
 Under these assumptions, the absorption coefficient $k$ of the clouds is %%%
 %%%
 \begin{equation}
@@ -424,8 +410,6 @@ where $p$ is the pressure, $Q_r$ and $Q_l$ are the radiative and latent heating 
 The contribution of each term of the right-hand side of equation (\ref{eq:conserv_energy_2}) in the steady state is shown in Figure \ref{fig:heating_rate}, for the substellar regions of low and high irradiation cases with GJ876 and the Sun. %
 It is clearly seen that the net radiative heating at high irradiation cases is compensated by the cooling by the vertical advection. }
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tb]
     \begin{center}
@@ -490,21 +474,17 @@ The corresponding vertical profiles in the substellar region are shown in Figure
 Although refraction due to the planetary atmosphere is included, its effect on the transmission spectra of planets around late-type stars like GJ~876 is minor \citep{Betremieux2014,Misra2014}. 
 
 Without the opacity due to clouds (dashed lines in Figure~\ref{fig:transmission}), the effective altitude of the water vapor absorption features increases from $\sim $10 km to $\sim $40 km when $S_X$ increases from $0.6$ to $1.2$. 
-This level of effective altitude of water signatures is comparable with the strongest features in the modeled visible-to-NIR transmission spectrum of the Earth \revise{shown in the black line}. % \citep[e.g.,][]{Kaltenegger2009}.
+This level of effective altitude of water signatures is comparable with the strongest features in the modeled visible-to-NIR transmission spectrum of the Earth \revise{shown in the black line}. 
 Thus, for the highly-irradiated cases shown here, \water{} signatures will be a natural target when trying to observe the strongest atmospheric signatures of planets similar to the Earth. 
 
-\revise{However, we also find clouds} 
-%Clouds are also present 
-in the upper atmosphere around the terminator, and the inclusion of clouds substantially raises the baseline of the transmission spectra. 
+\revise{However, we also find clouds} in the upper atmosphere around the terminator, and the inclusion of clouds substantially raises the baseline of the transmission spectra. 
 \revise{(Note that the high clouds discussed in the previous sections are those around the substellar point, while what matter here for the transmission spectra are those at the terminator.)} 
 These clouds at the terminator presumably form from water vapor that is transported from the substellar point and cools radiatively or adiabatically. 
 Although these tenuous clouds at high altitude would be optically thin vertically, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
 \revise{After including the effect of clouds, however, we still find the overall increase of water vapor signatures as the incident flux increases. }
 \revise{Compared to the low-irradiation case (\wv{} mixing ratio $\sim 10^{-6}$) with the same assumptions for the cloud optical properties, the signal of a high-irradiation case would be larger by a factor of a few. }
 
-\revise{%We do not discuss in detail the detectability of individual systems considered in this paper, because is depends significantly on the distance from the Earth, the instrumental properties and the observation strategy. 
-%Instead, 
-For idealized cases, where the only source of observational uncertainty is photon noise, we can evaluate the detectability of these features. For an Earth-sized planet 10 pc away, assuming a 6.5~m telescope (having the James Webb Space Telescope in mind) with 30 \% throughput and the wavelength resolution $\mathcal{R}=$100, absorption features with 25~km differential altitude (e.g., the strongest features around 2.5~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after 500 hours of integration with an M4 star (assuming blackbody radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ876), or after 60 hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
+\revise{For idealized cases, where the only source of observational uncertainty is photon noise, we can evaluate the detectability of these features. For an Earth-sized planet 10 pc away, assuming a 6.5~m telescope (having the James Webb Space Telescope in mind) with 30 \% throughput and the wavelength resolution $\mathcal{R}=$100, absorption features with 25~km differential altitude (e.g., the strongest features around 2.5~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after 500 hours of integration with an M4 star (assuming blackbody radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ876), or after 60 hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
 
 
 
@@ -594,7 +574,6 @@ Consistently, in the runs with a shorter spin period, the convection at the subs
 Moreover, the \wv{} transported upward by convection is more efficiently transported to the night side by the zonal wind, as noted above; the water vapor mixing ratio on the night side increases by about an order of magnitude when the rotation period decreases from 365 Earth days to 4 Earth days. 
 These processes are likely to lead to the smaller upper atmosphere \wv{} mixing ratio observed in our shorter shorter period runs. 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
@@ -614,21 +593,18 @@ These processes are likely to lead to the smaller upper atmosphere \wv{} mixing 
 
 We have investigated the response of atmospheric \wv{} profiles of synchronously rotating aquaplanets to changes in the incident stellar flux. 
 \revise{We find a quasi-exponential increase of \wv{} mixing ratios in the upper atmosphere as a function of total incident flux, resulting in a variation of several orders of magnitude as the total incident flux increases by a factor of two to three,  but much more gradual than predicted by 1-D models. }
-%We find a gradual (quasi-exponential) increase of \wv{} mixing ratios in the upper atmosphere as a function of total incident flux, resulting in a variation of several orders of magnitude as the total incident flux increases by a factor of two to three. 
 
 \revise{The increase of \wv{} mixing ratio in response to larger incident flux is not primarily caused by the increased surface temperature as previous 1D models suggest, due to the relatively stable surface temperature at the substellar point. }
 Instead, it is induced by the effect of the increased NIR portion of the incident flux on the high-altitude circulation. 
 The enhanced radiative heating due to the absorption by \wv{} and cloud particles drives a large-scale \revise{circulation} of the air at altitudes above those to which convection penetrates, taking over the role of transporting \wv{} from the moist lower atmosphere to the upper atmosphere, and further increasing the heating rate in the upper atmosphere.
 As a result, the moisture in the upper atmosphere increases dramatically while the surface below it remains temperate. 
 This picture is supported by the good correlation between the \wv{} mixing ratio at \preslevel{} and the NIR portion of the incident radiation, regardless of the spectral type of the host star. 
-%\revise{Although the enhanced abundance of \wv{} in the upper atmosphere has also been observed in 1D photochemical atmospheric models \citep{Rauer2011,Rugheimer2013,Rugheimer2015}, the mechanism that controls \wv{} is different because we did not include photochemistry. }
 
 Simulating transmission spectra based on the atmospheric profiles found in GCM experiments, 
 we demonstrate that the increase of the \wv{} mixing ratio at \preslevel{} from $10^{-6}$ to $3 \times 10^{-3}$ leads to an increase of the \water{} absorption depth by a factor of a few, making the effective altitude of the \water{} absorption features as high as 40~km. 
 \revise{We also find the presence of high clouds at the terminator, which}   potentially increases the baseline effective altitude and thus weakens the absorption features. 
 \revise{Our calculation may overestimate the effects of clouds on the transmission spectra due to the spatially and temporally averaged cloud properties of individual GCM grid cells.} Additional uncertainties come from other assumptions we made. 
 \revise{A more realistic inclusion of clouds in our simulated transmission spectra will be the scope of future work. }
-
 
 While we used a thermodynamic ocean model with zero ocean heat transport for simplicity, comparable experiments with a dynamic ocean are also performed to demonstrate that this approximation of an ocean has only a modest effect on the \wv{} mixing ratio, the size of which is within about an order of magnitude or less. 
 Varying the CO$_2$ mixing ratio from 1~ppm to 300~ppm has a negligible effect. 
@@ -683,7 +659,7 @@ Differences between the 29 and 280 band configurations are small, $<$ 5 W/m$^2$ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
 \centering
 \caption{The short-wave bands.}
@@ -721,24 +697,9 @@ Differences between the 29 and 280 band configurations are small, $<$ 5 W/m$^2$ 
    29 &       4.60  &   10.0 \\ \hline
 \end{tabular}
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cloud scheme in our GCM}
-\label{ap:clouds}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\revise{The \modelE{}  cumulus parameterization uses a mass flux closure determined by the mass required to establish neutral buoyancy at cloud base over a specified adjustment time.  The total mass flux is divided into two components (``plumes'') that entrain at different rates \citep{DelGenio2007}. 
-Entrainment is proportional to parcel buoyancy and inversely proportional to the square of updraft speed, following \citet{Gregory2001}. 
-Convection is triggered when a parcel lifted one model layer becomes buoyant according to a virtual moist static energy test. The plume rises until the updraft speed decreases to zero. Mass is detrained at all levels above the level of neutral buoyancy. 
-A downdraft forms at any level when an equal mixture of cloud and environment is negatively buoyant. Updraft convective condensate is partitioned into fractions that precipitate, detrain, and are carried upward by assuming a Marshall-Palmer particle size distribution and empirical size-fall speed relationships and calculating the fraction of the size distribution whose fall speed exceeds, is comparable to, or is less than the diagnosed updraft speed \citep{DelGenio2005}. 
-Detrained condensate is treated by the stratiform cloud microphysics \citep[an updated version of][]{DelGenio1996}. 
-Stratiform cloud fraction is diagnosed as a function of relative humidity and stability, while condensed water evolves using a prognostic equation that includes representation of all relevant microphysical source and sink processes.  
-Partitioning between the liquid and ice phase is specified as a function of temperature in the mixed phase temperature range, and then modified by a parameterization of diffusional growth of ice when snow falls into a supercooled liquid water layer. }
-
-
-\end{document}
 
 

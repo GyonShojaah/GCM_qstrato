@@ -26,6 +26,7 @@
 \def\wv{water vapor}
 
 \def\revise#1{{\bf #1}}
+\def\memoYF#1{\textcolor{red}{#1}}
 
 \newcommand{\GG}[1]{}
 
@@ -98,7 +99,7 @@ Motivated mainly by this ``habitability'' aspect, atmospheric models with differ
 \citet{Kasting1993} and \citet{Kopparapu2013} used a simple one-dimensional (1D) model with a saturated troposphere and an isothermal stratosphere to examine the response of the stratospheric \wv{} mixing ratio to increased instellation. 
 They found a transition from an Earth-like dry upper atmosphere to a water-dominated atmosphere, driven by the increase of the surface temperature. 
 The above-mentioned critical mixing ratio ($\sim 3 \times 10^{-3}$) is reached when the surface temperature is $\sim $340 K. 
-\citet{Kodama2015} also showed a similarly rapid transition to a water-dominated atmosphere as a function of incident flux using a 1D radiative-convective model after \citet{Abe1988}. 
+\citet{Kodama2015} also showed a similarly rapid transition to a water-dominated atmosphere as a function of incident flux using a 1D radiative-convective model. % after \citet{Abe1988}. 
 
 \citet{Wordsworth2013,Wordsworth2014} argued that the degree to which a condensible gas is transported from the surface is represented by $\mathcal{M} = m_v p_v L / m_n p_n c_p T $ where $L$, $c_p$, and $T$ are the specific latent heat of the condensing gas, the specific heat capacity at constant pressure of the non-condensing gas, and surface  temperature, respectively, while $m_{\{v,n\}}$ and $p_{\{v,n\}}$ are molar masses and the partial pressures of the  condensing ($v$) or non-condensing ($n$) gases. 
 A moist upper atmosphere occurs when $\mathcal{M} > 1$. 
@@ -240,7 +241,7 @@ Opacities are treated using the correlated-$k$ method \citep{Lacis1991,Goody1989
 \revise{H$_2$O continuum absorption is treated using the CAVIAR continuum \citep{Ptashnik2011}.}
 Overlapping gaseous absorption is treated using equivalent extinction~\citep{Edwards1996,Amundsen2016}. 
 
-\revise{The optical properties of liquid clouds were derived using Mie theory, with the effective radius diagnosed from the cloud water content assuming a specified number concentration for liquid clouds over ocean and land. 
+\revise{The optical properties of liquid clouds were derived using Mie theory, with the effective radius diagnosed from the cloud water content assuming a specified number concentration for liquid clouds. % over ocean and land. 
 The optical properties of ice crystals are described in \citet{Edwards2007}, and are based on the representation of ice aggregates introduced by \citet{Baran2001}, with the effective dimension calculated using a parametrization based on temperature. 
 Convective and stratiform clouds are treated separately, and if both are present in the same grid box they are treated as randomly overlapping to calculate the total cloud fraction within the grid box. 
 Vertical cloud overlap is treated using the maximum-random overlap assumption, where clouds in adjacent layers overlap maximally, while clouds separated by one or more layers overlap randomly. }
@@ -470,11 +471,12 @@ Because the NIR flux is an external parameter that can be found from direct obse
 
 In this subsection, we show the \revise{the dependence of the} transmission spectra \revise{on the incident flux, taking} the modeled planets around one of our M-type stars, GJ~876 \revise{as examples}. 
 Figure~\ref{fig:transmission} shows the transmission spectra for the $S_X=0.6$, $1.0$ and $1.2$ cases, where the \wv{} mixing ratio at \preslevel{} is roughly $10^{-6}$, $10^{-4}$ and $3\cdot 10^{-3}$, respectively. 
-The corresponding vertical profiles in the substellar region are shown in Figure~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \wv{} mixing ratio is even higher at medium altitudes (10 to 30 km).
+The corresponding vertical profiles in the substellar region are shown in Figure~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}, and note that the \wv{} mixing ratio is even higher at medium altitudes (10 to 30~km).
 Although refraction due to the planetary atmosphere is included, its effect on the transmission spectra of planets around late-type stars like GJ~876 is minor \citep{Betremieux2014,Misra2014}. 
 
-Without the opacity due to clouds (dashed lines in Figure~\ref{fig:transmission}), the effective altitude of the water vapor absorption features increases from $\sim $10 km to $\sim $40 km when $S_X$ increases from $0.6$ to $1.2$. 
-This level of effective altitude of water signatures is comparable with the strongest features in the modeled visible-to-NIR transmission spectrum of the Earth \revise{shown in the black line}. 
+Without the opacity due to clouds (colored dashed lines in Figure~\ref{fig:transmission}), the effective altitude of the water vapor absorption features increases from $\sim $15~km to $\sim $40~km when $S_X$ increases from $0.6$ to $1.2$. 
+This level of effective altitude of water signatures is comparable with the strongest features \revise{(CO$_2$)} in the modeled visible-to-NIR transmission spectrum of the Earth \revise{(solid black line)}\revise{, and substantially larger than the H$_2$O signatures of the Earth. %
+Note that the feature around 2.7$\mu $m is the overlap between H$_2$O and CO$_2$, and in our simulation cases with 1 ppm of CO$_2$ the feature predominantly comes from H$_2$O, while in the case of the Earth it mostly comes from CO$_2$. }
 Thus, for the highly-irradiated cases shown here, \water{} signatures will be a natural target when trying to observe the strongest atmospheric signatures of planets similar to the Earth. 
 
 \revise{However, we also find clouds} in the upper atmosphere around the terminator, and the inclusion of clouds substantially raises the baseline of the transmission spectra. 
@@ -482,19 +484,18 @@ Thus, for the highly-irradiated cases shown here, \water{} signatures will be a 
 These clouds at the terminator presumably form from water vapor that is transported from the substellar point and cools radiatively or adiabatically. 
 Although these tenuous clouds at high altitude would be optically thin vertically, the grazing geometry of transmission observations cause them to significantly affect the transmission spectra due to the long optical path length. 
 \revise{After including the effect of clouds, however, we still find the overall increase of water vapor signatures as the incident flux increases. }
-\revise{Compared to the low-irradiation case (\wv{} mixing ratio $\sim 10^{-6}$) with the same assumptions for the cloud optical properties, the signal of a high-irradiation case would be larger by a factor of a few. }
+\revise{Compared to the standard Earth model, or the low-irradiation case (\wv{} mixing ratio $\sim 10^{-6}$) with the same assumptions for the cloud optical properties, the signal of a high-irradiation case could be larger by a factor of a few. }
 
-\revise{For idealized cases, where the only source of observational uncertainty is photon noise, we can evaluate the detectability of these features. For an Earth-sized planet 10 pc away, assuming a 6.5~m telescope (having the James Webb Space Telescope in mind) with 30 \% throughput and the wavelength resolution $\mathcal{R}=$100, absorption features with 25~km differential altitude (e.g., the strongest features around 2.5~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after 500 hours of integration with an M4 star (assuming blackbody radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ876), or after 60 hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
+\revise{For idealized cases, where the only source of observational uncertainty is photon noise, we can evaluate the detectability of these features. For an Earth-sized planet 10 pc away, assuming a 6.5~m telescope (having the James Webb Space Telescope in mind) with 40 \% throughput and the wavelength resolution $\mathcal{R}=$20, absorption features with 20~km differential effective altitude in this wavelength range (e.g., the feature around 2.7~$\mu$m for the cases with clouds) would become detectable (5$\sigma $) after $\sim 100$ hours of integration with an M4 star (assuming blackbody radiation with $R_{\star }=0.4 R_{\odot }$, T=3500~K, similar to GJ~876), or after $\sim 15$ hours with an M8 star (with $R_{\star }=0.1 R_{\odot }$, T=2500~K, similar to TRAPPIST-1 planets), respectively. }
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=\hsize]{transit_GJ876_USstandard.pdf}
+    \includegraphics[width=\hsize]{transit_GJ876_usstandard_labels.pdf}
     \end{center}
-\caption{Modeled transmission spectra based on GCM experiments for planets around GJ~876 (M4V) with $S_X=0.6$ (dark red), $1.0$ (red) and $1.2$ (pink), with (solid) and without (dashed) clouds. The corresponding vertical profiles in the substellar region are shown in Figure~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective altitude, while the right-hand side indicates the transit depth in ppm using the size of the star from Table~\ref{tbl:stellar_properties}. The spectral resolution is lowered to $R=100$. 
-\revise{For a reference, the black line shows the modeled transmission spectrum of the Earth based on the US standard atmosphere. }}
+\caption{Modeled transmission spectra based on GCM experiments for planets around GJ~876 (M4V) with $S_X=0.6$ (dark red), $1.0$ (red) and $1.2$ (pink), with (solid) and without (dashed) clouds. The corresponding vertical profiles in the substellar region are shown in Figure~\ref{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}. The left-hand side of the $y$-axis shows the effective altitude, while the right-hand side indicates the transit depth in ppm using the size of the star from Table~\ref{tbl:stellar_properties}. The spectral resolution is lowered to $\mathcal{R}=100$. }
 \label{fig:transmission}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

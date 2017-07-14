@@ -139,7 +139,6 @@ The details of the ROCKE-3D GCM are presented in \citet{Way2017}.
 In the following, we first describe the specific configurations in our experiments to clarify our targets. Then, we also discuss in some detail the convection/cloud parameterizations and the radiation parameterization used in our GCM, as these are of particular importance to our results. 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[!btp]
 \caption{Stellar Properties}
@@ -590,26 +589,25 @@ These processes are likely to lead to the smaller upper atmosphere \wv{} mixing 
 \label{ss:sensitivity_continuum}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-a
 
-We have discussed that radiative heating of water vapor is one of the key factors in our experiments. 
-However, the nature of water vapor continuum has not been fully understood \citep[e.g.,][]{Shine2016,Campargue2016}. 
-% While we have used the CAVIAR continuum, there are other water vapor continuum models. 
-Besides the CAVIAR model we adopted for our fiducial runs, among those widely used is the Clough-Kneizys-Davies (CKD) family of models \citep{Clough1989,Clough2005} which were used by, for example,  \citet{Leconte2013a} and \citet{Wolf2014,Wolf2015}. 
-Based on the laboratory measurements so far, it appears that the CAVIAR model largely represents the upper end of the scatter of the measured cross section, while the CKD model represents the lower end \citep[see][]{Shine2016}. 
-Therefore, we have also run simulations with the CKD model based on XXX, so that we can explore the extent to which the choice of the water vapor continuum affects our main results. 
-For completeness, the comparison of the CAVIAR model and the CKD model is presented in Figure \ref{fig:wvc_CAVIAR_CKD}. 
+We have shown that the radiative heating caused by absorption of the incident near-infrared radiation by water vapor is one of the key processes governing the upper atmosphere humidity, and the water vapor continuum absorption is partly responsible for this. 
+There is significant uncertainty in the strength of both the self- and foreign-broadened water vapor continua at near-infrared wavelengths \citep{Shine2016,Campargue2016}. 
+Our fiducial models used the CAVIAR water vapor continuum \citep{Ptashnik2011}, which from recent laboratory measurements appear to overestimate particularly the self-broadened water vapor continuum \citep{Shine2016}. 
+Another popular continuum model, MT\_CKD \citep{Mlawer2012}, or its predecessor CKD \citep{Clough1989}, appears to be more in line with, or a bit below, the recent measurements of the self-broadened continuum. 
+Measurements of the foreign-broadened continuum are sparse, but more consistent with CAVIAR as MT\_CKD (and CKD) appears to underestimate the strength of this continuum \citep{Shine2016}. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!t]
-    \begin{center}
-    \includegraphics[width=\hsize]{foreign_wvc.pdf}
-    \includegraphics[width=\hsize]{self_wvc.pdf}
-    \end{center}
-\caption{Top: The comparison in the foreign broadening cross section between the CAVIAR model we adopted for our fiducial runs and the CKD model we consider in this section. Bottom: The comparison in the self-broadening cross section. }
-\label{fig:wvc_CAVIAR_CKD}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%, previously used by \citet{Leconte2013a}. 
+
+In order to evaluate the impact of the water vapor continuum model on our results, we have also run simulations with the CKD 2.4 water vapor continuum. 
+As CAVIAR and CKD 2.4 approximately bracket the available measurements, this should give a good indication of the sensitivity of our results to the adopted continuum model.
+
+% We have discussed that radiative heating of wa- ter vapor is one of the key factors in our experiments. 
+% However, the nature of water vapor continuum has not been fully understood \citep[e.g.,][]{Shine2016,Campargue2016}. 
+% Besides the CAVIAR model we adopted for our fiducial runs, among those widely used is the Clough-Kneizys-Davies (CKD) family of models \citep{Clough1989,Clough2005} which were used by, for example,  \citet{Leconte2013a} and \citet{Wolf2014,Wolf2015}. 
+% Based on the laboratory measurements so far, it appears that the CAVIAR model largely represents the upper end of the scatter of the measured cross section, while the CKD model represents the lower end \citep[see][]{Shine2016}. 
+% Therefore, we have also run simulations with the CKD model based on XXX, so that we can explore the extent to which the choice of the water vapor continuum affects our main results. 
+% For completeness, the comparison of the CAVIAR model and the CKD model is presented in Figure \ref{fig:wvc_CAVIAR_CKD}. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!b]
@@ -634,16 +632,20 @@ For completeness, the comparison of the CAVIAR model and the CKD model is presen
 
 % However, when we compare the atmospheric structure in the equilibrium state, we found only very minor difference. 
 %
-Figure \ref{fig:xH2O_CAVIAR_vs_CKD} compares \xwater with the CAVIAR (our fiducial model) and those with the CKD model, indicating that the effect of the water vapor continuum is very small. 
+Figure \ref{fig:xH2O_CAVIAR_vs_CKD} compares \xwater with the CAVIAR model (our fiducial model) and those with the CKD 2.4 model, indicating that the effect of the water vapor continuum is very small. 
 %
 We also compare in Figure \ref{fig:CAVIAR_vs_CKD_GJ876_Sun} the vertical profiles of temperature and water vapor in the substellar region for the most highly irradiated (i.e., most moist) runs with the GJ~876 and Solar spectra. 
 The resulting profiles overall closely match. 
 
-Note that when the atmospheric structure is fixed, the difference in the radiation field due to the different water vapor continuum is observed, predominantly in the lower atmosphere ($<10 $~km). 
-When assuming the clear-sky vertical profile at the substellar point of our fiducial runs with GJ~876 and $S_X=1.2$, we find that the short-wave surface flux is smaller with the CKD model by about 7\%, while the surface flux with the CAVIAR is 838~W. 
-However, letting the system evolve, we find that such a difference is  adjusted by small changes in the surface/atmospheric temperature, the cloud patterns, and the water vapor profiles, leaving the basic moisture profile  similar. 
+When the atmospheric structure is fixed, the difference in short-wave fluxes due to the different water vapor continua is observed predominantly in the lower atmosphere ($<$ 10~km), as expected since the strength of continuum absorption is $\propto P^2$, where $P$ is the pressure. 
+Using the P-T and specific humidity profiles at the substellar point from our fiducial run with the spectrum of GJ~876 and $S_X = 1.2$, we find that the net short-wave clear-sky flux at the surface is larger with the CKD continuum compared to the CAVIAR continuum by about 7\%, with the net surface clear-sky short-wave flux with the CAVIAR model being 838 W/m$^2$. 
+%Note that when the atmospheric structure is fixed, the difference in the radiation field due to the different water vapor continuum is observed, predominantly in the lower atmosphere ($<10 $~km). 
+%When assuming the clear-sky vertical profile at the substellar point of our fiducial runs with GJ~876 and $S_X=1.2$, we find that the short-wave surface flux is smaller with the CKD model by about 7\%, while the surface flux with the CAVIAR is 838~W. 
+However, letting the system evolve, we find that such a difference is adjusted by small changes in temperature and humidity profiles and cloud patterns, leaving the basic atmospheric structure similar. 
 
-Therefore, our main results of the correlation between the humidity in the upper atmosphere and the near-infrared incident radiation is not sensitive to the choice of the water vapor continuum model. 
+%Therefore, our main results of the correlation between the humidity in the upper atmosphere and the near-infrared incident radiation is not sensitive to the choice of the water vapor continuum model. 
+
+Based on these results, we are confident that the correlation between the humidity in the upper atmosphere and the amount of near-infrared incident radiation shown in Figure \ref{fig:xH2O_S0X} is not sensitive to the choice of water vapor continuum model.
 
 % We also compare in Figure \ref{fig:} the vertical profiles of temperature and water vapor in the substellar region of the equilibrium state for the highly irradiated runs (i.e., with highest moisture) with the GJ~876 and Solar spectra. 
 % The resulting profiles closely match. 

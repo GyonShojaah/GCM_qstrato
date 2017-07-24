@@ -23,7 +23,8 @@
 \def\modelE{ROCKE-3D}
 \def\wv{water vapor}
 
-\def\revise#1{{\bf #1}}
+%\def\revise#1{{\bf #1}}
+\def\revise#1{{\color{red}{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -54,7 +55,7 @@
 \begin{abstract}
 %
 H$_2$O is a key molecule in characterizing atmospheres of temperate terrestrial planets, and observations of transmission spectra are expected to play a primary role in detecting its signatures in the near future. 
-Detectability of H$_2$O absorption features in transmission spectra depends on the abundance of water vapor in the upper part of the atmosphere. 
+Detectability of H$_2$O absorption features in transmission spectra \revise{is contingent} on the abundance of water vapor in the upper part of the atmosphere. 
 While the stratospheric water vapor mixing ratio of the Earth is less than $10^{-5}$ due to the cold trap, the efficiency of the cold trap depends on atmospheric properties. 
 Here we study the three-dimensional distribution of atmospheric H$_2$O for synchronously rotating Earth-sized aquaplanets using the general circulation model (GCM) ROCKE-3D, and examine the effects of total incident flux and stellar spectral type.  
 We observe a more gentle increase of the water vapor mixing ratio in response to increased incident flux than one-dimensional models suggest, in qualitative agreement with the climate-stabilizing effect of clouds around the substellar point previously observed in GCMs applied to synchronously rotating planets. 
@@ -120,7 +121,7 @@ We also present synthetic transmission spectra based on GCM outputs in order to 
 The organization of this paper is as follows: %
 Section \ref{s:model} describes the set-up of our GCM experiments and  calculations of transmission spectra. %
 Section \ref{s:results} discusses our results of \wv{} profiles as a function of the incident spectrum, and shows the modeled transmission spectra. %
-The sensitivities of our results to the ocean model, the CO$_2$ abundance, and the spin period are studied in Section \ref{s:sensitivity}. %
+The sensitivities of our results to the ocean model, the CO$_2$ abundance, the spin period\revise{, and the water vapor continuum absorption} are studied in Section \ref{s:sensitivity}. %
 Finally, Section \ref{s:summary} summarizes our findings. % 
 
 
@@ -132,12 +133,11 @@ Finally, Section \ref{s:summary} summarizes our findings. %
 \subsection{GCM experiments}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We use the \modelE{} \ GCM \citep{Way2017} to obtain 3D atmospheric structures of planets with varying total incident flux and spectral type of the star, focusing on the \water{} profile in the upper atmosphere. 
+We use the \modelE{} GCM \citep{Way2017} to obtain 3D atmospheric structures of \revise{terrestrial} planets \revise{with surface water under varying irradiation}, focusing on the \water{} profile in the upper atmosphere. 
 \modelE{} is a generalization of the ModelE2 GCM \citep{Schmidt2014}, which has been developed for the Earth at NASA's Goddard Institute for Space Studies. 
 The details of the ROCKE-3D GCM are presented in \citet{Way2017}.
 
 In the following, we first describe the specific configurations in our experiments to clarify our targets. Then, we also discuss in some detail the convection/cloud parameterizations and the radiation parameterization used in our GCM, as these are of particular importance to our results. 
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table*}[!btp]
@@ -163,6 +163,28 @@ GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{D
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[btp]
+\caption{Orbital period, to which the rotation period is equated, in the case of $S_X=1$. }
+\begin{center}
+\begin{tabular}{ccr} \hline \hline
+%
+Star & $T_{\rm eff}$ & Period [days] ($S_X=1$) \\ \hline
+%
+Sun & 5772~K & 365.3 \\ 
+%
+HD 22049 & 5039~K & 171.6 \\
+%
+Kepler 186 & 3755~K & 56.2 \\
+%
+GJ 876 & 3129~K & 22.0 \\ \hline
+\end{tabular}
+\end{center}
+\label{tbl:orbital_period}
+\end{table}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!b]
     \begin{center}
     \includegraphics[width=\hsize]{star_spectra.pdf}
@@ -176,9 +198,9 @@ GJ 876 & M4V & 3129~K & 0.0122 & 0.37 & 0.3761 & \citet{vonBraun2014} & \citet{D
 \subsubsection{Our Configurations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Throughout the paper, we exclusively consider synchronously rotating planets due to their relevance to future transmission observations of close-in systems as discussed in Section~\ref{s:intro}. 
+\revise{In our experiments, the radius and the surface gravity of the planet are set to Earth's value. }
 
-We also only consider aquaplanets, i.e., planets whose surfaces are wholly covered with water. 
+We only consider aquaplanets, i.e., planets whose surfaces are wholly covered with water. 
 We use a thermodynamic ocean with 50 m depth for the fiducial runs for simplicity. 
 However, in Section \ref{ss:sensitivity_ocean}, we also present the results of runs with a fully dynamic ocean, to show that our conclusions are not very sensitive to ocean heat transport. 
 
@@ -189,7 +211,8 @@ We did not include the effects of aerosols and photochemistry.
 The model was configured to have a horizontal grid with 4 degree resolution in latitude and 5 degree resolution in longitude, and 40 vertical layers covering up to 0.14 mbar (corresponding to $\sim 65$ km in the case of the Earth). 
 
 In our experiments, we mainly changed two parameters: the total incident flux and the spectral type of the star. 
-For the latter, four types of stars are considered: 
+\revise{In the following, we represent the incident flux normalized by the solar constant by $S_X$.}
+\revise{We consider} four types of stars: 
 Sun (G2V), 
 HD 22049 (K2V), 
 Kepler-186 (M1V), and 
@@ -198,8 +221,12 @@ The spectra of HD~22049 and GJ~876 are obtained from \citet{Segura2003} and \cit
 while the spectrum of Kepler-186 is a modeled spectrum from BT-Settl \citep{Allard2012} based on the stellar parameters reported in Table S1 of \citet{Quintana2014}. 
 The physical parameters of these stars as well as the references are summarized in Table \ref{tbl:stellar_properties}, and the spectra are displayed in Figure~\ref{fig:star_spectra}. 
 
-The orbital period (identical to the spin period) is changed according to Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. Thus, the incident flux and the spin period are changed simultaneously for the fiducial set of runs. 
-However, we also isolate the effect of the spin period in Section \ref{ss:sensitivity_Porbit}. 
+\revise{Throughout the paper, we exclusively consider synchronously rotating planets due to their relevance to future transmission observations of close-in systems as discussed in Section~\ref{s:intro}. }
+The orbital period (identical to the spin period) is changed according to Kepler's 3rd law, to be consistent with the total incident flux the planet receives and the stellar mass. 
+Thus, the incident flux and the spin period are changed simultaneously for the fiducial set of runs. 
+\revise{The orbital/spin periods corresponding to $S_X=1$ are shown in Table~\ref{tbl:orbital_period}. }
+We also isolate the effect of the spin period in Section \ref{ss:sensitivity_Porbit}. 
+
 
 Our fiducial models with a thermodynamic ocean typically equilibrate in $\sim $ 30 Earth years in model time. 
 After the steady state is reached, we average the 3D atmospheric profiles over an integer number of orbits that is approximately equal to 10 Earth years. 
@@ -322,12 +349,13 @@ The uncertainties in the particle radius, scattering cross section, and the clou
 \label{ss:result_H2Omixingratio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Before examining the dependence of the \wv{} mixing ratio in the upper atmosphere, we discuss the 3D structures of temperature and water vapor as we need to know at which altitude the mixing ratio of \wv{} becomes relatively uniform, in order to identify a suitable \wv{} mixing ratio that can be regarded as representative of the humidity in the upper atmosphere. 
+Before examining the dependence of the \wv{} mixing ratio in the upper atmosphere, we discuss the 3D structures of temperature and water vapor as we need to know at which altitude the mixing ratio of \wv{} becomes relatively uniform \revise{and hence} %in order to identify a suitable \wv{} mixing ratio that 
+can be regarded as representative of the humidity in the upper atmosphere. 
 
 Figure~\ref{fig:3Dprofile_equator} shows the structures of temperature and  \wv{} mixing ratio along the equator for the planets around GJ~876 (M4V) and around the Sun (G2V), respectively, for varying incident flux normalized by the solar constant ($S_X$). 
 In all panels the substellar point corresponds to $0^{\circ }$ longitude. 
 In general, the temperature and the \wv{} mixing ratio near the surface strongly depend on the distance from the substellar point, but are fairly uniform in the upper part of the atmosphere. 
-Above 1 mbar, which is located between 35 and 50 km altitude depending on the atmospheric temperature profiles, the \wv{} mixing ratio becomes horizontally uniform within a few tens of percent. 
+Above \revise{about} 1~mbar, which is located between 35 and 50 km altitude depending on the atmospheric temperature profiles, the \wv{} mixing ratio becomes horizontally uniform within a few tens of percent. 
 Therefore, in the following, we denote the globally averaged \wv{} mixing ratio at \preslevel{} by \xwater{}, and use it as representative of the \wv{} abundance in the upper atmosphere. 
 
 We also observe optically thick clouds around the substellar point and a resulting increase of the planetary albedo as a function of total incident flux (not shown in figures), consistent with \citet{Yang2013,Yang2014}, \citet{Kopparapu2016} and \citet{Way2016}. 
@@ -336,10 +364,12 @@ As shown in Figure~\ref{fig:3Dprofile_equator}, the maximum surface temperature 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tbh]
     \begin{center}
-    \includegraphics[width=0.9\hsize]{AqOH0TLS_GJ876_temp_xH2O_vz_heat_ver2.pdf}
+%    \includegraphics[width=0.9\hsize]{AqOH0TLS_GJ876_temp_xH2O_vz_heat_ver2.pdf}
+    \includegraphics[width=0.9\hsize]{AqOH0TLS_GJ876_SW29_temp_xH2O_heat_vz_ver3.pdf}
     \end{center}
     \begin{center}
-        \includegraphics[width=0.9\hsize]{AqOH0TLS_Sun_temp_xH2O_vz_heat_ver3.pdf}
+%        \includegraphics[width=0.9\hsize]{AqOH0TLS_Sun_temp_xH2O_vz_heat_ver3.pdf}
+        \includegraphics[width=0.9\hsize]{AqOH0TLS_Sun_SW29_temp_xH2O_heat_vz_ver4.pdf}
     \end{center}
 \caption{From left to right, the vertical profiles of temperature, \wv{} mixing ratio, short-wave heating rate, and upward velocity, averaged within $0.2R_\earth$ of the substellar point, for a planet around GJ~876 (top) and around the Sun (bottom) with varying total incident flux. Dashed lines in the left-most panels show the moist adiabat drawn from the same surface temperature. The cross marks indicate the altitude of \preslevel{} where \xwater{} is measured. In the right-most panel, the altitudes with negative upward velocity are not shown. }
 \label{fig:AqOH0TLS_GJ876_temp_xH2O_vz_heat}
@@ -367,7 +397,7 @@ To see the effect of the surface temperature, we have plotted \xwater{} as a fun
 It is then clearly seen that the \wv{}  mixing ratio starts to rise at a fairly modest surface temperature and increases even more dramatically as a function of surface temperature than 1D models suggest. 
 This indicates that the increasing surface temperature cannot by itself explain the increased stratospheric \wv{} mixing ratios. %
 
-Instead, we find that the NIR component of the incident flux appears to be a good predictor of stratospheric humidity across the full range of stellar spectral types (Figure~\ref{fig:xH2O_S0X}, the right panel). %
+Instead, we find that the \revise{near-infrared (}NIR\revise{)} component of the incident flux appears to be a good predictor of stratospheric humidity across the full range of stellar spectral types (Figure~\ref{fig:xH2O_S0X}, the right panel). %
 Here, we integrated the star spectra between 0.9 and 3 \textmu m (the interval is somewhat arbitrary) to obtain the NIR component of the incident flux. %
 We will examine the reason for this in the next subsection.
  
@@ -383,7 +413,7 @@ The variability of the profiles in the individual gridboxes that contribute to t
 Rising motion exists at most altitudes in the substellar region.  In the troposphere, where moist convection occurs, large-scale vertical motion is relatively insensitive to $S_X$.  Above the convective layers, though, large-scale upward motion increases strongly with incident flux, concurrently with the increase in \wv{} mixing ratio and heating rate in the upper atmosphere. 
 
 Here in the upper atmosphere we see the interplay among the radiative heating, water abundance, and the vertical air transport:  
-When the incident flux increases, the radiative heating due to the absorption of short-wave radiation by \wv{} and potential cloud particles, mainly in the near-infrared (NIR) regime, also increases. %
+When the incident flux increases, the radiative heating due to the absorption of short-wave radiation by \wv{} and potential cloud particles, mainly in the NIR regime, also increases. %
 The air then reacts by rising and adiabatically cooling. %
 The induced upward motion of the atmosphere transports water vapor from the moist lower atmosphere to the upper atmosphere, lowering the vertical gradient of water vapor and increasing the moisture at high altitude, further increasing the short-wave heating. 
 
@@ -401,8 +431,8 @@ or
 %%%
 where $p$ is the pressure, $Q_r$ and $Q_l$ are the radiative and latent heating rates, $c_p$ is the specific heat of the atmosphere at constant pressure, $\rho $ is atmospheric density, $\{ u, v, \omega \}$ are the conventional velocity components toward the east ($x-$axis), north ($y-$axis), and upward ($z-$axis; expressed here in pressure coordinates as $\omega \equiv dp/dt$), respectively. 
 %
-Given that the horizontal advection (the last term on the right-hand side) has a negligible contribution since the horizontal gradients are small (Figure~\ref{fig:3Dprofile_equator}), and that the latent heating (the first term on the right-hand side) is also negligible above the altitude to which convection penetrates, the increase of the radiative heating in the upper atmosphere must be compensated by the adiabatic cooling by vertical advection. %
-The contribution of each term of the right-hand side of equation (\ref{eq:conserv_energy_2}) in the steady state is shown in Figure \ref{fig:heating_rate}, for the substellar regions of low and high irradiation cases with GJ876 and the Sun. %
+Given that the horizontal advection (the last term on the right-hand side) has a negligible contribution since the horizontal gradients are small (Figure~\ref{fig:3Dprofile_equator}), and that the latent heating (the first term on the right-hand side) is also negligible above the altitude to which convection penetrates, the increase of the radiative heating in the upper atmosphere must be \revise{balanced} by the adiabatic cooling by vertical advection. %
+The contribution of each term of the right-hand side of equation (\ref{eq:conserv_energy_2}) in the steady state is shown in Figure \ref{fig:heating_rate}, for the substellar regions of low and high irradiation cases with GJ~876 and the Sun. %
 It is clearly seen that the net radiative heating at high irradiation cases is compensated by the cooling by the vertical advection. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -438,7 +468,7 @@ It is clearly seen that the net radiative heating at high irradiation cases is c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Figure \ref{fig:vectormap} puts this upward motion in the sub-stellar regions into the global context, by presenting the velocity fields in the altitude-longitude plane along the equator for the low and high irradiation cases for GJ876 and the Sun. %
+Figure \ref{fig:vectormap} puts this upward motion in the sub-stellar regions into the global context, by presenting the velocity fields in the altitude-longitude plane along the equator for the low and high irradiation cases for GJ~876 and the Sun. %
 Here, the vertical components of the vectors are multiplied by 1000 to make them more visible, because large-scale vertical motions are about three orders of magnitude weaker than horizontal motions. % 
 The development of the large-scale circulation above the troposphere is clearly seen. 
 
@@ -448,14 +478,14 @@ This is the reason for the behavior seen in the right panel of Figure~\ref{fig:x
 We also note that the contribution of radiative heating by cloud particles above convective layers is not negligible. 
 In order to see the radiative effect of clouds above convective layers, we created models that are comparable to the fiducial models, but where the  influence of cloud particles above the 237 mbar level ($\sim 11$ km for the runs shown below) has been turned off in the radiation calculations (i.e., clouds particles in the upper atmosphere are transparent to radiation). 
 Figure~\ref{fig:GJ876_heat_cld} displays the comparison between such ``transparent high clouds'' models (black, dotted) and fiducial models (red solid), for $S_X=1.0$ and $1.2$ with the incident spectrum of GJ~876. 
-While these high clouds have a minimal effect on the surface temperature and atmospheric profiles below the convection layers, it is seen that radiative heating above the convection layer is substantially suppressed without the radiative effect of clouds, leading to a colder, and drier upper atmosphere. 
+While these high clouds have a minimal effect on the surface temperature and atmospheric profiles \revise{in} the convection layers, it is seen that radiative heating above the convection layer is substantially suppressed without the radiative effect of clouds, leading to a colder, and drier upper atmosphere. 
 Note that we still see heating attributed to water vapor in the ``transparent high clouds'' models, for example, the \wv{} mixing ratio and short-wave heating at 20-30 km altitude increase considerably from $S_X$ = 1.0 to $S_X$ = 1.2 even in the absence of cloud radiative effects, but the sensitivity to $S_X$ is weaker at higher altitudes. 
 We also ran equivalent simulations for other types of stars and found that the overall effects of the ``transparent high clouds'' assumption are very similar. 
 
 
 In summary, atmospheric vertical motion and the radiative heating by \wv{} and cloud particles interact with each other through positive feedbacks, and thus a modest increase of the incident radiative flux, $S_X$, can result in  an order-of-magnitude or more increase of the \wv{} mixing ratio in the upper atmosphere, while the surface temperature increases only modestly due to the stabilization by clouds. 
 This picture is verified by a good correlation between the \wv{} mixing ratio at \preslevel{} and the NIR portion of the incident flux as shown in the right panel of Figure~\ref{fig:xH2O_S0X}, insensitive to the stellar spectral types. %
-Because the NIR flux is an external parameter that can be found from direct observations of the host star, it would be a useful guide to predict the high-altitude \wv{}  mixing ratio for a planet with surface liquid water given knowledge of its distance from the star. 
+Because the NIR flux is an external parameter that can be found from direct observations of the host star, it would be a useful guide to predict the high-altitude \wv{}  mixing ratio for a planet with surface liquid water.  %given knowledge of its distance from the star. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -505,7 +535,7 @@ For idealized cases, where the only source of observational uncertainty is photo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section we examine the sensitivity of our results to some of our assumptions. 
-In particular, we discuss the effect of the assumption of a simple thermodynamic ocean, the effect of the background CO$_2$ mixing ratio, and the effect of the spin period. 
+In particular, we discuss the effect of the assumption of a simple thermodynamic ocean (Section \ref{ss:sensitivity_ocean}), the effect of the background CO$_2$ mixing ratio (Section \ref{ss:sensitivity_CO2}), the effect of the spin period (Section \ref{ss:sensitivity_Porbit})\revise{, and the effect of the uncertainty in the water vapor continuum absorption (Section \ref{ss:sensitivity_continuum})}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -590,8 +620,8 @@ These processes are likely to lead to the smaller upper atmosphere \wv{} mixing 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We have shown that the radiative heating caused by absorption of the incident near-infrared radiation by water vapor is one of the key processes governing the upper atmosphere humidity, and the water vapor continuum absorption is partly responsible for this. 
-There is significant uncertainty in the strength of both the self- and foreign-broadened water vapor continua at near-infrared wavelengths \citep{Shine2016,Campargue2016}. 
+We have shown that the radiative heating caused by absorption of the incident NIR radiation by water vapor is one of the key processes governing the upper atmosphere humidity, and the water vapor continuum absorption is partly responsible for this. 
+There is significant uncertainty in the strength of both the self- and foreign-broadened water vapor continua at NIR wavelengths \citep{Shine2016,Campargue2016}. 
 Our fiducial models used the CAVIAR water vapor continuum \citep{Ptashnik2011}, which from recent laboratory measurements appear to overestimate particularly the self-broadened water vapor continuum \citep{Shine2016}. 
 Another popular continuum model, MT\_CKD \citep{Mlawer2012}, or its predecessor CKD \citep{Clough1989}, appears to be more in line with, or a bit below, the recent measurements of the self-broadened continuum. 
 Measurements of the foreign-broadened continuum are sparse, but more consistent with CAVIAR as MT\_CKD (and CKD) appears to underestimate the strength of this continuum \citep{Shine2016}. 
@@ -614,7 +644,7 @@ As CAVIAR and CKD 2.4 approximately bracket the available measurements, this sho
     \begin{center}
     \includegraphics[width=0.9\hsize]{xH2O_CAVIAR_vs_CKD.pdf}
     \end{center}
-\caption{Effect of different water vapor continuum models on the humidity in the upper atmospheres as a function of incident near-infrared flux. \color{red}{Mean to update...}}
+\caption{\revise{Effect of different water vapor continuum models on the water vapor mixing ratio at 1.39 mbar. Results with the CKD 2.4 continuum model, shown in dashed lines, are compared with our fiducial results with CAVIAR (same as the ones in Figure 3), in the case of GJ~876 spectrum (red) and for Solar spectrum (blue). }}
 \label{fig:xH2O_CAVIAR_vs_CKD}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -622,9 +652,10 @@ As CAVIAR and CKD 2.4 approximately bracket the available measurements, this sho
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
     \begin{center}
-    \includegraphics[width=0.9\hsize]{CAVIAR_vs_CKD_GJ876_Sun.pdf}
+    \includegraphics[width=0.9\hsize]{CAVIAR_vs_CKD_GJ876_Sx12.pdf}
+    \includegraphics[width=0.9\hsize]{CAVIAR_vs_CKD_Sun_Sx26.pdf}
     \end{center}
-\caption{Effect of different water vapor continuum models on the vertical profiles of temperature and water vapor mixing ratio. }
+\caption{\revise{Effect of different water vapor continuum models on the vertical profiles of temperature and water vapor mixing ratio. Upper panels: with GJ~876 spectrum and $S_X=1.2$. Lower panels: with Solar spectrum and $S_X=2.6$.}}
 \label{fig:CAVIAR_vs_CKD_GJ876_Sun}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -632,7 +663,7 @@ As CAVIAR and CKD 2.4 approximately bracket the available measurements, this sho
 
 % However, when we compare the atmospheric structure in the equilibrium state, we found only very minor difference. 
 %
-Figure \ref{fig:xH2O_CAVIAR_vs_CKD} compares \xwater with the CAVIAR model (our fiducial model) and those with the CKD 2.4 model, indicating that the effect of the water vapor continuum is very small. 
+Figure \ref{fig:xH2O_CAVIAR_vs_CKD} compares \xwater{} with the CAVIAR model (our fiducial model) and those with the CKD 2.4 model, indicating that the effect of the water vapor continuum is very small. 
 %
 We also compare in Figure \ref{fig:CAVIAR_vs_CKD_GJ876_Sun} the vertical profiles of temperature and water vapor in the substellar region for the most highly irradiated (i.e., most moist) runs with the GJ~876 and Solar spectra. 
 The resulting profiles overall closely match. 
@@ -645,7 +676,7 @@ However, letting the system evolve, we find that such a difference is adjusted b
 
 %Therefore, our main results of the correlation between the humidity in the upper atmosphere and the near-infrared incident radiation is not sensitive to the choice of the water vapor continuum model. 
 
-Based on these results, we are confident that the correlation between the humidity in the upper atmosphere and the amount of near-infrared incident radiation shown in Figure \ref{fig:xH2O_S0X} is not sensitive to the choice of water vapor continuum model.
+Based on these results, we are confident that the correlation between the humidity in the upper atmosphere and the amount of NIR incident radiation shown in Figure \ref{fig:xH2O_S0X} is not sensitive to the choice of water vapor continuum model.
 
 % We also compare in Figure \ref{fig:} the vertical profiles of temperature and water vapor in the substellar region of the equilibrium state for the highly irradiated runs (i.e., with highest moisture) with the GJ~876 and Solar spectra. 
 % The resulting profiles closely match. 
@@ -687,6 +718,7 @@ A more realistic inclusion of clouds in our simulated transmission spectra will 
 While we used a thermodynamic ocean model with zero ocean heat transport for simplicity, comparable experiments with a dynamic ocean are also performed to demonstrate that this approximation of an ocean has only a modest effect on the \wv{} mixing ratio, the size of which is within about an order of magnitude or less. 
 Varying the CO$_2$ mixing ratio from 1~ppm to 300~ppm has a negligible effect. 
 We also confirmed that changing the planet spin period only has a secondary effect on the \wv{} mixing ratio, resulting in an order of magnitude variation at most. 
+\revise{Our results are not sensitive to the choice of water vapor continuum  model within the known uncertainty. }
 
 In this paper, we limit our discussion on the \wv{} profiles to the effects of the total incident flux and spectral energy distribution (i.e., the spectral type of the host star). 
 These parameters are among the limited number of properties that can be constrained relatively easily by observations. 
@@ -743,7 +775,7 @@ Differences between the 29 and 280 band configurations are small, $<$ 5 W/m$^2$ 
 \caption{The short-wave bands.}
 \label{tab:short-wave}
 \begin{tabular}{l|l|l} \hline \hline
-\# & lower limit [${\rm m}$m] & upper limit [${\rm m}$m] \\ \hline 
+\# & lower limit [\textmu m] & upper limit [\textmu m] \\ \hline 
     1 &       0.200 &    0.385 \\
     2 &       0.385 &    0.500 \\
     3 &       0.500 &    0.690 \\
